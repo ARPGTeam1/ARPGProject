@@ -9,14 +9,15 @@ namespace Characters.Player
     {
         private NavMeshAgent _agent;
         private Camera _cam;
-
         private LayerMask _ground;
+        private HP hitPoint;
 
         private void Awake()
         {
             this._agent = GetComponent<NavMeshAgent>();
             this._cam = Camera.main;
             this._ground = LayerMask.GetMask("Ground");
+            hitPoint = GetComponent<HP>();
         }
 
         private void Update()
@@ -28,7 +29,7 @@ namespace Characters.Player
         private void MoveToLocation()
         {
             var ray = this._cam.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out var hit, this._cam.farClipPlane, this._ground))
+            if (Physics.Raycast(ray, out var hit, this._cam.farClipPlane, this._ground) && !hitPoint.isDefeat)
                 this._agent.destination = hit.point;
         }
     }
