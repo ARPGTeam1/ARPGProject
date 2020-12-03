@@ -19,7 +19,7 @@ public class Door : MonoBehaviour
     {
         _navMeshObstacle = door.GetComponent<NavMeshObstacle>();
         _closedPos = transform.position;
-        _openPos = _closedPos + new Vector3(0, _closedPos.y + (door.transform.localScale.y / 2), 0);
+        _openPos = _closedPos + new Vector3(0, _closedPos.y + (door.transform.localScale.y / 2) * transform.lossyScale.y, 0);
         _navMeshObstacle.enabled = isLocked;
         ChangeState(State.Closed);
     }
