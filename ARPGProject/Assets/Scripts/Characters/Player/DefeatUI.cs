@@ -20,5 +20,31 @@ namespace Characters.Player
             DefeatUIText.Invoke(text);
             this.gameObject.SetActive(true);
         }
+
+        public void CorpseRevive()
+        {
+            //?? Spawn protection? (Invisible/Invulnerable for X seconds)
+            //?? Limited charges?
+            //if button is pressed, heal the player to full
+            //then regain control of the player character
+            //make sure the player respawns in the same position they died in
+
+            switch (this.hitPoint.isDefeat)
+            {
+                case true:
+                    this.hitPoint.CurrentHp = this.hitPoint.maxHP;
+                    this.hitPoint.isDefeat = false;
+                    this.gameObject.SetActive(false);
+                    break;
+                case false:
+                    Debug.LogError("Player isn't Dead. Please fix.");
+                    break;
+            }
+        }
+
+        public void CheckpointRevive()
+        {
+            
+        }
     }
 }
