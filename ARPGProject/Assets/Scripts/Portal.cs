@@ -13,13 +13,12 @@ public class Portal : MonoBehaviour
         var NavMesh = toTeleport.GetComponent<NavMeshAgent>();
         NavMesh.Warp(myOtherPortal.spawnLocation.transform.position);
         toTeleport.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        //NavMesh.isStopped = true;
-
+        toTeleport.transform.rotation = myOtherPortal.spawnLocation.rotation;
     }
-
-
+    
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.CompareTag("Player"))
             Teleport(other.gameObject);
+        
     }
 }

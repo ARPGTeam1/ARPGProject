@@ -13,12 +13,13 @@ namespace Characters.Player
         [HideInInspector] public UnityEvent<string> BeenDefeatedText;
         private int _currentHp;
 
-        private int CurrentHp
+        //Made this public to be able to modify reset currentHP when reviving
+        public int CurrentHp
         {
-            get => _currentHp;
+            get => this._currentHp;
             set
             {
-                _currentHp = value;
+                this._currentHp = value;
                 HPChanged.Invoke(value);
             }
         }
