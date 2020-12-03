@@ -21,8 +21,9 @@ namespace Characters.Player
             get => this._currentHp;
             set
             {
-                this._currentHp = value;
-                HPChanged.Invoke(value);
+                var clampValue = Mathf.Clamp(value, 0, maxHP);
+                _currentHp = clampValue;
+                HPChanged.Invoke(clampValue);
             }
         }
         
