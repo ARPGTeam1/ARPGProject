@@ -22,13 +22,14 @@ public class StationaryThreat : MonoBehaviour
 
     private void DamageTarget()
     {
-        target.TakeDamage(damage, "Player");
-        Debug.Log($"Player taking {this.damage} damage");
+        target.TakeDamage(damage, this.name);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        target = null;
+        if (target == null)
+            return;
         CancelInvoke(nameof(DamageTarget));
+        target = null;
     }
 }
