@@ -704,5 +704,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Guard
       objectReference: {fileID: 0}
+    - target: {fileID: 6864254133440587559, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: rangedRange
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
