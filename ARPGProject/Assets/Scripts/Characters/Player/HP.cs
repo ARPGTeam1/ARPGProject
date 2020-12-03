@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
@@ -14,6 +15,7 @@ namespace Characters.Player
         private int _currentHp;
 
         //Made this public to be able to modify reset currentHP when reviving
+        
         public int CurrentHp
         {
             get => this._currentHp;
@@ -23,6 +25,22 @@ namespace Characters.Player
                 HPChanged.Invoke(value);
             }
         }
+        
+        /*
+        idea : You could do something like this if you wanted to keep it private perhaps? :
+        then calling heal() with no parameters is a full heal, and if specified will only heal that much. 
+        
+        public void Heal()
+        {
+            CurrentHp = maxHP;
+        }
+        
+        public void Heal(int amount)
+        {
+            CurrentHp = Mathf.Clamp(CurrentHp + amount, 0, maxHP);
+            //could clamp in CurrentHp setter instead, probably better.
+        }
+        */
 
         private void Awake()
         {

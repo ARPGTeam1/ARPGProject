@@ -11,6 +11,12 @@ namespace Characters.Player
         private Camera _cam;
         private LayerMask _ground;
         private HP hitPoint;
+        private Animator _animator;
+
+        private bool IsMoving()
+        {
+            return this._agent.velocity.magnitude > 0;
+        }
 
         private void Awake()
         {
@@ -18,12 +24,29 @@ namespace Characters.Player
             this._cam = Camera.main;
             this._ground = LayerMask.GetMask("Ground");
             hitPoint = GetComponent<HP>();
+            this._animator = GetComponent<Animator>();
         }
 
         private void Update()
         {
-            if(Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1))
                 MoveToLocation();
+
+            if (this._agent.destination == this.transform.position)
+            {
+                this._agent.ResetPath();
+            }
+
+            switch (this._agent.velocity.magnitude > 0)
+            {
+                case true:
+                    this._animator.SetBool("isMoving", true);
+                    break;
+                case false:
+                    this._animator.SetBool("isMoving", false);
+                    break;
+            }
+            
         }
 
         private void MoveToLocation()
