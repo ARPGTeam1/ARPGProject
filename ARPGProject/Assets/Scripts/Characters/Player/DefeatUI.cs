@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Events;
 
 namespace Characters.Player
@@ -8,6 +9,10 @@ namespace Characters.Player
     {
         public UnityEvent<string> DefeatUIText;
         private HP hitPoint;
+        public Vector3 checkPoint = Vector3.zero; //default
+        public NavMeshAgent player;
+        
+        
         private void Start()
         {
             hitPoint = GetComponentInParent<HP>();
@@ -44,7 +49,18 @@ namespace Characters.Player
 
         public void CheckpointRevive()
         {
-            
+            switch (this.hitPoint.isDefeat)
+            {
+                case true:
+                    this.hitPoint.CurrentHp = this.hitPoint.maxHP;
+                    this.hitPoint.isDefeat = false;
+                    this.gameObject.SetActive(false);
+                    this.player.Warp(checkPoint);
+                    break;
+                case false:
+                    Debug.LogError("Player isn't Dead. Please fix.");
+                    break;
+            }
         }
     }
 }
