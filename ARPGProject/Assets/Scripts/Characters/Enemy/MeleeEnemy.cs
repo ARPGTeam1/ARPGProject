@@ -26,12 +26,8 @@ public class MeleeEnemy : MonoBehaviour, IColliderListener
 
     private void Start()
     {
-        // collider = GetComponentInChildren<SphereCollider>();
-        if (collider.gameObject != gameObject)
-        {
-            ColliderBridge cb = collider.gameObject.AddComponent<ColliderBridge>();
-            cb.Initialize(this);
-        }
+        collider.gameObject.AddComponent<ColliderBridge>(); 
+        collider.GetComponent<ColliderBridge>().Initialize(this);
     }
 
     public void OnTriggerEnter(Collider other)
