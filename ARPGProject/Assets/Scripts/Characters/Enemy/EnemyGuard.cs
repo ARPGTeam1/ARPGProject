@@ -11,12 +11,12 @@ public class EnemyGuard : MonoBehaviour, IColliderListener
     
     public void Awake()
     {
-        Collider collider = GetComponentInChildren<SphereCollider>();
-        if (collider.gameObject != gameObject)
-        {
-            ColliderBridge cb = collider.gameObject.AddComponent<ColliderBridge>();
-            cb.Initialize(this);
-        }
+        // Collider collider = GetComponentInChildren<SphereCollider>();
+        // if (collider.gameObject != gameObject)
+        // {
+        //     ColliderBridge cb = collider.gameObject.AddComponent<ColliderBridge>();
+        //     cb.Initialize(this);
+        // }
     }
 
     public void OnTriggerEnter(Collider other)

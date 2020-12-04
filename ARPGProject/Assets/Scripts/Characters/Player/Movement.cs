@@ -12,6 +12,7 @@ namespace Characters.Player
         private LayerMask _ground;
         private HP hitPoint;
         private Animator _animator;
+        private Rigidbody _rb;
 
         private bool IsMoving()
         {
@@ -25,6 +26,7 @@ namespace Characters.Player
             this._ground = LayerMask.GetMask("Ground");
             hitPoint = GetComponent<HP>();
             this._animator = GetComponent<Animator>();
+            this._rb = GetComponent<Rigidbody>();
         }
 
         private void Update()
@@ -32,9 +34,16 @@ namespace Characters.Player
             if (Input.GetMouseButtonDown(1))
                 MoveToLocation();
 
-            if (this._agent.destination == this.transform.position)
+            // if (this._agent.destination == this.transform.position)
+            // {
+            //     
+            // }
+
+            if (ShouldStop())
             {
                 this._agent.ResetPath();
+                this._agent.velocity = Vector3.zero;
+                this._rb.angularVelocity = Vector3.zero;
             }
 
             switch (this._agent.velocity.magnitude > 0)
@@ -46,7 +55,11 @@ namespace Characters.Player
                     this._animator.SetBool("isMoving", false);
                     break;
             }
-            
+        }
+
+        private bool ShouldStop()
+        {
+            return Vector3.Distance(this._agent.destination, this.transform.position) <= 0f;
         }
 
         private void MoveToLocation()
