@@ -14,10 +14,10 @@ namespace Characters.Player
         [HideInInspector] public UnityEvent<string> BeenDefeatedText;
         private int _currentHp;
         
-        private int CurrentHp
+        public int CurrentHp
         {
             get => this._currentHp;
-            set
+            private set
             {
                 var clampValue = Mathf.Clamp(value, 0, maxHP);
                 _currentHp = clampValue;
