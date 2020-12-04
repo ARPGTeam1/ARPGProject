@@ -23,13 +23,11 @@ public class EnemyGuard : MonoBehaviour, IColliderListener
     {
         if (!other.gameObject.CompareTag("Player"))
             return;
-        Debug.Log("I see you " + other.gameObject.tag + "!");
     }
 
     public void OnTriggerExit(Collider other)
     {
         if (!other.gameObject.CompareTag("Player"))
             return;
-        Debug.Log("Bye bye, " + other.gameObject.tag + ".");
     }
 }

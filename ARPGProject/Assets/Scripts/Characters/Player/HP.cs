@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
@@ -12,16 +13,26 @@ namespace Characters.Player
         [HideInInspector] public UnityEvent<int> HPChanged;
         [HideInInspector] public UnityEvent<string> BeenDefeatedText;
         private int _currentHp;
-
-        //Made this public to be able to modify reset currentHP when reviving
-        public int CurrentHp
+        
+        private int CurrentHp
         {
             get => this._currentHp;
             set
             {
-                this._currentHp = value;
-                HPChanged.Invoke(value);
+                var clampValue = Mathf.Clamp(value, 0, maxHP);
+                _currentHp = clampValue;
+                HPChanged.Invoke(clampValue);
             }
+        }
+
+        public void Heal()
+        {
+            CurrentHp = maxHP;
+        }
+
+        public void Heal(int amount)
+        {
+            CurrentHp += amount;
         }
 
         private void Awake()

@@ -56,7 +56,7 @@ namespace Characters.Player
 
         private void ReviveLogic()
         {
-            this._hp.CurrentHp = this._hp.maxHP;
+            this._hp.Heal();
             this._hp.isDefeat = false;
         }
 
