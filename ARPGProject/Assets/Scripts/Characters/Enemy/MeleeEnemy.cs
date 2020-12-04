@@ -1,35 +1,37 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Characters.Player;
-
 
 public class MeleeEnemy : MonoBehaviour, IColliderListener
 {
 
     [SerializeField] private int damage;
     [SerializeField] private float attackRange;
+    [SerializeField] private float attackWindupTime;
     [SerializeField] private float attackTimeCooldown;
+    [SerializeField] private Collider collider;
+    
     
     private GameObject _target;
     private HP _targetHpRef;
     private bool _isAttacking;
-    private float _elapsedTime;
+    //private float _elapsedTime;
+    
+    private float originalAttackCoolDown;
     
     public void Awake()
     {
-        Collider collider = GetComponentInChildren<SphereCollider>();
+        //_elapsedTime = 0f;
+        originalAttackCoolDown = attackTimeCooldown;
+    }
+
+    private void Start()
+    {
+        // collider = GetComponentInChildren<SphereCollider>();
         if (collider.gameObject != gameObject)
         {
             ColliderBridge cb = collider.gameObject.AddComponent<ColliderBridge>();
             cb.Initialize(this);
         }
-    }
-
-    private void Start()
-    {
-        _elapsedTime = 0f;
     }
 
     public void OnTriggerEnter(Collider other)
@@ -46,16 +48,30 @@ public class MeleeEnemy : MonoBehaviour, IColliderListener
 
     private void Update()
     {
-        if (_isAttacking)
+        if (attackTimeCooldown > 0)
         {
-            float distance = Vector3.Distance(this.transform.position, _target.transform.position);
-            if (distance < attackRange)
+            
+            attackTimeCooldown -= Time.deltaTime;
+        }
+        else
+        {
+            if (_isAttacking)
             {
-                _elapsedTime += Time.deltaTime;
-                if (_elapsedTime > attackTimeCooldown)
+                float distance = Vector3.Distance(this.transform.position, _target.transform.position);
+                if (distance < attackRange)
                 {
-                    _elapsedTime -= attackTimeCooldown;
                     DamageTarget();
+                    attackTimeCooldown = originalAttackCoolDown;
+
+                    /*
+                     * For when we have Enemy Attack animations? 
+                     */
+                    // _elapsedTime += Time.deltaTime; // Animation time ?
+                    // if (_elapsedTime > attackWindupTime)
+                    // {
+                    //     _elapsedTime = 0;
+                        //DamageTarget();
+                    //}
                 }
             }
         }
