@@ -1,33 +1,52 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGuard : MonoBehaviour, IColliderListener
+namespace Characters.Enemy
 {
-
-    private GameObject target;
-
-    
-    public void Awake()
+    public class EnemyGuard : MonoBehaviour, IColliderListener
     {
-        // Collider collider = GetComponentInChildren<SphereCollider>();
-        // if (collider.gameObject != gameObject)
-        // {
-        //     ColliderBridge cb = collider.gameObject.AddComponent<ColliderBridge>();
-        //     cb.Initialize(this);
-        // }
-    }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (!other.gameObject.CompareTag("Player"))
-            return;
-    }
+        [SerializeField] private Collider collider;
+        private GameObject target;
+        private Vector3 targetTransform;
 
-    public void OnTriggerExit(Collider other)
-    {
-        if (!other.gameObject.CompareTag("Player"))
-            return;
+        private bool HasTarget => target != null;
+        private MoveToTarget _moveToTarget;
+
+        public void Awake()
+        {
+   
+        }
+
+        private void Start()
+        {
+            collider.gameObject.AddComponent<ColliderBridge>(); 
+            collider.GetComponent<ColliderBridge>().Initialize(this);
+            _moveToTarget = this.gameObject.GetComponent<MoveToTarget>();
+        }
+
+        private void Update()
+        {
+            if (HasTarget)
+            {
+                targetTransform = new Vector3(target.transform.position.x, this.transform.position.y, target.transform.position.z);
+                this.transform.LookAt(targetTransform);
+                _moveToTarget.MoveTowards(target);
+            }
+        }
+
+        public void OnTriggerEnter(Collider other)
+        {
+            if (!other.gameObject.CompareTag("Player"))
+                return;
+            target = other.gameObject;
+        }
+
+        public void OnTriggerExit(Collider other)
+        {
+            if (!other.gameObject.CompareTag("Player"))
+                return;
+            target = null;
+        }
     }
 }

@@ -354,6 +354,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3777453130216299768, guid: 0c66c1c5fcea5c84f89d4d14cafe6809, type: 3}
+      propertyPath: collider
+      value: 
+      objectReference: {fileID: 703639685}
     - target: {fileID: 3777453130216299770, guid: 0c66c1c5fcea5c84f89d4d14cafe6809, type: 3}
       propertyPath: m_Name
       value: Enemy Patrol
@@ -375,6 +379,10 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7846464531110220315, guid: 0c66c1c5fcea5c84f89d4d14cafe6809, type: 3}
+      propertyPath: collider
+      value: 
+      objectReference: {fileID: 1282585322}
+    - target: {fileID: 7846464531110220315, guid: 0c66c1c5fcea5c84f89d4d14cafe6809, type: 3}
       propertyPath: attackRange
       value: 4
       objectReference: {fileID: 0}
@@ -384,6 +392,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c66c1c5fcea5c84f89d4d14cafe6809, type: 3}
+--- !u!135 &703639685 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 2313089307799494247, guid: 0c66c1c5fcea5c84f89d4d14cafe6809, type: 3}
+  m_PrefabInstance: {fileID: 703639684}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &971671247
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971671247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.008, z: 0}
+  m_LocalPosition: {x: 3.34, y: 0.008, z: 0}
   m_LocalScale: {x: 0.2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 425295426}
@@ -465,6 +478,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971671247}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!135 &1282585322 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 3777453130044117929, guid: 0c66c1c5fcea5c84f89d4d14cafe6809, type: 3}
+  m_PrefabInstance: {fileID: 703639684}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1417166762
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,6 +964,11 @@ MonoBehaviour:
   player: {fileID: 543694521}
   followSpeed: 1
   offset: {x: 0, y: 8, z: -10}
+--- !u!135 &2086819456 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 3777453130044117929, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+  m_PrefabInstance: {fileID: 3777453130482606055}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3777453130482606055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -953,6 +976,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2019832464271398300, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3777453130216299719, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1001,6 +1028,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Guard
       objectReference: {fileID: 0}
+    - target: {fileID: 6864254133440587559, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: collider
+      value: 
+      objectReference: {fileID: 2086819456}
     - target: {fileID: 6864254133440587559, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
       propertyPath: attackRange
       value: 4
