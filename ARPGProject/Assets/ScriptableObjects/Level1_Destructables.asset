@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Level1_Destructables
   m_EditorClassIdentifier: 
   drops:
-  - {fileID: 4465842602289583930, guid: 5b35aea27fcf1fc4e85b1a2319b8e598, type: 3}
-  - {fileID: 8363996083945285566, guid: 616ea579e1e3e4043aa0aa6428435a07, type: 3}
-  - {fileID: 5302658807143707881, guid: 784bea9d15b7428489d4b59519bd46fe, type: 3}
-  - {fileID: 175454656885698313, guid: 0c3b82e1f5c8a09449b7ec2f8aa20e92, type: 3}
+  - {fileID: 1298029560938040, guid: d74e73c0044f5cd43a6f1f506f0df790, type: 3}
+  - {fileID: 1515678706149418, guid: 646a8faadb4803b4eb490eb7985cba43, type: 3}
+  - {fileID: 1024448355500536, guid: 06ecdd40143cad141b791ad42091c3c0, type: 3}
+  - {fileID: 1998893266685322, guid: dc99b5d38f546af47b2ea53fe8993998, type: 3}
+  - {fileID: 1895479114740378, guid: b0e6f9987b011af459d2ce8d057a189f, type: 3}
+  - {fileID: 1130292163209194, guid: 24725f56f23612541a04c408674368c8, type: 3}
