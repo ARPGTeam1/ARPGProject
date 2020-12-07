@@ -31,6 +31,12 @@ namespace Characters.Enemy
         
         private void Update()
         {
+            BehaviourTree();
+        }
+
+
+        private void BehaviourTree()
+        {
             if (!HasTarget)
             {
                 if (!CanPatrol)
@@ -41,6 +47,7 @@ namespace Characters.Enemy
                 _patrol.enabled = true;
                 return;
             }
+            
             targetTransform = new Vector3(target.transform.position.x, this.transform.position.y, target.transform.position.z);
             this.transform.LookAt(targetTransform);
             if (CanMove)
