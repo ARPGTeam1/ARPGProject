@@ -7,6 +7,10 @@ public class StationaryThreat : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private float startDamageTimerSeconds;
     [SerializeField] private float repeatDamageTimerSeconds;
+
+    [SerializeField] private AudioClip _audioClip;
+    [SerializeField] private AudioSource _audioSource;
+    
     private HP target;
 
     private void OnTriggerEnter(Collider other)
@@ -22,6 +26,13 @@ public class StationaryThreat : MonoBehaviour
 
     private void DamageTarget()
     {
+        if (_audioClip != null)
+        {
+            if (!target.isDefeat)
+            {
+                _audioSource.PlayOneShot(_audioClip);    
+            }
+        }
         target.TakeDamage(damage, this.name);
     }
 
