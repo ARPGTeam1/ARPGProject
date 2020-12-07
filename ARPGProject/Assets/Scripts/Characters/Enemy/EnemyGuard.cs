@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Characters.Enemy
 {
@@ -25,16 +26,26 @@ namespace Characters.Enemy
             collider.GetComponent<ColliderBridge>().Initialize(this);
         }
 
+        private void Update()
+        {
+            if (target)
+            {
+                this.transform.LookAt(target.transform.position);
+            }
+        }
+
         public void OnTriggerEnter(Collider other)
         {
             if (!other.gameObject.CompareTag("Player"))
                 return;
+            target = other.gameObject;
         }
 
         public void OnTriggerExit(Collider other)
         {
             if (!other.gameObject.CompareTag("Player"))
                 return;
+            target = null;
         }
     }
 }
