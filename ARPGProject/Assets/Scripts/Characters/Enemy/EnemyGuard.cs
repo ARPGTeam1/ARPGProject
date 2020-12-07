@@ -10,7 +10,7 @@ namespace Characters.Enemy
         private GameObject target;
         private Vector3 targetTransform;
 
-        protected bool HasTarget => target != null;
+        public bool HasTarget => target != null;
 
 
         public void Awake()
