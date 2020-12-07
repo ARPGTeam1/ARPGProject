@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090cb0a1b5d3b6b47964c8836e69719a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider: {fileID: 0}
+  collider: {fileID: 2313089307799494247}
 --- !u!114 &7473095215975324673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
   attackRange: 3
   attackWindupTime: 0
   attackTimeCooldown: 2
-  collider: {fileID: 0}
+  collider: {fileID: 3777453130044117929}
 --- !u!1 &3777453130932444393
 GameObject:
   m_ObjectHideFlags: 0
