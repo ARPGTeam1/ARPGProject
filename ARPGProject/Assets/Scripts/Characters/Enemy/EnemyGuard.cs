@@ -7,8 +7,11 @@ namespace Characters.Enemy
     {
 
         [SerializeField] private Collider collider;
-        
         private GameObject target;
+        private Vector3 targetTransform;
+
+        protected bool HasTarget => target != null;
+
 
         public void Awake()
         {
@@ -30,7 +33,8 @@ namespace Characters.Enemy
         {
             if (target)
             {
-                this.transform.LookAt(target.transform.position);
+                targetTransform = new Vector3(target.transform.position.x, this.transform.position.y, target.transform.position.z);
+                this.transform.LookAt(targetTransform);
             }
         }
 
