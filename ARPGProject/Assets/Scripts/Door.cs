@@ -19,7 +19,7 @@ public class Door : MonoBehaviour
     {
         _navMeshObstacle = door.GetComponent<NavMeshObstacle>();
         _closedPos = transform.position;
-        _openPos = _closedPos + new Vector3(0, _closedPos.y + (door.transform.localScale.y / 2) * transform.lossyScale.y, 0);
+        _openPos = _closedPos + new Vector3(0, _closedPos.y + (door.transform.localScale.y / 2) * transform.localScale.y, 0);
         _navMeshObstacle.enabled = isLocked;
         ChangeState(State.Closed);
     }
@@ -32,7 +32,7 @@ public class Door : MonoBehaviour
         {
             case State.Opening:
                 _elapsed += 1f - openSpeed;
-                door.transform.position = Vector3.Slerp(_closedPos, _openPos, _elapsed);
+                door.transform.position = Vector3.Lerp(_closedPos, _openPos, _elapsed);
                 if (door.transform.position.y >= _openPos.y)
                 {
                     door.transform.position = _openPos;
@@ -45,7 +45,7 @@ public class Door : MonoBehaviour
                 break;
             case State.Closing:
                 _elapsed += 1f - openSpeed;
-                door.transform.position = Vector3.Slerp(_openPos, _closedPos, _elapsed);
+                door.transform.position = Vector3.Lerp(_openPos, _closedPos, _elapsed);
                 if (door.transform.position.y <= _closedPos.y)
                 {
                     door.transform.position = _closedPos;
