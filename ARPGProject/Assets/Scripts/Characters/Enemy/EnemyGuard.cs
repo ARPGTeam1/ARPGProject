@@ -1,33 +1,40 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class EnemyGuard : MonoBehaviour, IColliderListener
+namespace Characters.Enemy
 {
-
-    private GameObject target;
-
-    
-    public void Awake()
+    public class EnemyGuard : MonoBehaviour, IColliderListener
     {
-        // Collider collider = GetComponentInChildren<SphereCollider>();
-        // if (collider.gameObject != gameObject)
-        // {
-        //     ColliderBridge cb = collider.gameObject.AddComponent<ColliderBridge>();
-        //     cb.Initialize(this);
-        // }
-    }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (!other.gameObject.CompareTag("Player"))
-            return;
-    }
+        [SerializeField] private Collider collider;
+        
+        private GameObject target;
 
-    public void OnTriggerExit(Collider other)
-    {
-        if (!other.gameObject.CompareTag("Player"))
-            return;
+        public void Awake()
+        {
+            // Collider collider = GetComponentInChildren<SphereCollider>();
+            // if (collider.gameObject != gameObject)
+            // {
+            //     ColliderBridge cb = collider.gameObject.AddComponent<ColliderBridge>();
+            //     cb.Initialize(this);
+            // }
+        }
+
+        private void Start()
+        {
+            collider.gameObject.AddComponent<ColliderBridge>(); 
+            collider.GetComponent<ColliderBridge>().Initialize(this);
+        }
+
+        public void OnTriggerEnter(Collider other)
+        {
+            if (!other.gameObject.CompareTag("Player"))
+                return;
+        }
+
+        public void OnTriggerExit(Collider other)
+        {
+            if (!other.gameObject.CompareTag("Player"))
+                return;
+        }
     }
 }
