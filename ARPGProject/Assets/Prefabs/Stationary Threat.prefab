@@ -93,7 +93,7 @@ MonoBehaviour:
   damage: 10
   startDamageTimerSeconds: 0
   repeatDamageTimerSeconds: 0.5
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: a98117179f8fb2e47be0e46e02905239, type: 3}
   _audioSource: {fileID: 6210928362294396943}
 --- !u!82 &6210928362294396943
 AudioSource:

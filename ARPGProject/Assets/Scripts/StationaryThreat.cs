@@ -28,7 +28,10 @@ public class StationaryThreat : MonoBehaviour
     {
         if (_audioClip != null)
         {
-            _audioSource.PlayOneShot(_audioClip);
+            if (!target.isDefeat)
+            {
+                _audioSource.PlayOneShot(_audioClip);    
+            }
         }
         target.TakeDamage(damage, this.name);
     }
