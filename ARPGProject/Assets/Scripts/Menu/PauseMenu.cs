@@ -1,14 +1,23 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool Paused;
     public GameObject PauseMenuUI;
+    public GameObject confirmationBox;
     public AudioClip WOHClickSound;
     public AudioClip WOHMenuSoundtrack;
+
+    private void Start()
+    {
+        
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetKeyDown(KeyCode.P)))
@@ -16,7 +25,7 @@ public class PauseMenu : MonoBehaviour
             if (Paused) 
                 Resume();
             else
-                Pause();
+                OnPausePressed();
     }
 
    public void Resume()
@@ -28,10 +37,11 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
-        PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         Paused = true;
     }
+    
+    
 
     void MainMenu()
     {
@@ -43,6 +53,31 @@ public class PauseMenu : MonoBehaviour
         
     }
 
+    public void OnPausePressed()
+    {
+        if (Paused) return;
+        Pause();
+        PauseMenuUI.SetActive(true);
+    }
+
+    public void OnQuitToMenuPressed()
+    {
+        var instance = Instantiate(confirmationBox, transform);
+        instance.GetComponent<ConfirmationBox>().OnConfirmation += () =>
+        {
+            SceneManager.LoadScene(0);
+        };
+    }
+    
+    public void OnQuitPressed()
+    {
+        
+        var instance = Instantiate(confirmationBox, transform);
+        instance.GetComponent<ConfirmationBox>().OnConfirmation += Quit;
+        instance.GetComponent<ConfirmationBox>().OnCancelled += Resume;
+        
+    }
+    
     public void Quit()
     {
         #if UNITY_STANDALONE
@@ -52,5 +87,11 @@ public class PauseMenu : MonoBehaviour
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
+    }
+
+    private void OnDestroy()
+    {
+        confirmationBox.GetComponent<ConfirmationBox>().OnConfirmation -= Quit;
+        confirmationBox.GetComponent<ConfirmationBox>().OnCancelled -= Resume;
     }
 }
