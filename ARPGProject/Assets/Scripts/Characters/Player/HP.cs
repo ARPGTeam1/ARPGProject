@@ -7,6 +7,7 @@ namespace Characters.Player
 {
     public class HP : MonoBehaviour
     {
+        public event Action OnDeath;
         public int maxHP;
         [HideInInspector] public bool isDefeat;
         private NavMeshAgent _agent;
@@ -64,6 +65,7 @@ namespace Characters.Player
             this._agent.ResetPath();
             BeenDefeatedText.Invoke($"You are Defeated by {source}");
             this._source.PlayOneShot(this.deathSound);
+            OnDeath?.Invoke();
         }
     }
 }

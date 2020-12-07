@@ -1,19 +1,21 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-[System.Serializable]
+[Serializable]
 public class DestructableObject : MonoBehaviour, IDamagable
 {
+    public event Action<GameObject, int> OnDamaged;
+    
     private DropLoot _dropLoot;
-
+    
     private void Start()
     {
         _dropLoot = GetComponent<DropLoot>();
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int damage)
     {
-        /*var instance = Instantiate(myLoot.RandomDrop());
-        instance.transform.Translate(Vector3.up * 5, Space.World);*/
+        OnDamaged?.Invoke(gameObject, damage);
         _dropLoot.Drop();
         Destroy(gameObject);    
     }

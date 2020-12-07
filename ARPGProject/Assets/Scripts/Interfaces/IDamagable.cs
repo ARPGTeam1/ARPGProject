@@ -1,4 +1,8 @@
-﻿public interface IDamagable 
+﻿using System;
+using UnityEngine;
+
+public interface IDamagable
 {
-    void TakeDamage();
+    event Action<GameObject, int> OnDamaged;
+    void TakeDamage(int damage);
 }
