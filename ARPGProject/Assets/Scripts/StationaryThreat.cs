@@ -26,7 +26,10 @@ public class StationaryThreat : MonoBehaviour
 
     private void DamageTarget()
     {
-        _audioSource.PlayOneShot(_audioClip);
+        if (_audioClip != null)
+        {
+            _audioSource.PlayOneShot(_audioClip);
+        }
         target.TakeDamage(damage, this.name);
     }
 
