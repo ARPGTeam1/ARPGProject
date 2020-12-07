@@ -3,7 +3,12 @@ guid: f49ba84b7ba09724ca02d5f79069df66
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pandora
+    second: {fileID: 2100000, guid: 1df9126ba1ca3774aa6178c87f34e10c, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

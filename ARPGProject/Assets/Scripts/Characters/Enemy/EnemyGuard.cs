@@ -1,33 +1,80 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGuard : MonoBehaviour, IColliderListener
+namespace Characters.Enemy
 {
-
-    private GameObject target;
-
-    
-    public void Awake()
+    public class EnemyGuard : MonoBehaviour, IColliderListener
     {
-        // Collider collider = GetComponentInChildren<SphereCollider>();
-        // if (collider.gameObject != gameObject)
-        // {
-        //     ColliderBridge cb = collider.gameObject.AddComponent<ColliderBridge>();
-        //     cb.Initialize(this);
-        // }
-    }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (!other.gameObject.CompareTag("Player"))
-            return;
-    }
+        [SerializeField] private Collider collider;
+        private GameObject _target;
+        private Vector3 _targetTransform;
+        private MoveToTarget _moveToTarget;
+        private Patrol _patrol;
+        
+        private bool HasTarget => _target != null;
+        private bool CanMove => _moveToTarget != null;
+        private bool CanPatrol => _patrol != null;
 
-    public void OnTriggerExit(Collider other)
-    {
-        if (!other.gameObject.CompareTag("Player"))
-            return;
+        public void Awake()
+        {
+   
+        }
+        
+        private void Start()
+        {
+            collider.gameObject.AddComponent<ColliderBridge>(); 
+            collider.GetComponent<ColliderBridge>().Initialize(this);
+            _moveToTarget = this.gameObject.GetComponent<MoveToTarget>();
+            _patrol = this.gameObject.GetComponent<Patrol>();
+        }
+        
+        private void Update()
+        {
+            BehaviourTree();
+        }
+
+
+        private void BehaviourTree()
+        {
+            if (!HasTarget)
+            {
+                if (!CanPatrol)
+                {
+                    return;
+                }
+                
+                _patrol.enabled = true;
+                return;
+            }
+            
+            _targetTransform = new Vector3(_target.transform.position.x, this.transform.position.y, _target.transform.position.z);
+            this.transform.LookAt(_targetTransform);
+            if (CanMove)
+            {
+                if (!CanPatrol)
+                {
+                    _moveToTarget.MoveTowards(_target);
+                    return;
+                }
+
+                _patrol.enabled = false;
+                _moveToTarget.MoveTowards(_target);
+            }
+        }
+
+        public void OnTriggerEnter(Collider other)
+        {
+            if (!other.gameObject.CompareTag("Player"))
+                return;
+            _target = other.gameObject;
+        }
+
+        public void OnTriggerExit(Collider other)
+        {
+            if (!other.gameObject.CompareTag("Player"))
+                return;
+            _target = null;
+        }
     }
 }

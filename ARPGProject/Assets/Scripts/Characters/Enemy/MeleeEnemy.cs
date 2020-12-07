@@ -1,88 +1,91 @@
-﻿using UnityEngine;
-using Characters.Player;
+﻿using Characters.Player;
+using UnityEngine;
 
-public class MeleeEnemy : MonoBehaviour, IColliderListener
+namespace Characters.Enemy
 {
-
-    [SerializeField] private int damage;
-    [SerializeField] private float attackRange;
-    [SerializeField] private float attackWindupTime;
-    [SerializeField] private float attackTimeCooldown;
-    [SerializeField] private Collider collider;
-    
-    
-    private GameObject _target;
-    private HP _targetHpRef;
-    private bool _isAttacking;
-    //private float _elapsedTime;
-    
-    private float originalAttackCoolDown;
-    
-    public void Awake()
+    public class MeleeEnemy : MonoBehaviour, IColliderListener
     {
-        //_elapsedTime = 0f;
-        originalAttackCoolDown = attackTimeCooldown;
-    }
 
-    private void Start()
-    {
-        collider.gameObject.AddComponent<ColliderBridge>(); 
-        collider.GetComponent<ColliderBridge>().Initialize(this);
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        if (!other.gameObject.CompareTag("Player"))
-            return;
-        _target = other.gameObject;
-        if (_target != null)
+        [SerializeField] private int damage;
+        [SerializeField] private float attackRange;
+        [SerializeField] private float attackWindupTime;
+        [SerializeField] private float attackTimeCooldown;
+        [SerializeField] private Collider collider;
+    
+    
+        private GameObject _target;
+        private HP _targetHpRef;
+        private bool _isAttacking;
+        //private float _elapsedTime;
+    
+        private float originalAttackCoolDown;
+    
+        public void Awake()
         {
-            _targetHpRef = _target.GetComponent<HP>();
-            _isAttacking = true;
+            //_elapsedTime = 0f;
+            originalAttackCoolDown = attackTimeCooldown;
         }
-    }
 
-    private void Update()
-    {
-        if (attackTimeCooldown > 0)
+        private void Start()
         {
-            
-            attackTimeCooldown -= Time.deltaTime;
+            collider.gameObject.AddComponent<ColliderBridge>(); 
+            collider.GetComponent<ColliderBridge>().Initialize(this);
         }
-        else
+
+        public void OnTriggerEnter(Collider other)
         {
-            if (_isAttacking)
+            if (!other.gameObject.CompareTag("Player"))
+                return;
+            _target = other.gameObject;
+            if (_target != null)
             {
-                float distance = Vector3.Distance(this.transform.position, _target.transform.position);
-                if (distance < attackRange)
-                {
-                    DamageTarget();
-                    attackTimeCooldown = originalAttackCoolDown;
+                _targetHpRef = _target.GetComponent<HP>();
+                _isAttacking = true;
+            }
+        }
 
-                    /*
-                     * For when we have Enemy Attack animations? 
-                     */
-                    // _elapsedTime += Time.deltaTime; // Animation time ?
-                    // if (_elapsedTime > attackWindupTime)
-                    // {
-                    //     _elapsedTime = 0;
+        private void Update()
+        {
+            if (attackTimeCooldown > 0)
+            {
+            
+                attackTimeCooldown -= Time.deltaTime;
+            }
+            else
+            {
+                if (_isAttacking)
+                {
+                    float distance = Vector3.Distance(this.transform.position, _target.transform.position);
+                    if (distance < attackRange)
+                    {
+                        DamageTarget();
+                        attackTimeCooldown = originalAttackCoolDown;
+
+                        /*
+                        * For when we have Enemy Attack animations? 
+                        */
+                        // _elapsedTime += Time.deltaTime; // Animation time ?
+                        // if (_elapsedTime > attackWindupTime)
+                        // {
+                        //     _elapsedTime = 0;
                         //DamageTarget();
-                    //}
+                        //}
+                    }
                 }
             }
         }
-    }
 
-    private void DamageTarget()
-    {
-        _targetHpRef.TakeDamage(damage, this.name);
-    }
+        private void DamageTarget()
+        {
+            _targetHpRef.TakeDamage(damage, this.name);
+        }
     
-    public void OnTriggerExit(Collider other)
-    {
-        if (_target == null)
-            return;
-        _isAttacking = false;
-        _target = null;
+        public void OnTriggerExit(Collider other)
+        {
+            if (_target == null)
+                return;
+            _isAttacking = false;
+            _target = null;
+        }
     }
 }
