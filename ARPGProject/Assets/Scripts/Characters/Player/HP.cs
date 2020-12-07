@@ -8,8 +8,11 @@ namespace Characters.Player
     public class HP : MonoBehaviour
     {
         public int maxHP;
-        public bool isDefeat;
+        [HideInInspector] public bool isDefeat;
         private NavMeshAgent _agent;
+        private Animator _animator;
+        private AudioSource _source;
+        public AudioClip deathSound;
         [HideInInspector] public UnityEvent<int> HPChanged;
         [HideInInspector] public UnityEvent<string> BeenDefeatedText;
         private int _currentHp;
@@ -40,6 +43,8 @@ namespace Characters.Player
             CurrentHp = maxHP;
             isDefeat = false;
             this._agent = GetComponent<NavMeshAgent>();
+            this._animator = GetComponent<Animator>();
+            this._source = GetComponent<AudioSource>();
         }
 
         public void TakeDamage(int amount, string source)
@@ -54,8 +59,11 @@ namespace Characters.Player
         public void ToBeDefeated(string source)
         {
             isDefeat = true;
+            this._animator.SetBool("Dead", true);
             this._agent.velocity = Vector3.zero;
+            this._agent.ResetPath();
             BeenDefeatedText.Invoke($"You are Defeated by {source}");
+            this._source.PlayOneShot(this.deathSound);
         }
     }
 }

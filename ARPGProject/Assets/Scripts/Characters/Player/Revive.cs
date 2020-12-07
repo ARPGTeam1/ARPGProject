@@ -10,6 +10,7 @@ namespace Characters.Player
         private HP _hp;
         private NavMeshAgent _agent;
         private AudioSource _source;
+        private Animator _animator;
 
         private float _reviveDelay;
 
@@ -17,14 +18,15 @@ namespace Characters.Player
         public AudioClip clip;
         [HideInInspector] public Vector3 checkPoint = Vector3.zero;
 
-        public Vector3 UpdateCheckpoint(Vector3 location)
+        public void UpdateCheckpoint(Vector3 location)
         {
-            return this.checkPoint = location;
+            this.checkPoint = location;
         }
 
         private void Awake()
         {
             this._hp = GetComponent<HP>();
+            this._animator = GetComponent<Animator>();
             this._agent = GetComponent<NavMeshAgent>();
             this._source = GetComponent<AudioSource>();
             this._dUI = FindObjectOfType<DefeatUI>();
@@ -40,14 +42,14 @@ namespace Characters.Player
             //then regain control of the player character
             //make sure the player respawns in the same position they died in
             
-            //also please fucking play the sound
 
             switch (this._hp.isDefeat)
             {
                 case true:
-                    this._source.PlayOneShot(this.clip);
+                    // this._source.PlayOneShot(this.clip);
                     this._dUI.gameObject.SetActive(false);
-                    Invoke(nameof(ReviveLogic), this._reviveDelay);
+                    // Invoke(nameof(ReviveLogic), this._reviveDelay);
+                    ReviveLogic();
                     break;
                 case false:
                     Debug.LogError("Player isn't Dead. Please fix.");
@@ -59,6 +61,7 @@ namespace Characters.Player
         {
             this._hp.Heal();
             this._hp.isDefeat = false;
+            this._animator.SetBool("Dead", false);
         }
 
         public void CheckpointRevive()
@@ -67,9 +70,10 @@ namespace Characters.Player
             {
                 case true:
                     this._agent.Warp(this.checkPoint);
-                    this._source.PlayOneShot(this.clip);
+                    // this._source.PlayOneShot(this.clip);
                     this._dUI.gameObject.SetActive(false);
-                    Invoke(nameof(ReviveLogic), this._reviveDelay);
+                    // Invoke(nameof(ReviveLogic), this._reviveDelay);
+                    ReviveLogic();
                     break;
                 case false:
                     Debug.LogError("Player isn't Dead. Please fix.");
