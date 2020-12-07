@@ -6,12 +6,11 @@ namespace Characters.Enemy
     public class MoveToTarget : MonoBehaviour
     {
         
-        private EnemyGuard _enemyGuard;
         private NavMeshAgent _agent;
 
         void Start()
         {
-            _enemyGuard = GetComponentInParent<EnemyGuard>();
+            
             _agent = GetComponentInParent<NavMeshAgent>();
         }
 

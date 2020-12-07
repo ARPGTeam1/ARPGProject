@@ -7,12 +7,12 @@ namespace Characters.Enemy
     {
 
         [SerializeField] private Collider collider;
-        private GameObject target;
-        private Vector3 targetTransform;
+        private GameObject _target;
+        private Vector3 _targetTransform;
         private MoveToTarget _moveToTarget;
         private Patrol _patrol;
         
-        private bool HasTarget => target != null;
+        private bool HasTarget => _target != null;
         private bool CanMove => _moveToTarget != null;
         private bool CanPatrol => _patrol != null;
 
@@ -48,18 +48,18 @@ namespace Characters.Enemy
                 return;
             }
             
-            targetTransform = new Vector3(target.transform.position.x, this.transform.position.y, target.transform.position.z);
-            this.transform.LookAt(targetTransform);
+            _targetTransform = new Vector3(_target.transform.position.x, this.transform.position.y, _target.transform.position.z);
+            this.transform.LookAt(_targetTransform);
             if (CanMove)
             {
                 if (!CanPatrol)
                 {
-                    _moveToTarget.MoveTowards(target);
+                    _moveToTarget.MoveTowards(_target);
                     return;
                 }
 
                 _patrol.enabled = false;
-                _moveToTarget.MoveTowards(target);
+                _moveToTarget.MoveTowards(_target);
             }
         }
 
@@ -67,14 +67,14 @@ namespace Characters.Enemy
         {
             if (!other.gameObject.CompareTag("Player"))
                 return;
-            target = other.gameObject;
+            _target = other.gameObject;
         }
 
         public void OnTriggerExit(Collider other)
         {
             if (!other.gameObject.CompareTag("Player"))
                 return;
-            target = null;
+            _target = null;
         }
     }
 }
