@@ -13,24 +13,21 @@ public class LootTable : ScriptableObject
         return drops[randomNum];
     }
 
-    public List<GameObject> RandomDrop(int amount)
+    public IEnumerable<GameObject> RandomDrop(int amount)
     {
-        List<GameObject> dropped = new List<GameObject>();
+        var dropped = new List<GameObject>();
         
         if (amount > drops.Length) amount = drops.Length;
 
-        for (int i = 0; i < amount; i++)
+        while (dropped.Count < amount)
         {
             var drop = RandomDrop();
             if (dropped.Contains(drop))
             {
-                i--;
-                break;
+               continue;
             }
-            else
-            {
-                dropped.Add(drop);
-            }
+            dropped.Add(drop);
+            
         }
         return dropped;
     }
