@@ -6,12 +6,11 @@ namespace Characters.Enemy
     public class MoveToTarget : MonoBehaviour
     {
         
-        private EnemyGuard _enemyGuard;
         private NavMeshAgent _agent;
 
         void Start()
         {
-            _enemyGuard = GetComponentInParent<EnemyGuard>();
+            
             _agent = GetComponentInParent<NavMeshAgent>();
         }
 
@@ -22,10 +21,10 @@ namespace Characters.Enemy
             {
                 this._agent.SetDestination(target.transform.position);                
             }
-            // else
-            // {
-            //     this._agent.SetDestination(this.transform.position);
-            // }
+            else
+            {
+                this._agent.SetDestination(this.transform.position);
+            }
         }
     }
 }

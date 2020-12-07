@@ -7,31 +7,59 @@ namespace Characters.Enemy
     {
 
         [SerializeField] private Collider collider;
-        private GameObject target;
-        private Vector3 targetTransform;
-
-        private bool HasTarget => target != null;
+        private GameObject _target;
+        private Vector3 _targetTransform;
         private MoveToTarget _moveToTarget;
+        private Patrol _patrol;
+        
+        private bool HasTarget => _target != null;
+        private bool CanMove => _moveToTarget != null;
+        private bool CanPatrol => _patrol != null;
 
         public void Awake()
         {
    
         }
-
+        
         private void Start()
         {
             collider.gameObject.AddComponent<ColliderBridge>(); 
             collider.GetComponent<ColliderBridge>().Initialize(this);
             _moveToTarget = this.gameObject.GetComponent<MoveToTarget>();
+            _patrol = this.gameObject.GetComponent<Patrol>();
         }
-
+        
         private void Update()
         {
-            if (HasTarget)
+            BehaviourTree();
+        }
+
+
+        private void BehaviourTree()
+        {
+            if (!HasTarget)
             {
-                targetTransform = new Vector3(target.transform.position.x, this.transform.position.y, target.transform.position.z);
-                this.transform.LookAt(targetTransform);
-                _moveToTarget.MoveTowards(target);
+                if (!CanPatrol)
+                {
+                    return;
+                }
+                
+                _patrol.enabled = true;
+                return;
+            }
+            
+            _targetTransform = new Vector3(_target.transform.position.x, this.transform.position.y, _target.transform.position.z);
+            this.transform.LookAt(_targetTransform);
+            if (CanMove)
+            {
+                if (!CanPatrol)
+                {
+                    _moveToTarget.MoveTowards(_target);
+                    return;
+                }
+
+                _patrol.enabled = false;
+                _moveToTarget.MoveTowards(_target);
             }
         }
 
@@ -39,14 +67,14 @@ namespace Characters.Enemy
         {
             if (!other.gameObject.CompareTag("Player"))
                 return;
-            target = other.gameObject;
+            _target = other.gameObject;
         }
 
         public void OnTriggerExit(Collider other)
         {
             if (!other.gameObject.CompareTag("Player"))
                 return;
-            target = null;
+            _target = null;
         }
     }
 }
