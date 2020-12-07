@@ -10,31 +10,28 @@ namespace Characters.Enemy
         private GameObject target;
         private Vector3 targetTransform;
 
-        public bool HasTarget => target != null;
-
+        private bool HasTarget => target != null;
+        private MoveToTarget _moveToTarget;
 
         public void Awake()
         {
-            // Collider collider = GetComponentInChildren<SphereCollider>();
-            // if (collider.gameObject != gameObject)
-            // {
-            //     ColliderBridge cb = collider.gameObject.AddComponent<ColliderBridge>();
-            //     cb.Initialize(this);
-            // }
+   
         }
 
         private void Start()
         {
             collider.gameObject.AddComponent<ColliderBridge>(); 
             collider.GetComponent<ColliderBridge>().Initialize(this);
+            _moveToTarget = this.gameObject.GetComponent<MoveToTarget>();
         }
 
         private void Update()
         {
-            if (target)
+            if (HasTarget)
             {
                 targetTransform = new Vector3(target.transform.position.x, this.transform.position.y, target.transform.position.z);
                 this.transform.LookAt(targetTransform);
+                _moveToTarget.MoveTowards(target);
             }
         }
 
