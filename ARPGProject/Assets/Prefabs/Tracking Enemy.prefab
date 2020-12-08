@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6344310275866603774}
   - component: {fileID: 6344310275866603769}
   - component: {fileID: 6344310275866603768}
+  - component: {fileID: 552664607933081652}
   m_Layer: 0
   m_Name: Tracking Enemy
   m_TagString: Untagged
@@ -83,6 +84,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &552664607933081652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6344310275866603771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa947e69b03c2248bc499cde41b7724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50
+  attackRange: 4
+  attackWindupTime: 0
+  attackTimeCooldown: 0.5
 --- !u!1001 &6344310276424877460
 PrefabInstance:
   m_ObjectHideFlags: 0
