@@ -47,10 +47,16 @@ public class PauseMenu : MonoBehaviour
    {
        if (Paused) return;
        Pause();
-       PauseMenuUI.SetActive(true);
+       ShowPausMenuUI();
    }
 
-    void Pause()
+   private void ShowPausMenuUI()
+   {
+       PauseMenuUI.SetActive(true);
+       Pause();
+   }
+
+   void Pause()
     {
         Time.timeScale = 0f;
         Paused = true;
@@ -72,7 +78,7 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(false);
         var instance = Instantiate(confirmationBox, transform);
         instance.GetComponent<ConfirmationBox>().OnConfirmation += MainMenu;
-        instance.GetComponent<ConfirmationBox>().OnCancelled += Resume;
+        instance.GetComponent<ConfirmationBox>().OnCancelled += ShowPausMenuUI;
     }
     
     public void OnQuitPressed()
@@ -80,7 +86,7 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(false);
         var instance = Instantiate(confirmationBox, transform);
         instance.GetComponent<ConfirmationBox>().OnConfirmation += Quit;
-        instance.GetComponent<ConfirmationBox>().OnCancelled += Resume;
+        instance.GetComponent<ConfirmationBox>().OnCancelled += ShowPausMenuUI;
         
     }
     
