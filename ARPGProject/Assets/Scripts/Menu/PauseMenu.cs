@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     public static bool Paused;
     public GameObject PauseMenuUI;
     public GameObject confirmationBox;
+    public GameObject instructionPopup;
     public AudioClip WOHClickSound;
     public AudioClip WOHMenuSoundtrack;
 
@@ -31,6 +32,7 @@ public class PauseMenu : MonoBehaviour
    public void Resume()
     {
         PauseMenuUI.SetActive(false);
+        instructionPopup.SetActive(false);
         Time.timeScale = 1f;
         Paused = false;
     }
@@ -48,9 +50,10 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("This will load the Main Menu");
     }
     
-    void SeeInstructions()
+    public void SeeInstructions()
     {
-        
+        PauseMenuUI.SetActive(false);
+        instructionPopup.SetActive(true);
     }
 
     public void OnPausePressed()
