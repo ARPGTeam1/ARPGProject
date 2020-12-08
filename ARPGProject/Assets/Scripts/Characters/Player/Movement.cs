@@ -46,6 +46,8 @@ namespace Characters.Player
         
         private void MoveToMouse()
         {
+            this._agent.ResetPath(); 
+            this._rb.velocity = Vector3.zero;
             var ray = this._cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out var hit, this._cam.farClipPlane, this._ground) && !this._hitPoint.isDefeat)
                 this._agent.destination = hit.point;
