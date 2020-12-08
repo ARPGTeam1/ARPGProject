@@ -43,7 +43,7 @@ namespace Characters.Enemy
                         attackTimeCooldown = originalAttackCoolDown;
 
                         /*
-                        * For when we have Enemy Attack animations? 
+                        * ToDo: For when we have Enemy Attack animations? 
                         */
                         // _elapsedTime += Time.deltaTime; // Animation time ?
                         // if (_elapsedTime > attackWindupTime)

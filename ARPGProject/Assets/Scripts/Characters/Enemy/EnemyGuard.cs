@@ -13,11 +13,12 @@ namespace Characters.Enemy
         private MoveToTarget _moveToTarget;
         private Patrol _patrol;
         private MeleeEnemy _meleeEnemy;
+        private RangedEnemy _rangedEnemy;
         
         private bool HasTarget => _target != null;
         private bool CanMove => _moveToTarget != null;
         private bool CanPatrol => _patrol != null;
-        private bool CanAttack => _meleeEnemy != null;
+        private bool CanAttack => _meleeEnemy != null || _rangedEnemy != null;
 
         public void Awake()
         {
@@ -31,6 +32,7 @@ namespace Characters.Enemy
             _moveToTarget = this.gameObject.GetComponent<MoveToTarget>();
             _patrol = this.gameObject.GetComponent<Patrol>();
             _meleeEnemy = this.gameObject.GetComponent<MeleeEnemy>();
+            _rangedEnemy = this.gameObject.GetComponent<RangedEnemy>();
         }
         
         private void Update()
@@ -55,16 +57,37 @@ namespace Characters.Enemy
             _targetTransform = new Vector3(_target.transform.position.x, this.transform.position.y, _target.transform.position.z);
             this.transform.LookAt(_targetTransform);
             
-            if (CanMove && _moveToTarget.enabled)
-            {
-                if (!CanPatrol)
-                {
-                    _moveToTarget.MoveTowards(_target);
-                    return;
-                }
+            
+            // TODO: Create decisions for how to move or not depending on if Enemy has a Ranged Attack, and if the ReturnDistance is less than Min distance?
+            // also if able to move then, when when in range and using Ranged attack, stop
+            // otherwise, move towards target
 
-                _patrol.enabled = false;
-                _moveToTarget.MoveTowards(_target);
+            if (CanAttack)
+            {
+                if (_rangedEnemy && _rangedEnemy.ReturnDistance() >= _rangedEnemy.AttackMinRange)
+                {
+                    
+                }
+                else if( _rangedEnemy && _meleeEnemy )
+                {
+                    
+                }
+                else if(_meleeEnemy)
+                {
+                    
+                }
+                
+                if (CanMove && _moveToTarget.enabled)
+                {
+                    if (!CanPatrol)
+                    {
+                        _moveToTarget.MoveTowards(_target);
+                        return;
+                    }
+
+                    _patrol.enabled = false;
+                    _moveToTarget.MoveTowards(_target);
+                }
             }
         }
 
@@ -76,7 +99,10 @@ namespace Characters.Enemy
             
             if (CanAttack)
             {
-                _meleeEnemy.GetTarget(_target);
+                if(_rangedEnemy)
+                    _rangedEnemy.GetTarget(_target);
+                if(_meleeEnemy)
+                    _meleeEnemy.GetTarget(_target);
             }
         }
 
@@ -88,7 +114,10 @@ namespace Characters.Enemy
             
             if (CanAttack)
             {
-                _meleeEnemy.ForgetTarget();   
+                if (_rangedEnemy)
+                    _rangedEnemy.ForgetTarget();
+                if (_meleeEnemy)
+                    _meleeEnemy.ForgetTarget();
             }
         }
     }
