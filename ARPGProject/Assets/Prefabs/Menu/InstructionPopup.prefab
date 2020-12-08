@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6665985373288092698}
   - component: {fileID: 78002615984803906}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Insert instruction text here
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2444206737583829006, guid: cb0899bd97dd3dc4284e68f711777923, type: 3}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: OnPausePressed
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
