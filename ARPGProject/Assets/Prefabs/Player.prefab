@@ -150,7 +150,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: f723942951702f248849a1500a956dd6, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -197,7 +197,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -342,8 +342,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2fc4ee5d9b34831bab6f2c4fb1fe720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
+  maxHP: 30
   isDefeat: 0
+  deathSound: {fileID: 8300000, guid: 03306655b86180d44ab5291a95cd33b8, type: 3}
   HPChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -728,6 +729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3404074584164369778}
   - component: {fileID: 6657778371243977111}
+  - component: {fileID: 1853276306}
   m_Layer: 0
   m_Name: Skirt1.001
   m_TagString: Untagged
@@ -855,6 +857,25 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00024755485, y: -0.00034804642, z: 0.00046022888}
     m_Extent: {x: 0.040172517, y: 0.052930042, z: 0.02343956}
   m_DirtyAABB: 0
+--- !u!95 &1853276306
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749917935137541821}
+  m_Enabled: 0
+  m_Avatar: {fileID: 9000000, guid: c0741e5009b644648839662b71595907, type: 3}
+  m_Controller: {fileID: 9100000, guid: f723942951702f248849a1500a956dd6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1851348202814072541
 GameObject:
   m_ObjectHideFlags: 0
