@@ -14,7 +14,6 @@ namespace Characters.Enemy
         
         private GameObject _target;
         private HP _targetHpRef;
-        private bool _isAttacking;
         private float originalAttackCoolDown;
         //private float _elapsedTime;
         
@@ -35,7 +34,7 @@ namespace Characters.Enemy
             }
             else
             {
-                if (HasTarget)
+                if (HasTarget && !_targetHpRef.isDefeat)
                 {
                     float distance = Vector3.Distance(this.transform.position, _target.transform.position);
                     if (distance < attackRange)
