@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseMenuUI;
     public GameObject confirmationBox;
     public GameObject instructionPopup;
+    public AudioSource audiosource;
     public AudioClip WOHClickSound;
     public AudioClip WOHMenuSoundtrack;
 
@@ -91,6 +92,10 @@ public class PauseMenu : MonoBehaviour
         #endif
     }
 
+    public void OnClickSound()
+    {
+        audiosource.PlayOneShot(WOHClickSound); 
+    }
     private void OnDestroy()
     {
         confirmationBox.GetComponent<ConfirmationBox>().OnConfirmation -= Quit;

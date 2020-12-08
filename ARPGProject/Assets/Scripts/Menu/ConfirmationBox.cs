@@ -10,6 +10,9 @@ public class ConfirmationBox : MonoBehaviour
     public event Action OnConfirmation;
     public event Action OnCancelled;
     
+    public AudioSource audiosource;
+    public AudioClip WOHClickSound;
+    
     public void Setup()
     {
         
@@ -38,4 +41,10 @@ public class ConfirmationBox : MonoBehaviour
         OnCancelled?.Invoke();
         Destroy(gameObject);
     }
+    
+    public void OnClickSound()
+    {
+        audiosource.PlayOneShot(WOHClickSound); 
+    }
+    
 }
