@@ -1,8 +1,9 @@
 ﻿using System;
+using Characters.Enemy;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-[Serializable]
+[RequireComponent(typeof(Health))]
 public class DropLoot : MonoBehaviour
 {
     private enum DropType { RandomSingle, RandomMultiple, All, FirstInList  }

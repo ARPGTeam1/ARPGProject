@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5608858709600063706}
   - component: {fileID: 1343682341}
   - component: {fileID: 1343682340}
+  - component: {fileID: 225751541}
   m_Layer: 0
   m_Name: DestructableObject
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 5608858709600063709}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 87.8011, y: 4.17, z: 78.957306}
-  m_LocalScale: {x: 6.2802, y: 6.2802, z: 6.2802}
+  m_LocalScale: {x: 3.7744632, y: 3.7744632, z: 3.7744632}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -139,6 +140,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lootTable: {fileID: 11400000, guid: ff7e3066b5bd98b4abf472abc82dbaee, type: 2}
-  dropType: 1
+  dropType: 0
   amountOfDrops: 3
   launchSpeed: 500
+--- !u!114 &225751541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5608858709600063709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00010e16fa8bf842840c8797f2438d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDamageText: 1
+  damageTextPrefab: {fileID: 6131599464639163245, guid: a36437762455c6640827158090c4ef1d, type: 3}
+  maxHealth: 10
+  onDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1343682340}
+        m_TargetAssemblyTypeName: DropLoot, Assembly-CSharp
+        m_MethodName: Drop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
