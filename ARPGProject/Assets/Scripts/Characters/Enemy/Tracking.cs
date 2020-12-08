@@ -11,6 +11,7 @@ namespace Characters.Enemy
         public bool Escapeable;
         private bool reachable;
         private LineRenderer line;
+        public float visionAngle;
         [SerializeField] private Collider collider;
 
         public void Awake()
@@ -40,9 +41,20 @@ namespace Characters.Enemy
            agent.destination = transform.position;
         }
 
-        private void Update()
+        bool fieldVision(GameObject target)
         {
             if (_target != null)
+            {
+                Vector3 targetDir = target.transform.position - transform.position;
+                float angle = Vector3.Angle(targetDir, transform.forward);
+                return angle < visionAngle;
+            }
+            return false;
+        }
+
+        private void Update()
+        {
+            if (fieldVision(_target))
             {
                 agent.destination = _target.transform.position;
                 reachable = ! NavMesh.Raycast(transform.position, _target.transform.position, out NavMeshHit  hit, NavMesh.AllAreas);
