@@ -66,30 +66,72 @@ namespace Characters.Enemy
             {
                 if (_rangedEnemy && _rangedEnemy.ReturnDistance() >= _rangedEnemy.AttackMinRange)
                 {
-                    
+                    RangedOnly();
                 }
                 else if( _rangedEnemy && _meleeEnemy )
                 {
-                    
+                    RangedAndMelee();
                 }
                 else if(_meleeEnemy)
                 {
-                    
-                }
-                
-                if (CanMove && _moveToTarget.enabled)
-                {
-                    if (!CanPatrol)
-                    {
-                        _moveToTarget.MoveTowards(_target);
-                        return;
-                    }
-
-                    _patrol.enabled = false;
-                    _moveToTarget.MoveTowards(_target);
+                    MeleeOnly();
                 }
             }
         }
+
+        private void RangedOnly()
+        {
+            if (CanMove && _moveToTarget.enabled)
+            {
+                if (!CanPatrol)
+                {
+                    // Always stand still if within range
+                    // else move towards target
+                    
+                    _moveToTarget.MoveTowards(_target);
+                    return;
+                }
+
+                _patrol.enabled = false;
+                _moveToTarget.MoveTowards(_target);
+            }
+        }
+
+        private void RangedAndMelee()
+        {
+            if (CanMove && _moveToTarget.enabled)
+            {
+                // Check distance, first IF (priority) Ranged Damage if min-distance is greater
+                // Else, lower prio, when min-distance is less, opt to close distance and Melee
+                
+                if (!CanPatrol)
+                {
+                    _moveToTarget.MoveTowards(_target);
+                    return;
+                }
+
+                _patrol.enabled = false;
+                _moveToTarget.MoveTowards(_target);
+            }
+        }
+
+        private void MeleeOnly()
+        {
+            if (CanMove && _moveToTarget.enabled)
+            {
+                // Is probably fine as-is, behavior was built based on Melee first
+                
+                if (!CanPatrol)
+                {
+                    _moveToTarget.MoveTowards(_target);
+                    return;
+                }
+
+                _patrol.enabled = false;
+                _moveToTarget.MoveTowards(_target);
+            }
+        }
+        
 
         public void OnTriggerEnter(Collider other)
         {
