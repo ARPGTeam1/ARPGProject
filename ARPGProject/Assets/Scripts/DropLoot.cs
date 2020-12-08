@@ -1,9 +1,7 @@
 ﻿using System;
-using Characters.Enemy;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(Health))]
 public class DropLoot : MonoBehaviour
 {
     private enum DropType { RandomSingle, RandomMultiple, All, FirstInList  }
@@ -65,16 +63,4 @@ public class DropLoot : MonoBehaviour
         gtfo.AddForce(LaunchDirection() * launchSpeed);
         gtfo.AddTorque(gtfo.gameObject.transform.position - GameObject.FindWithTag("Player").transform.position);
     }
-    
-    #region Testing_DELETE_ME
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            Drop();
-            Destroy(gameObject);
-        }
-    }
-
-    #endregion
 }

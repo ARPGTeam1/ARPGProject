@@ -10,11 +10,6 @@ namespace Characters.Enemy
         [SerializeField] private bool spawnDamageText = true;
         [SerializeField] private GameObject damageTextPrefab;
         
-        public Health()
-        {
-            CurrentHealth = MaxHealth = maxHealth;
-        }
-        
         public int CurrentHealth
         {
             get => _currentHealth;

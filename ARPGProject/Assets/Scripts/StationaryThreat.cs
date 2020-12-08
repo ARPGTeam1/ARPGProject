@@ -11,14 +11,14 @@ public class StationaryThreat : MonoBehaviour
     [SerializeField] private AudioClip _audioClip;
     [SerializeField] private AudioSource _audioSource;
     
-    private HP target;
+    private HP _target;
 
     private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.CompareTag("Player"))
                 return;
-        target = other.gameObject.GetComponent<HP>();
-        if (target != null)
+        _target = other.gameObject.GetComponent<HP>();
+        if (_target != null)
         {
             InvokeRepeating(nameof(DamageTarget), startDamageTimerSeconds, repeatDamageTimerSeconds);         
         }
@@ -28,19 +28,19 @@ public class StationaryThreat : MonoBehaviour
     {
         if (_audioClip != null)
         {
-            if (!target.isDefeat)
+            if (!_target.isDefeat)
             {
                 _audioSource.PlayOneShot(_audioClip);    
             }
         }
-        target.TakeDamage(damage, this.name);
+        _target.TakeDamage(damage, this.name);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (target == null)
+        if (_target == null)
             return;
         CancelInvoke(nameof(DamageTarget));
-        target = null;
+        _target = null;
     }
 }
