@@ -111,7 +111,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3777453130044117930
 Transform:
   m_ObjectHideFlags: 0
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090cb0a1b5d3b6b47964c8836e69719a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider: {fileID: 2019832464271398300}
+  visionCollider: {fileID: 2019832464271398300}
 --- !u!114 &6864254133440587559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,7 +206,6 @@ MonoBehaviour:
   attackRange: 2
   attackWindupTime: 0
   attackTimeCooldown: 1
-  collider: {fileID: 3777453130044117929}
 --- !u!114 &4707203654422645439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,7 +375,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4582945053365865646}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 6

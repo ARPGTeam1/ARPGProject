@@ -1,20 +1,24 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Characters.Enemy
 {
     public class EnemyGuard : MonoBehaviour, IColliderListener
     {
 
-        [SerializeField] private Collider collider;
+        [FormerlySerializedAs("collider")] [SerializeField] private Collider visionCollider;
         private GameObject _target;
         private Vector3 _targetTransform;
         private MoveToTarget _moveToTarget;
         private Patrol _patrol;
+        private MeleeEnemy _meleeEnemy;
         
         private bool HasTarget => _target != null;
         private bool CanMove => _moveToTarget != null;
         private bool CanPatrol => _patrol != null;
+
+        private bool CanAttack => _meleeEnemy != null;
 
         public void Awake()
         {
@@ -23,10 +27,11 @@ namespace Characters.Enemy
         
         private void Start()
         {
-            collider.gameObject.AddComponent<ColliderBridge>(); 
-            collider.GetComponent<ColliderBridge>().Initialize(this);
+            visionCollider.gameObject.AddComponent<ColliderBridge>(); 
+            visionCollider.GetComponent<ColliderBridge>().Initialize(this);
             _moveToTarget = this.gameObject.GetComponent<MoveToTarget>();
             _patrol = this.gameObject.GetComponent<Patrol>();
+            _meleeEnemy = this.gameObject.GetComponent<MeleeEnemy>();
         }
         
         private void Update()
@@ -68,6 +73,11 @@ namespace Characters.Enemy
             if (!other.gameObject.CompareTag("Player"))
                 return;
             _target = other.gameObject;
+            
+            if (CanAttack)
+            {
+                _meleeEnemy.GetTarget(_target);
+            }
         }
 
         public void OnTriggerExit(Collider other)
@@ -75,6 +85,11 @@ namespace Characters.Enemy
             if (!other.gameObject.CompareTag("Player"))
                 return;
             _target = null;
+            
+            if (CanAttack)
+            {
+                _meleeEnemy.ForgetTarget();   
+            }
         }
     }
 }
