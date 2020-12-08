@@ -15,15 +15,13 @@ public class DestructableObject : MonoBehaviour
     
     private void OnCollisionEnter(Collision other)
     {
-        //GetComponent<IDamagable>().TakeDamage(other.gameObject.GetComponent<Player>().Damage());
+        if (!other.gameObject.CompareTag("Player")) return;
         
-        
-        if(other.gameObject.CompareTag("Player"))
-        {
-            health.TakeDamage(5);
-            if(health.IsDead)
-                Destroy(gameObject, 0.1f);
-        }
+        GetComponent<IDamagable>()?.TakeDamage(5);
+        if(health.IsDead)
+            Destroy(gameObject, 0.1f);
+
+       
         //if colliding with PlayerProjectile/weapon, (IPlayerDamageHandler?) 
         //get damageAmount from it (IPlayerDamageHandler.Damage)
         //deduct if from health with TakeDamage()

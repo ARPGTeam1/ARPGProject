@@ -26,7 +26,8 @@ namespace Menu
         private void LateUpdate()
         {
             //put moving text here with code or animate?
-            transform.LookAt(_mainCam.transform);
+            transform.LookAt(transform.position + _mainCam.transform.rotation * Vector3.forward, 
+                                _mainCam.transform.rotation * Vector3.up);
         }
     }
 }

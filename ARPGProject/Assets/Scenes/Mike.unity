@@ -232,17 +232,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
---- !u!114 &225751541 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 225751541, guid: 0ef533ccd4658fd408ac433b9dc6fe96, type: 3}
-  m_PrefabInstance: {fileID: 5608858710941607934}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b00010e16fa8bf842840c8797f2438d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &344053506
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4803037469379867756, guid: ef99832f0357b4a4485db7a0baabaeba, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4803037469379867756, guid: ef99832f0357b4a4485db7a0baabaeba, type: 3}
       propertyPath: m_LocalScale.z
@@ -348,7 +337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4803037469379867756, guid: ef99832f0357b4a4485db7a0baabaeba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.8
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: 4803037469379867756, guid: ef99832f0357b4a4485db7a0baabaeba, type: 3}
       propertyPath: m_LocalPosition.z
@@ -409,7 +398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 528528524810468096, guid: 3d5946ca0d6d06b42aee8001c52fe59f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.27
+      value: 6.52
       objectReference: {fileID: 0}
     - target: {fileID: 528528524810468096, guid: 3d5946ca0d6d06b42aee8001c52fe59f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -949,34 +938,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 225751541, guid: 0ef533ccd4658fd408ac433b9dc6fe96, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 225751541, guid: 0ef533ccd4658fd408ac433b9dc6fe96, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 225751541, guid: 0ef533ccd4658fd408ac433b9dc6fe96, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 225751541}
-    - target: {fileID: 225751541, guid: 0ef533ccd4658fd408ac433b9dc6fe96, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 225751541, guid: 0ef533ccd4658fd408ac433b9dc6fe96, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: DamageText
-      objectReference: {fileID: 0}
-    - target: {fileID: 225751541, guid: 0ef533ccd4658fd408ac433b9dc6fe96, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Characters.Enemy.Health, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 225751541, guid: 0ef533ccd4658fd408ac433b9dc6fe96, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5608858709600063702, guid: 0ef533ccd4658fd408ac433b9dc6fe96, type: 3}
       propertyPath: m_RootOrder
       value: 4
