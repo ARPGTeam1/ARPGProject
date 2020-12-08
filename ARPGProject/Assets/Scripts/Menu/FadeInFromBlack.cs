@@ -8,12 +8,7 @@ public class FadeInFromBlack : MonoBehaviour
         
     private void Start()
     {
-        var image = GetComponent<Image>();
-        var tempcolor = image.color;
-        tempcolor = new Color(0,0,0,1);
-        image.color = tempcolor;
-        
-        
+
         var rect = GetComponent<RectTransform>();
     
         rect.offsetMax = Vector2.zero;
@@ -25,7 +20,7 @@ public class FadeInFromBlack : MonoBehaviour
         var image = GetComponent<Image>();
         var tempcolor = image.color;
         
-        tempcolor.a -= 0.05f;
+        tempcolor.a -= 0.005f;
         image.color = tempcolor;
 
         if (tempcolor.a <= 0)

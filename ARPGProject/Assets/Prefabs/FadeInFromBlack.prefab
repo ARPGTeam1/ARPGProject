@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6746018228810323030}
   - component: {fileID: 8879483142863382022}
   - component: {fileID: 6888311865873674916}
-  - component: {fileID: 4757958109865387809}
+  - component: {fileID: 1493957549093752509}
   m_Layer: 5
   m_Name: FadeInFromBlack
   m_TagString: Untagged
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -89,9 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AspectMode: 3
+  m_AspectMode: 4
   m_AspectRatio: 1.6666666
---- !u!114 &4757958109865387809
+--- !u!114 &1493957549093752509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,7 +100,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7537701326722169736}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14cf943eee494cc47a8b3a47400a8530, type: 3}
+  m_Script: {fileID: 11500000, guid: 44df06e731e358741b5d433671ae877c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadein: 0
