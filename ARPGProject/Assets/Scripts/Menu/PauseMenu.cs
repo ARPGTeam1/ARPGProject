@@ -21,8 +21,11 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetKeyDown(KeyCode.P)))
 
-            if (Paused) 
+            if (Paused)
+            {
+                OnClickSound();
                 Resume();
+            }
             else
                 OnPausePressed();
     }

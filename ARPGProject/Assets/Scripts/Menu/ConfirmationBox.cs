@@ -10,7 +10,7 @@ public class ConfirmationBox : MonoBehaviour
     public event Action OnConfirmation;
     public event Action OnCancelled;
     
-    public AudioSource audiosource;
+    private AudioSource audiosource;
     public AudioClip WOHClickSound;
     
     public void Setup()
@@ -18,14 +18,22 @@ public class ConfirmationBox : MonoBehaviour
         
     }
 
+    void Start()
+    {
+        audiosource = GetComponentInParent<AudioSource>();
+    }
+    
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            OnClickSound();
             Confirm();
         }
         else if(Input.GetKeyDown(KeyCode.Escape))
         {
+            OnClickSound();
             Deny();
         }
     }
@@ -38,13 +46,15 @@ public class ConfirmationBox : MonoBehaviour
 
     public void Deny()
     {
+        
         OnCancelled?.Invoke();
         Destroy(gameObject);
     }
     
     public void OnClickSound()
     {
-        audiosource.PlayOneShot(WOHClickSound); 
+        audiosource.clip = WOHClickSound;
+        audiosource.Play();
     }
     
 }
