@@ -145,13 +145,14 @@ GameObject:
   - component: {fileID: 6999371300191676480}
   - component: {fileID: 891300878251167222}
   - component: {fileID: 6587237166169066824}
+  - component: {fileID: 4066536335572635165}
   m_Layer: 5
   m_Name: InstructionPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6999371300191676480
 RectTransform:
   m_ObjectHideFlags: 0
@@ -211,6 +212,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4066536335572635165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4208903152079682636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2783c056195de4e4ab9a175e12e9e7ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4358565422350408908
 GameObject:
   m_ObjectHideFlags: 0
