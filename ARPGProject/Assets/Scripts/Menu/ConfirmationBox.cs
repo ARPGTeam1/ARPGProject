@@ -14,7 +14,19 @@ public class ConfirmationBox : MonoBehaviour
     {
         
     }
-    
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Confirm();
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Deny();
+        }
+    }
+
     public void Confirm()
     {
        OnConfirmation?.Invoke();

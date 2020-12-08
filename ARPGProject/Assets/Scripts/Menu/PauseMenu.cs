@@ -62,6 +62,7 @@ public class PauseMenu : MonoBehaviour
 
     public void OnQuitToMenuPressed()
     {
+        PauseMenuUI.SetActive(false);
         var instance = Instantiate(confirmationBox, transform);
         instance.GetComponent<ConfirmationBox>().OnConfirmation += () =>
         {
@@ -71,7 +72,7 @@ public class PauseMenu : MonoBehaviour
     
     public void OnQuitPressed()
     {
-        
+        PauseMenuUI.SetActive(false);
         var instance = Instantiate(confirmationBox, transform);
         instance.GetComponent<ConfirmationBox>().OnConfirmation += Quit;
         instance.GetComponent<ConfirmationBox>().OnCancelled += Resume;
