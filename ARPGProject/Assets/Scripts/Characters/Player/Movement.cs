@@ -31,7 +31,7 @@ namespace Characters.Player
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(0))
                 MoveToMouse();
 
             if (ShouldStop())
