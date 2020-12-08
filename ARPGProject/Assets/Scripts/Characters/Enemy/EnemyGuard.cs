@@ -17,7 +17,6 @@ namespace Characters.Enemy
         private bool HasTarget => _target != null;
         private bool CanMove => _moveToTarget != null;
         private bool CanPatrol => _patrol != null;
-
         private bool CanAttack => _meleeEnemy != null;
 
         public void Awake()
@@ -55,7 +54,8 @@ namespace Characters.Enemy
             
             _targetTransform = new Vector3(_target.transform.position.x, this.transform.position.y, _target.transform.position.z);
             this.transform.LookAt(_targetTransform);
-            if (CanMove)
+            
+            if (CanMove && _moveToTarget.enabled)
             {
                 if (!CanPatrol)
                 {
