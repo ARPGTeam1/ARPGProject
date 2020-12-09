@@ -26,6 +26,7 @@ namespace Characters.Enemy
 
         public event Action<int> OnHealthChanged;
         public event Action<int> OnDamaged;
+        public event Action OnDeath;
         public UnityEvent onDeath;
         
         public bool IsDead => CurrentHealth <= 0;
@@ -48,6 +49,12 @@ namespace Characters.Enemy
             {
                 onDeath.Invoke();
             }
+        }
+
+        public void Kill()
+        {
+            OnDeath?.Invoke();
+            Destroy(gameObject);
         }
 
         public void Heal()

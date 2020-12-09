@@ -1,5 +1,4 @@
-﻿using Characters.Enemy;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Characters.Player
 {
@@ -20,9 +19,10 @@ namespace Characters.Player
             this._ground = LayerMask.GetMask("Ground");
 
         }
-
+        
         private void Update()
         {
+            
             if (_health.isDefeat) return;
             
             if (Input.GetMouseButtonDown(0))

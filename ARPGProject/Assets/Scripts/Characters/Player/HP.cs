@@ -58,6 +58,11 @@ namespace Characters.Player
             }
         }
 
+        public void Kill()
+        {
+            //ToBeDefeated();
+        }
+
         public void ToBeDefeated(string source)
         {
             isDefeat = true;
