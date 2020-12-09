@@ -12,7 +12,6 @@ namespace Characters.Player
         [HideInInspector] public bool isDefeat;
         private NavMeshAgent _agent;
         private Animator _animator;
-        private PlayerAnimation _animation;
         private AudioSource _source;
         public AudioClip deathSound;
         [HideInInspector] public UnityEvent<int> HPChanged;
