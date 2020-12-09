@@ -17,17 +17,24 @@ public class PauseMenu : MonoBehaviour
 
     private InstructionPopup _instruction;
 
+    private void Start()
+    {
+        audiosource = GetComponentInChildren<AudioSource>();
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || (Input.GetKeyDown(KeyCode.P)))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+        {
+            OnClickSound();
 
             if (Paused)
             {
-                OnClickSound();
                 Resume();
             }
             else
                 OnPausePressed();
+        }
     }
 
    public void Resume()
@@ -35,7 +42,7 @@ public class PauseMenu : MonoBehaviour
         if (_instruction != null)
         {
             DestroyImmediate(_instruction.gameObject);
-            PauseMenuUI.SetActive(true);
+            ShowPausMenuUI();
         }else {
             PauseMenuUI.SetActive(false);
             Time.timeScale = 1f;
@@ -46,7 +53,6 @@ public class PauseMenu : MonoBehaviour
    public void OnPausePressed()
    {
        if (Paused) return;
-       Pause();
        ShowPausMenuUI();
    }
 
