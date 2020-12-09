@@ -54,6 +54,14 @@ public class RangedEnemy : MonoBehaviour
                 float distance = Vector3.Distance(this.transform.position, _target.transform.position);
                 if (distance < attackMaxRange && distance > attackMinRange)
                 {
+                    //TODO: Spawn Projectile Prefab (perhaps has Tracking script on it?) and give it a target?
+                    if (shouldShootSpawnProjectile)
+                    {
+                        // Just placeholder for now
+                        DamageTarget();
+                        return;
+                    }
+                    //Otherwise just shoot the target like hitscan
                     DamageTarget();
                     attackTimeCooldown = originalAttackCoolDown;
 
