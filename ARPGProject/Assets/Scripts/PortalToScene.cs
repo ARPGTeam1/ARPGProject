@@ -10,7 +10,7 @@ public class PortalToScene : MonoBehaviour
     [SerializeField] private TextMeshPro destinationText;
     [SerializeField] private string prefixToDestName;
     [SerializeField] private bool textFacesPlayer;
-    [SerializeField] private ParticleSystem _particleSystem;
+    //[SerializeField] private ParticleSystem _particleSystem;
     private Camera mainCam; 
     
     private void Start()
@@ -18,7 +18,7 @@ public class PortalToScene : MonoBehaviour
         destinationText.SetText($"{prefixToDestName} {scene.name}");
         destinationText.enabled = false;
         mainCam = Camera.main;
-        _particleSystem.Stop();
+        //_particleSystem.Stop();
     }
 
     private void FixedUpdate()
@@ -40,13 +40,13 @@ public class PortalToScene : MonoBehaviour
     {
         destinationText.enabled = true;
         Debug.Log($"{name} became VISIBLE");
-        _particleSystem.Play();
+        //_particleSystem.Play();
     }
 
     private void OnBecameInvisible()
     {
         destinationText.enabled = false;
         Debug.Log($"{name} became invisible");
-        _particleSystem.Stop();
+        //_particleSystem.Stop();
     }
 }

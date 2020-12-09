@@ -25,8 +25,11 @@ namespace Characters.Player
                 var ray = this._cam.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out var hit, this._cam.farClipPlane))
                 {
-                    if(Vector3.Distance(transform.position,hit.transform.position) <= _weapon.stats.attackRange)
-                        SwingWeapon(hit.transform.GetComponent<IDamagable>());
+                    if (hit.transform.gameObject.CompareTag("Enemy"))
+                    {
+                        if(Vector3.Distance(transform.position,hit.transform.position) <= _weapon.stats.attackRange)
+                            SwingWeapon(hit.transform.GetComponent<IDamagable>());
+                    }
                 }
             }
 
