@@ -12,7 +12,7 @@ namespace Characters.Enemy
         private bool reachable;
         private LineRenderer line;
         public float visionAngle;
-        [SerializeField] private Collider collider;
+        [SerializeField] private new Collider collider;
 
         public void Awake()
         {
@@ -68,7 +68,8 @@ namespace Characters.Enemy
             line.enabled = reachable;
             line.SetPosition(0, transform.position);
             if(reachable) line.SetPosition(1, _target.transform.position);
-            line.SetWidth(reachable ? 0.1f : 0f, reachable ? 0.1f : 0f);
+            line.startWidth = reachable ? 0.1f : 0f;
+            line.endWidth = reachable ? 0.1f : 0f;
             line.startColor= Color.yellow;
             line.endColor= Color.red;
         }
