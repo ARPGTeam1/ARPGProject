@@ -14,6 +14,10 @@ namespace Characters.Player
         private Animator _animator;
         private Rigidbody _rb;
 
+        [SerializeField] private GameObject clickDestinationPrefab;
+
+        public bool HasEffect => clickDestinationPrefab != null;
+        
         private bool IsMoving()
         {
             return this._agent.velocity.magnitude > 0;
@@ -32,7 +36,10 @@ namespace Characters.Player
         private void Update()
         {
             if (Input.GetMouseButtonDown(0))
+            {
                 MoveToMouse();
+                
+            }
 
             if (ShouldStop())
             {
@@ -50,7 +57,15 @@ namespace Characters.Player
             this._rb.velocity = Vector3.zero;
             var ray = this._cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out var hit, this._cam.farClipPlane, this._ground) && !this._hitPoint.isDefeat)
+            {
                 this._agent.destination = hit.point;
+                if (HasEffect)
+                {
+                    var instance = Instantiate(clickDestinationPrefab, hit.point, Quaternion.identity);
+                    Destroy(instance, instance.GetComponent<ParticleSystem>().main.duration);
+                    
+                }
+            }
         }
         
         private bool ShouldStop()

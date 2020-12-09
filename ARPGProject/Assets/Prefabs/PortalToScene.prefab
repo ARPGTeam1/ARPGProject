@@ -50,7 +50,8 @@ MonoBehaviour:
   scene: {fileID: 0}
   destinationText: {fileID: 4250087541440225086}
   prefixToDestName: Teleport to
-  textFacesPlayer: 0
+  textFacesPlayer: 1
+  _particleSystem: {fileID: 198364770514263595}
 --- !u!65 &528528524810468099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4038,7 +4039,7 @@ ParticleSystem:
         m_RotationOrder: 4
     maxLights: 20
   TrailModule:
-    enabled: 1
+    enabled: 0
     mode: 0
     ratio: 1
     lifetime:
@@ -4872,7 +4873,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 2100000, guid: d78e8c5940a6ba5418fca673c0315ab2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
