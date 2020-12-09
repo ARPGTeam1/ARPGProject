@@ -842,6 +842,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6d034ca4c943b04a941a6a2ac2867f0, type: 3}
+--- !u!1 &1459208387 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6344310275866603771, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+  m_PrefabInstance: {fileID: 6344310276152486282}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1459208388 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 664047108803499833, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+  m_PrefabInstance: {fileID: 6344310276152486282}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459208387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090cb0a1b5d3b6b47964c8836e69719a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1459208395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459208387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00010e16fa8bf842840c8797f2438d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDamageText: 1
+  damageTextPrefab: {fileID: 6131599464639163245, guid: a36437762455c6640827158090c4ef1d, type: 3}
+  maxHealth: 50
+  onDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1459208388}
+        m_TargetAssemblyTypeName: Characters.Enemy.EnemyGuard, Assembly-CSharp
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1537869305
 GameObject:
   m_ObjectHideFlags: 0

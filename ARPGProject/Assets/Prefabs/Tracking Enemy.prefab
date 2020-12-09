@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 664047108803499833}
   - component: {fileID: 1459208394}
   - component: {fileID: 1459208393}
+  - component: {fileID: 1459208395}
   m_Layer: 0
   m_Name: Tracking Enemy
   m_TagString: Enemy
@@ -132,10 +133,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa947e69b03c2248bc499cde41b7724, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 10
   attackRange: 4
   attackWindupTime: 0
-  attackTimeCooldown: 0.5
+  attackTimeCooldown: 1
 --- !u!114 &664047108803499833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +179,36 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.75
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1459208395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6344310275866603771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00010e16fa8bf842840c8797f2438d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDamageText: 1
+  damageTextPrefab: {fileID: 6131599464639163245, guid: a36437762455c6640827158090c4ef1d, type: 3}
+  maxHealth: 50
+  onDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 664047108803499833}
+        m_TargetAssemblyTypeName: Characters.Enemy.EnemyGuard, Assembly-CSharp
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7146324214373211162
 GameObject:
   m_ObjectHideFlags: 0

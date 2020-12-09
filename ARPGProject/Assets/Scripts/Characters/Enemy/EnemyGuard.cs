@@ -1,10 +1,12 @@
 ﻿using System;
+using Interfaces;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace Characters.Enemy
 {
-    public class EnemyGuard : MonoBehaviour, IColliderListener
+    [RequireComponent(typeof(Health))]
+    public class EnemyGuard : MonoBehaviour, IColliderListener, IKillable
     {
 
         [FormerlySerializedAs("collider")] [SerializeField] private Collider visionCollider;
@@ -14,6 +16,7 @@ namespace Characters.Enemy
         private Patrol _patrol;
         private MeleeEnemy _meleeEnemy;
         private RangedEnemy _rangedEnemy;
+        private Health _health;
         
         private bool HasTarget => _target != null;
         private bool CanMove => _moveToTarget != null;
@@ -24,6 +27,12 @@ namespace Characters.Enemy
         {
    
         }
+
+
+        public void Kill()
+        {
+           Destroy(gameObject);
+        }
         
         private void Start()
         {
@@ -33,10 +42,12 @@ namespace Characters.Enemy
             _patrol = this.gameObject.GetComponent<Patrol>();
             _meleeEnemy = this.gameObject.GetComponent<MeleeEnemy>();
             _rangedEnemy = this.gameObject.GetComponent<RangedEnemy>();
+            _health = GetComponent<Health>();
         }
         
         private void Update()
         {
+            //if (_health.IsDead) return;
             BehaviourTree();
         }
 
@@ -134,8 +145,6 @@ namespace Characters.Enemy
             }
         }
 
-        
-        
         private bool DetermineDistance()
         {
             if (_rangedEnemy.ReturnDistance() >= _rangedEnemy.AttackMinRange &&
@@ -146,7 +155,6 @@ namespace Characters.Enemy
 
             return false;
         }
-        
 
         public void OnTriggerEnter(Collider other)
         {
