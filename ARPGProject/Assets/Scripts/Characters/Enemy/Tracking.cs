@@ -56,8 +56,8 @@ namespace Characters.Enemy
         {
             if (fieldVision(_target))
             {
-                agent.destination = _target.transform.position;
                 reachable = ! NavMesh.Raycast(transform.position, _target.transform.position, out NavMeshHit  hit, NavMesh.AllAreas);
+                agent.destination = reachable?_target.transform.position: this.transform.position;
             }
 
             Drawline(reachable);
