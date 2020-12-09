@@ -15,6 +15,7 @@ namespace Characters.Player
         private float _reviveDelay;
 
         private DefeatUI _dUI;
+        public GameObject defeatUI;
         public AudioClip clip;
         [HideInInspector] public Vector3 checkPoint = Vector3.zero;
 
@@ -47,7 +48,7 @@ namespace Characters.Player
             {
                 case true:
                     // this._source.PlayOneShot(this.clip);
-                    this._dUI.gameObject.SetActive(false);
+                    this.defeatUI.SetActive(false);
                     // Invoke(nameof(ReviveLogic), this._reviveDelay);
                     ReviveLogic();
                     break;
@@ -62,6 +63,7 @@ namespace Characters.Player
             this._hp.Heal();
             this._hp.isDefeat = false;
             this._animator.SetBool("Dead", false);
+            this._dUI.StartCoroutine(this._dUI.FadeSquare(false));
         }
 
         public void CheckpointRevive()
@@ -71,7 +73,7 @@ namespace Characters.Player
                 case true:
                     this._agent.Warp(this.checkPoint);
                     // this._source.PlayOneShot(this.clip);
-                    this._dUI.gameObject.SetActive(false);
+                    this.defeatUI.SetActive(false);
                     // Invoke(nameof(ReviveLogic), this._reviveDelay);
                     ReviveLogic();
                     break;

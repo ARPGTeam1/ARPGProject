@@ -42,3 +42,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: FadeOut
+    uniqueID: 2439302833
+    locked: 0
