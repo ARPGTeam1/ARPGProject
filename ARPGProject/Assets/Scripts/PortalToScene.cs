@@ -9,6 +9,7 @@ public class PortalToScene : MonoBehaviour
     public Object scene;
     [SerializeField] private TextMeshPro destinationText;
     [SerializeField] private string prefixToDestName;
+    [SerializeField] private bool textFacesPlayer;
     private Camera mainCam; 
     private void Start()
     {
@@ -19,28 +20,28 @@ public class PortalToScene : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (destinationText.enabled)
+        if (destinationText.enabled && textFacesPlayer)
         {
             destinationText.transform.LookAt(mainCam.transform);
             destinationText.transform.Rotate(Vector3.up * 180);
         }
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-            destinationText.enabled = true;
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-            destinationText.enabled = false;
-    }
-
     private void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.CompareTag("Player"))
             SceneManager.LoadScene(scene.name);
+    }
+
+    private void OnBecameVisible()
+    {
+        destinationText.enabled = true;
+        Debug.Log($"{name} became VISIBLE");
+    }
+
+    private void OnBecameInvisible()
+    {
+        destinationText.enabled = false;
+        Debug.Log($"{name} became invisible");
     }
 }

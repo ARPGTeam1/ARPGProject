@@ -26,7 +26,7 @@ public class RockSlide : MonoBehaviour
     {
         
         var random = Random.Range(minSize, maxSize);
-        var instance = Instantiate(rockSlidePrefab, transform.position, Quaternion.identity);
+        var instance = Instantiate(rockSlidePrefab, transform.position, Quaternion.identity, transform);
         instance.transform.localScale = new Vector3(random, random, random);
         random = Random.Range(minSize, maxSize);
         instance.GetComponent<Rigidbody>().AddTorque(Vector3.forward * torque);
