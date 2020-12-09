@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 namespace Characters.Enemy
 {
     [RequireComponent(typeof(Health))]
-    public class EnemyGuard : MonoBehaviour, IColliderListener, IKillable
+    public class EnemyBehavior : MonoBehaviour, IColliderListener, IKillable
     {
 
         [FormerlySerializedAs("collider")] [SerializeField] private Collider visionCollider;
