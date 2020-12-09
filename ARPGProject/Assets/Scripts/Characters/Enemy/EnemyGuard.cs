@@ -56,23 +56,18 @@ namespace Characters.Enemy
             
             _targetTransform = new Vector3(_target.transform.position.x, this.transform.position.y, _target.transform.position.z);
             this.transform.LookAt(_targetTransform);
-            
-            
-            // TODO: Create decisions for how to move or not depending on if Enemy has a Ranged Attack, and if the ReturnDistance is less than Min distance?
-            // also if able to move then, when when in range and using Ranged attack, stop
-            // otherwise, move towards target
 
             if (CanAttack)
             {
-                if (_rangedEnemy && _rangedEnemy.ReturnDistance() >= _rangedEnemy.AttackMinRange)
-                {
-                    RangedOnly();
-                }
-                else if( _rangedEnemy && _meleeEnemy )
+                if (_rangedEnemy && _meleeEnemy)
                 {
                     RangedAndMelee();
                 }
-                else if(_meleeEnemy)
+                else if( _rangedEnemy && !_meleeEnemy)
+                {
+                    RangedOnly();
+                }
+                else if(_meleeEnemy && !_rangedEnemy)
                 {
                     MeleeOnly();
                 }
@@ -81,29 +76,53 @@ namespace Characters.Enemy
 
         private void RangedOnly()
         {
+            
+            if (DetermineDistance()) return;
             if (CanMove && _moveToTarget.enabled)
             {
+                
                 if (!CanPatrol)
                 {
-                    // Always stand still if within range
-                    // else move towards target
+                    // TODO: Perhaps run away if only Ranged and target is too close?
+                    // OR Only Ranged enemy has no minimum range?
                     
-                    _moveToTarget.MoveTowards(_target);
+                    _moveToTarget.MoveTowards(this.gameObject);
                     return;
                 }
 
                 _patrol.enabled = false;
-                _moveToTarget.MoveTowards(_target);
+                _moveToTarget.MoveTowards(this.gameObject);
             }
         }
 
         private void RangedAndMelee()
         {
+
+            if (DetermineDistance()) return;
+            if (_rangedEnemy.ReturnDistance() <= _rangedEnemy.AttackMinRange)
+            {
+                
+                if (CanMove && _moveToTarget.enabled)
+                {
+                    
+                
+                    if (!CanPatrol)
+                    {
+                        _moveToTarget.MoveTowards(_target);
+                        return;
+                    }
+
+                    _patrol.enabled = false;
+                    _moveToTarget.MoveTowards(_target);
+                }    
+            }
+        }
+
+        private void MeleeOnly()
+        {
+            
             if (CanMove && _moveToTarget.enabled)
             {
-                // Check distance, first IF (priority) Ranged Damage if min-distance is greater
-                // Else, lower prio, when min-distance is less, opt to close distance and Melee
-                
                 if (!CanPatrol)
                 {
                     _moveToTarget.MoveTowards(_target);
@@ -115,21 +134,17 @@ namespace Characters.Enemy
             }
         }
 
-        private void MeleeOnly()
+        
+        
+        private bool DetermineDistance()
         {
-            if (CanMove && _moveToTarget.enabled)
+            if (_rangedEnemy.ReturnDistance() >= _rangedEnemy.AttackMinRange &&
+                _rangedEnemy.ReturnDistance() <= _rangedEnemy.AttackMaxRange)
             {
-                // Is probably fine as-is, behavior was built based on Melee first
-                
-                if (!CanPatrol)
-                {
-                    _moveToTarget.MoveTowards(_target);
-                    return;
-                }
-
-                _patrol.enabled = false;
-                _moveToTarget.MoveTowards(_target);
+                return true;
             }
+
+            return false;
         }
         
 

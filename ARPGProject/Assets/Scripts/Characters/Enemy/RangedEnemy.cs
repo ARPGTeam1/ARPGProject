@@ -11,11 +11,14 @@ public class RangedEnemy : MonoBehaviour
     [SerializeField] private float attackMaxRange;
     [SerializeField] private float attackWindupTime;
     [SerializeField] private float attackTimeCooldown;
+    [SerializeField] private bool shouldShootSpawnProjectile;
+    
+    
     
     private GameObject _target;
     private HP _targetHpRef;
     private float originalAttackCoolDown;
-    
+
     private bool HasTarget => _target != null;
     private float _currentRange;
     
@@ -24,7 +27,18 @@ public class RangedEnemy : MonoBehaviour
         get => attackMinRange;
     }
     
+    public float AttackMaxRange
+    {
+        get => attackMaxRange;
+    }
+    
 
+    public void Awake()
+    {
+        //_elapsedTime = 0f;
+        originalAttackCoolDown = attackTimeCooldown;
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -71,6 +85,7 @@ public class RangedEnemy : MonoBehaviour
     
     private void DamageTarget()
     {
+        Debug.Log("Shooting player");
         _targetHpRef.TakeDamage(damage, this.name);
     }
 
