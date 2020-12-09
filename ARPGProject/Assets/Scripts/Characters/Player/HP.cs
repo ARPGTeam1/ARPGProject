@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 namespace Characters.Player
 {
-    public class HP : MonoBehaviour
+    public class HP : MonoBehaviour, IDamagable
     {
         public event Action OnDeath;
         public int maxHP;
@@ -51,6 +51,7 @@ namespace Characters.Player
         public void TakeDamage(int amount, string source)
         {
             CurrentHp -= amount;
+            //Play takeDamage sound or trigger fmod event?
             if (CurrentHp <= 0 && !isDefeat)
             {
                 ToBeDefeated(source);

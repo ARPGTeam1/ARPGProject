@@ -35,7 +35,7 @@ namespace Characters.Enemy
             CurrentHealth = MaxHealth;
         }
 
-        public void TakeDamage(int damage)
+        public void TakeDamage(int damage, string source)
         {
             if(IsDead) return;
             
