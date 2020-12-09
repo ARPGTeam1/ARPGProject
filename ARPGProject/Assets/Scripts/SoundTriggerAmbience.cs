@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource), typeof(BoxCollider))]
@@ -20,6 +21,16 @@ public class SoundTriggerAmbience : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        StartCoroutine(nameof(Fade));
+    }
+
+    IEnumerator Fade()
+    {
+        while (_audioSource.volume > 0)
+        {
+            _audioSource.volume -= Time.deltaTime;
+            yield return new WaitForSeconds(0.1f);
+        }
         _audioSource.Stop();
     }
 
