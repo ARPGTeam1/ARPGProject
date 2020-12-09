@@ -1,4 +1,5 @@
-﻿using Characters.Player;
+﻿using System.Collections;
+using Characters.Player;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,21 +7,56 @@ namespace Menu
 {
     public class DefeatUI : MonoBehaviour
     {
+        public GameObject player;
+        public GameObject defeatUI;
+        public SpriteRenderer fadeSquare;
         public UnityEvent<string> DefeatUIText;
         private HP hitPoint;
 
 
         private void Start()
         {
-            this.hitPoint = GetComponentInParent<HP>();
+            this.hitPoint = this.player.GetComponent<HP>();
             this.hitPoint.BeenDefeatedText.AddListener(onDefeated);
-            this.gameObject.SetActive(false);
+            this.defeatUI.SetActive(false);
         }
 
         private void onDefeated(string text)
         {
             this.DefeatUIText.Invoke(text);
-            this.gameObject.SetActive(true);
+            StartCoroutine(FadeSquare());
+            Invoke(nameof(ActivateUI), 3);
+        }
+
+        private void ActivateUI() => this.defeatUI.SetActive(true);
+
+        public IEnumerator FadeSquare(bool fadeToBlack = true, int fadeSpeed = 1)
+        {
+            Color objectColor = this.fadeSquare.color;
+            float fadeAmount;
+
+            if (fadeToBlack)
+            {
+                while (this.fadeSquare.color.a < 1)
+                {
+                    fadeAmount = objectColor.a + (fadeSpeed * Time.deltaTime);
+                    
+                    objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                    this.fadeSquare.color = objectColor;
+                    yield return null;
+                }
+            }
+            else
+            {
+                while (this.fadeSquare.color.a > 0)
+                {
+                    fadeAmount = objectColor.a - (fadeSpeed * Time.deltaTime);
+                    
+                    objectColor = new Color(objectColor.r, objectColor.g, objectColor.b, fadeAmount);
+                    this.fadeSquare.color = objectColor;
+                    yield return null;
+                }
+            }
         }
     }
 }
