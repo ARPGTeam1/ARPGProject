@@ -22,7 +22,6 @@ namespace Characters.Player
         
         private void Update()
         {
-            
             if (_health.isDefeat) return;
             
             if (Input.GetMouseButtonDown(0))
@@ -31,7 +30,10 @@ namespace Characters.Player
                 if (Physics.Raycast(ray, out var hit, this._cam.farClipPlane))
                 {
                     if(Vector3.Distance(transform.position,hit.transform.position) <= _weapon.stats.attackRange)
-                            SwingWeapon(hit.transform.GetComponent<IDamagable>());
+                    {
+                        if (hit.collider.gameObject.CompareTag("Player")) return;
+                        SwingWeapon(hit.transform.GetComponent<IDamagable>());
+                    }
                     
                 }
             }
