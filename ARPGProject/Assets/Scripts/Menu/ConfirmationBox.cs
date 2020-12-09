@@ -20,7 +20,7 @@ public class ConfirmationBox : MonoBehaviour
 
     void Start()
     {
-        audiosource = GetComponentInParent<AudioSource>();
+        audiosource = GameObject.Find("PauseMenuAudioSource").GetComponent<AudioSource>();
     }
     
 
