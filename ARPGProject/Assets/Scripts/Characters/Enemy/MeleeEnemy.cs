@@ -13,6 +13,7 @@ namespace Characters.Enemy
         [SerializeField] private float attackTimeCooldown;
         
         private GameObject _target;
+        private Animator _animator;
         private HP _targetHpRef;
         private float originalAttackCoolDown;
         //private float _elapsedTime;
@@ -25,6 +26,7 @@ namespace Characters.Enemy
         {
             //_elapsedTime = 0f;
             originalAttackCoolDown = attackTimeCooldown;
+            this._animator = GetComponentInChildren<Animator>();
         }
 
         private void Update()
@@ -41,6 +43,7 @@ namespace Characters.Enemy
                     float distance = Vector3.Distance(this.transform.position, _target.transform.position);
                     if (distance < attackRange)
                     {
+                        this._animator.SetTrigger("Melee");
                         DamageTarget();
                         attackTimeCooldown = originalAttackCoolDown;
 
