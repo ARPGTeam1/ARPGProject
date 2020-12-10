@@ -10,10 +10,12 @@ public interface IProjectile
 public class Projectile : MonoBehaviour, IProjectile
 {
 
+    
     [SerializeField] private float projectileSpeed;
     [SerializeField] private int projectileDamage;
     [SerializeField] private bool shouldTrack;
     [SerializeField] private Vector3 offset;
+    [SerializeField] private GameObject collisionEffect;
     
     private GameObject trackingTarget;
     private GameObject _owner;
@@ -44,6 +46,8 @@ public class Projectile : MonoBehaviour, IProjectile
         }
         
         other.gameObject.GetComponent<IDamagable>()?.TakeDamage(this.projectileDamage, name);
+        if(collisionEffect) Instantiate(collisionEffect, this.gameObject.transform.position, Quaternion.identity);
+        
         Destroy(this.gameObject);
     }
 
