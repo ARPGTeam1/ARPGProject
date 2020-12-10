@@ -47,7 +47,7 @@ namespace Characters.Enemy
         
         private void Update()
         {
-            //if (_health.IsDead) return;
+            if (_health.IsDead) return;
             BehaviourTree();
         }
 
