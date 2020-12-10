@@ -72,7 +72,10 @@ namespace Characters.Enemy
             {
                 if (_rangedEnemy && _meleeEnemy)
                 {
-                    RangedAndMelee();
+                    if (_meleeEnemy.CanAttack && _rangedEnemy.CanAttack)
+                    {
+                        RangedAndMelee();    
+                    }
                 }
                 else if( _rangedEnemy && !_meleeEnemy)
                 {
