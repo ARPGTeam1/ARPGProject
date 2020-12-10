@@ -5,16 +5,14 @@ using UnityEngine.UI;
 
 public class MainMenuBackgroundFade : MonoBehaviour
 {
-
-    public BlackScreenFadeIn blackscreen;
+    
+    
+    public BlackScreenFadeInRoomChange blackscreen;
     public bool fadein = false;
     private float scaler = 1f;
     private bool fadeDone = false;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void FixedUpdate()
