@@ -13,6 +13,7 @@ namespace Characters.Enemy
         private LineRenderer line;
         public float visionAngle;
         [SerializeField] private new Collider collider;
+        private Vector3 targetPosition;
 
         public void Awake()
         {
@@ -54,10 +55,12 @@ namespace Characters.Enemy
 
         private void Update()
         {
+            
             if (fieldVision(_target))
             {
-                //reachable = ! NavMesh.Raycast(transform.position, _target.transform.position, out NavMeshHit  hit, NavMesh.GetAreaFromName("Not Walkable"));
-                reachable = !Physics.Linecast(transform.position, _target.transform.position, out var hit, LayerMask.GetMask("Ground"));
+                //targetPosition = new Vector3(_target.transform.position.x,_target.transform.position.y + 1f,_target.transform.position.z);
+                targetPosition = _target.transform.position + new Vector3(0, 2.5f, 0);
+                reachable = !Physics.Linecast(transform.position, targetPosition, out var hit, LayerMask.GetMask("Ground"));
                 agent.destination = reachable?_target.transform.position: this.transform.position;
             }
 
@@ -68,7 +71,7 @@ namespace Characters.Enemy
         {
             line.enabled = reachable;
             line.SetPosition(0, transform.position);
-            if(reachable) line.SetPosition(1, _target.transform.position);
+            if(reachable) line.SetPosition(1, targetPosition);
             line.startWidth = reachable ? 0.1f : 0f;
             line.endWidth = reachable ? 0.1f : 0f;
             line.startColor= Color.yellow;
