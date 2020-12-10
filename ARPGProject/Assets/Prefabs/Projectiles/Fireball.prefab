@@ -24073,6 +24073,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5115399405960964587}
+  - component: {fileID: 6784970680060906874}
+  - component: {fileID: 4100043967771622403}
+  - component: {fileID: 2972156604947449078}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
@@ -24097,6 +24100,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &6784970680060906874
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5801624073439031333}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4100043967771622403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5801624073439031333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e409cc9c2b8c7f49bbe2f46b0055abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 3
+  projectileDamage: 10
+  shouldTrack: 1
+  offset: {x: 0, y: 2, z: 0}
+--- !u!54 &2972156604947449078
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5801624073439031333}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7642403165965156868
 GameObject:
   m_ObjectHideFlags: 0
@@ -24108,7 +24156,6 @@ GameObject:
   - component: {fileID: 1391121769461792740}
   - component: {fileID: 7828315614388867233}
   - component: {fileID: 6371141194194692575}
-  - component: {fileID: 9158294885939860535}
   m_Layer: 0
   m_Name: Model Core
   m_TagString: Untagged
@@ -24179,19 +24226,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &9158294885939860535
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7642403165965156868}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8093502324768555596
 GameObject:
   m_ObjectHideFlags: 0
@@ -24203,7 +24237,6 @@ GameObject:
   - component: {fileID: 1914733787964256756}
   - component: {fileID: 4073926233124862380}
   - component: {fileID: 40685373285042518}
-  - component: {fileID: 6178094423551267623}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -24274,16 +24307,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &6178094423551267623
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8093502324768555596}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}

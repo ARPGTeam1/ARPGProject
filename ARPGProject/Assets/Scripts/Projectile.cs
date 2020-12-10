@@ -1,7 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+
+public interface IProjectile
+{
+    void Spawn(GameObject target, GameObject owner);
+}
+
+public class Projectile : MonoBehaviour, IProjectile
 {
 
     [SerializeField] private float projectileSpeed;
@@ -10,10 +16,17 @@ public class Projectile : MonoBehaviour
     [SerializeField] private Vector3 offset;
     
     private GameObject trackingTarget;
-    
+    private GameObject _owner;
     
     private bool Tracking => trackingTarget != null;
-
+    
+    
+    public void Spawn(GameObject target, GameObject owner)
+    {
+        this._owner = owner;
+        TrackTarget(target);
+    }
+    
     private void Update()
     {
         if (Tracking)
@@ -25,6 +38,11 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        if (other.gameObject == this._owner || other.gameObject.name == this.name)
+        {
+            return;
+        }
+        
         other.gameObject.GetComponent<IDamagable>()?.TakeDamage(this.projectileDamage, name);
         Destroy(this.gameObject);
     }
