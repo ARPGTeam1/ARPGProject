@@ -3,5 +3,7 @@ using UnityEngine;
 
 public interface IDamagable
 {
-    void TakeDamage(int damage);
+    event Action OnDeath;
+    void TakeDamage(int damage, string souce);
+    void Kill();
 }

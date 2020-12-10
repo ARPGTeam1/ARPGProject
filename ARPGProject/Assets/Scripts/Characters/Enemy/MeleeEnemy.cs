@@ -19,6 +19,8 @@ namespace Characters.Enemy
         
         private bool HasTarget => _target != null;
         
+        public bool CanAttack => attackTimeCooldown <= 0;
+        
         public void Awake()
         {
             //_elapsedTime = 0f;

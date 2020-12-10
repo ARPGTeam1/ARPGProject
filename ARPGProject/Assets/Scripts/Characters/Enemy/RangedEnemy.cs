@@ -12,7 +12,8 @@ public class RangedEnemy : MonoBehaviour
     [SerializeField] private float attackWindupTime;
     [SerializeField] private float attackTimeCooldown;
     [SerializeField] private bool shouldShootSpawnProjectile;
-    
+    [SerializeField] private GameObject projectileToSpawn;
+    [SerializeField] private GameObject projectileSpawnPoint;
     
     
     private GameObject _target;
@@ -31,6 +32,8 @@ public class RangedEnemy : MonoBehaviour
     {
         get => attackMaxRange;
     }
+    
+    public bool CanAttack => attackTimeCooldown <= 0;
     
 
     public void Awake()
@@ -57,23 +60,25 @@ public class RangedEnemy : MonoBehaviour
                     //TODO: Spawn Projectile Prefab (perhaps has Tracking script on it?) and give it a target?
                     if (shouldShootSpawnProjectile)
                     {
-                        // Just placeholder for now
-                        DamageTarget();
-                        return;
+                        var instance = Instantiate(projectileToSpawn, this.projectileSpawnPoint.transform.position, Quaternion.identity);
+                        instance.GetComponent<IProjectile>()?.Spawn(_target, this.gameObject);
+                        attackTimeCooldown = originalAttackCoolDown;
                     }
-                    //Otherwise just shoot the target like hitscan
-                    DamageTarget();
-                    attackTimeCooldown = originalAttackCoolDown;
+                    else
+                    {
+                        DamageTarget();
+                        attackTimeCooldown = originalAttackCoolDown;
 
-                    /*
-                    * ToDo: For when we have Enemy Attack animations? 
-                    */
-                    // _elapsedTime += Time.deltaTime; // Animation time ?
-                    // if (_elapsedTime > attackWindupTime)
-                    // {
-                    //     _elapsedTime = 0;
-                    //DamageTarget();
-                    //}
+                        /*
+                        * ToDo: For when we have Enemy Attack animations? 
+                        */
+                        // _elapsedTime += Time.deltaTime; // Animation time ?
+                        // if (_elapsedTime > attackWindupTime)
+                        // {
+                        //     _elapsedTime = 0;
+                        //DamageTarget();
+                        //}    
+                    }
                 }
             }
         }

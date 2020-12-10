@@ -17,7 +17,7 @@ public class DestructableObject : MonoBehaviour
     {
         if (!other.gameObject.CompareTag("Player")) return;
         
-        GetComponent<IDamagable>()?.TakeDamage(5);
+        GetComponent<IDamagable>()?.TakeDamage(5, this.name);
         if(health.IsDead)
             Destroy(gameObject, 0.1f);
 
