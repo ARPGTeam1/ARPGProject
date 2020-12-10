@@ -60,9 +60,8 @@ public class RangedEnemy : MonoBehaviour
                     //TODO: Spawn Projectile Prefab (perhaps has Tracking script on it?) and give it a target?
                     if (shouldShootSpawnProjectile)
                     {
-                        // Just placeholder for now
-                        DamageTarget();
-                        return;
+                        var instance = Instantiate(projectileToSpawn, this.transform.position, Quaternion.identity);
+                        instance.GetComponent<Projectile>().TrackTarget(_target);
                     }
                     //Otherwise just shoot the target like hitscan
                     DamageTarget();
