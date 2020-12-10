@@ -56,7 +56,8 @@ namespace Characters.Enemy
         {
             if (fieldVision(_target))
             {
-                reachable = ! NavMesh.Raycast(transform.position, _target.transform.position, out NavMeshHit  hit, NavMesh.AllAreas);
+                //reachable = ! NavMesh.Raycast(transform.position, _target.transform.position, out NavMeshHit  hit, NavMesh.GetAreaFromName("Not Walkable"));
+                reachable = !Physics.Linecast(transform.position, _target.transform.position, out var hit, LayerMask.GetMask("Ground"));
                 agent.destination = reachable?_target.transform.position: this.transform.position;
             }
 
