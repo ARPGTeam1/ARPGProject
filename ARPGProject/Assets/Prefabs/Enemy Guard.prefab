@@ -243,6 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnDamageText: 1
   damageTextPrefab: {fileID: 6131599464639163245, guid: a36437762455c6640827158090c4ef1d, type: 3}
+  animator: {fileID: 1968196962521495448}
   maxHealth: 100
   onDeath:
     m_PersistentCalls:
@@ -363,5 +364,10 @@ PrefabInstance:
 --- !u!4 &5598075908945964514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3611477755948507899, guid: 20d7114ca43d89d45b95a3d186c31cd4, type: 3}
+  m_PrefabInstance: {fileID: 9200528048282947353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1968196962521495448 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7277437902289959041, guid: 20d7114ca43d89d45b95a3d186c31cd4, type: 3}
   m_PrefabInstance: {fileID: 9200528048282947353}
   m_PrefabAsset: {fileID: 0}
