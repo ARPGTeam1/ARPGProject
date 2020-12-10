@@ -9,6 +9,7 @@ namespace Characters.Enemy
     {
         [SerializeField] private bool spawnDamageText = true;
         [SerializeField] private GameObject damageTextPrefab;
+        public Animator animator;
         
         public int CurrentHealth
         {
@@ -42,6 +43,8 @@ namespace Characters.Enemy
             
             OnHealthChanged?.Invoke(damage);
             OnDamaged?.Invoke(damage);
+            
+            
             if (spawnDamageText)
                 DamageText(damage);
             CurrentHealth -= damage;
@@ -54,7 +57,8 @@ namespace Characters.Enemy
         public void Kill()
         {
             OnDeath?.Invoke();
-            Destroy(gameObject);
+            animator.SetTrigger("Die");
+            Destroy(gameObject, 2);
         }
 
         public void Heal()

@@ -1,13 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Object = UnityEngine.Object;
 
-public class BlackScreenFadeIn : MonoBehaviour
+public class BlackScreenFadeInRoomChange : MonoBehaviour
 {
-    public float fadeInRate = 0.05f;
-    bool fadein = false;
-
+    public float fadeInRate = 0.005f;
+    public bool fadein = false;
+    public Object sceneToChangeTo;
     private void Start()
     {
         var image = GetComponent<Image>();
@@ -30,13 +33,12 @@ public class BlackScreenFadeIn : MonoBehaviour
 
             if (tempcolor.a >= 1f)
             {
-                tempcolor.a = 1f;
+                SceneManager.LoadScene(sceneToChangeTo.ToString());
             }
         }
     }
 
-    public void StartFadeIn()
-    {
-        fadein = true;
-    }
+
+        
 }
+
