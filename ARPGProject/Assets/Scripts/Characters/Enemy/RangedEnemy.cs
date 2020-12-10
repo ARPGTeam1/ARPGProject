@@ -35,8 +35,6 @@ public class RangedEnemy : MonoBehaviour
     
     public bool CanAttack => attackTimeCooldown <= 0;
     
-    
-    
 
     public void Awake()
     {
@@ -112,15 +110,4 @@ public class RangedEnemy : MonoBehaviour
         _currentRange = Vector3.Distance(this.transform.position, _target.transform.position);
         return _currentRange;
     }
-
-
-    public bool ReturnAttackTimer()
-    {
-        if (attackTimeCooldown > 0)
-        {
-            return false;
-        }
-        return true;
-    }
-    
 }
