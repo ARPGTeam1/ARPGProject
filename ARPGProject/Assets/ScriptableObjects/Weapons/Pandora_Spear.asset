@@ -15,6 +15,6 @@ MonoBehaviour:
   weaponName: Pandora's Spear
   damage: 10
   attackCooldown: 1
-  attackRange: 3
+  attackRange: 5
   model: {fileID: 919132149155446097, guid: f49ba84b7ba09724ca02d5f79069df66, type: 3}
   hitSound: {fileID: 0}
