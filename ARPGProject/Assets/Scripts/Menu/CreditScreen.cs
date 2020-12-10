@@ -5,11 +5,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class CreditScreen : MonoBehaviour
+public class CreditScreen : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private bool closeMenu = false;
 
- 
+    private bool IsPointerOutside = true;
     
     
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class CreditScreen : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
 
-            if (GetComponent<IsMouseOutsideThis>().IsPointerOutside())
+            if (IsPointerOutside)
             {
                 closeMenu = true;
             }
@@ -57,5 +57,15 @@ public class CreditScreen : MonoBehaviour
         {
             DestroyImmediate(this.gameObject);
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        IsPointerOutside = false;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        IsPointerOutside = true;
     }
 }
