@@ -12,6 +12,7 @@ public class RangedEnemy : MonoBehaviour
     [SerializeField] private float attackWindupTime;
     [SerializeField] private float attackTimeCooldown;
     [SerializeField] private bool shouldShootSpawnProjectile;
+    [SerializeField] private GameObject projectileToSpawn;
     
     
     
