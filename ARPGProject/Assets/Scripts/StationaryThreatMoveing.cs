@@ -46,7 +46,7 @@ public class StationaryThreatMoveing : MonoBehaviour
         if (!other.gameObject.CompareTag("Player"))
                 return;
         target = other.gameObject.GetComponent<HP>();
-        if (target != null)
+        if (target != null && !target.isDefeat)
         {
             InvokeRepeating(nameof(DamageTarget), startDamageTimerSeconds, repeatDamageTimerSeconds);         
         }
