@@ -14,6 +14,7 @@ public class RangedEnemy : MonoBehaviour
     [SerializeField] private bool shouldShootSpawnProjectile;
     [SerializeField] private GameObject projectileToSpawn;
     [SerializeField] private GameObject projectileSpawnPoint;
+    private Animator _animator;
     
     
     private GameObject _target;
@@ -40,6 +41,7 @@ public class RangedEnemy : MonoBehaviour
     {
         //_elapsedTime = 0f;
         originalAttackCoolDown = attackTimeCooldown;
+        this._animator = GetComponentInChildren<Animator>();
     }
     
     // Update is called once per frame
@@ -62,6 +64,7 @@ public class RangedEnemy : MonoBehaviour
                     {
                         var instance = Instantiate(projectileToSpawn, this.projectileSpawnPoint.transform.position, Quaternion.identity);
                         instance.GetComponent<IProjectile>()?.Spawn(_target, this.gameObject);
+                        // this._animator.SetTrigger("Fire");
                         attackTimeCooldown = originalAttackCoolDown;
                     }
                     else
