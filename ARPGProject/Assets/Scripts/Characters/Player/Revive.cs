@@ -37,20 +37,14 @@ namespace Characters.Player
 
         public void CorpseRevive()
         {
-            //?? Spawn protection? (Invisible/Invulnerable for X seconds)
-            //?? Limited charges?
-            //if button is pressed, heal the player to full
-            //then regain control of the player character
-            //make sure the player respawns in the same position they died in
-            
-
             switch (this._hp.isDefeat)
             {
                 case true:
                     // this._source.PlayOneShot(this.clip);
                     this.defeatUI.SetActive(false);
-                    // Invoke(nameof(ReviveLogic), this._reviveDelay);
-                    ReviveLogic();
+                    this._animator.SetBool("Dead", false);
+                    this._dUI.StartCoroutine(this._dUI.FadeSquare(false));
+                    Invoke(nameof(ReviveLogic), 2f);
                     break;
                 case false:
                     Debug.LogError("Player isn't Dead. Please fix.");
@@ -62,8 +56,6 @@ namespace Characters.Player
         {
             this._hp.Heal();
             this._hp.isDefeat = false;
-            this._animator.SetBool("Dead", false);
-            this._dUI.StartCoroutine(this._dUI.FadeSquare(false));
         }
 
         public void CheckpointRevive()
@@ -74,8 +66,9 @@ namespace Characters.Player
                     this._agent.Warp(this.checkPoint);
                     // this._source.PlayOneShot(this.clip);
                     this.defeatUI.SetActive(false);
-                    // Invoke(nameof(ReviveLogic), this._reviveDelay);
-                    ReviveLogic();
+                    this._animator.SetBool("Dead", false);
+                    this._dUI.StartCoroutine(this._dUI.FadeSquare(false));
+                    Invoke(nameof(ReviveLogic), 2f);
                     break;
                 case false:
                     Debug.LogError("Player isn't Dead. Please fix.");
