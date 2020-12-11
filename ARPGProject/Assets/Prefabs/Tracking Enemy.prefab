@@ -193,12 +193,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnDamageText: 1
   damageTextPrefab: {fileID: 6131599464639163245, guid: a36437762455c6640827158090c4ef1d, type: 3}
+  animator: {fileID: 0}
   maxHealth: 50
   onDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 664047108803499833}
-        m_TargetAssemblyTypeName: Characters.Enemy.EnemyGuard, Assembly-CSharp
+      - m_Target: {fileID: 1459208395}
+        m_TargetAssemblyTypeName: Characters.Enemy.Health, Assembly-CSharp
         m_MethodName: Kill
         m_Mode: 1
         m_Arguments:

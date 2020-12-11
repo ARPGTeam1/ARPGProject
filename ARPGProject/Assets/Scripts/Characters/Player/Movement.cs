@@ -13,16 +13,12 @@ namespace Characters.Player
         private HP _hitPoint;
         private Animator _animator;
         private Rigidbody _rb;
-
+        private Attack _attack;
+        
         [SerializeField] private GameObject clickDestinationPrefab;
 
         public bool HasEffect => clickDestinationPrefab != null;
         
-        private bool IsMoving()
-        {
-            return this._agent.velocity.magnitude > 0;
-        }
-
         private void Awake()
         {
             this._agent = GetComponent<NavMeshAgent>();
@@ -31,13 +27,15 @@ namespace Characters.Player
             this._hitPoint = GetComponent<HP>();
             this._animator = GetComponent<Animator>();
             this._rb = GetComponent<Rigidbody>();
+            this._attack = GetComponent<Attack>();
         }
 
         private void Update()
         {
             if (Input.GetMouseButtonDown(0))
             {
-                MoveToMouse();
+                if(!_attack.IsAttacking) 
+                    MoveToMouse();
                 
             }
 
