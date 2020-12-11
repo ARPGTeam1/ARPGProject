@@ -24128,7 +24128,7 @@ MonoBehaviour:
   projectileSpeed: 6
   projectileDamage: 10
   lifetime: 5
-  shouldTrack: 1
+  shouldTrack: 0
   offset: {x: 0, y: 2, z: 0}
   collisionEffect: {fileID: 4248124551644843708, guid: 8f5668f40c847417199b9ee37858de11, type: 3}
 --- !u!54 &2972156604947449078
