@@ -24,7 +24,6 @@ namespace Characters.Player
             this._ground = LayerMask.GetMask("Ground");
             this._targetableLayerMask = LayerMask.GetMask("Targetable");
             _animator = GetComponent<Animator>();
-            _animator.speed = _weapon.stats.attackSpeed * speedBuff;
         }
         
         private void Update()

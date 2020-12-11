@@ -22,6 +22,8 @@ namespace Characters.Enemy
         private bool CanMove => _moveToTarget != null;
         private bool CanPatrol => _patrol != null;
         private bool CanAttack => _meleeEnemy != null || _rangedEnemy != null;
+        
+        private bool IsDead => _health != null && _health.IsDead;
 
         public void Awake()
         {
@@ -47,7 +49,7 @@ namespace Characters.Enemy
         
         private void Update()
         {
-            if (_health.IsDead) return;
+            if (IsDead) return;
             BehaviourTree();
         }
 
@@ -70,6 +72,7 @@ namespace Characters.Enemy
 
             if (CanAttack)
             {
+             
                 if (_rangedEnemy && _meleeEnemy)
                 {
                     if (_meleeEnemy.CanAttack && _rangedEnemy.CanAttack)
@@ -94,7 +97,6 @@ namespace Characters.Enemy
             if (DetermineDistance()) return;
             if (CanMove && _moveToTarget.enabled)
             {
-                
                 if (!CanPatrol)
                 {
                     // TODO: Perhaps run away if only Ranged and target is too close?
@@ -119,9 +121,8 @@ namespace Characters.Enemy
                 if (CanMove && _moveToTarget.enabled)
                 {
                     
-                
                     if (!CanPatrol)
-                    {
+                   {
                         _moveToTarget.MoveTowards(_target);
                         return;
                     }
@@ -129,6 +130,21 @@ namespace Characters.Enemy
                     _patrol.enabled = false;
                     _moveToTarget.MoveTowards(_target);
                 }    
+            }
+            else
+            {
+                if (CanMove && _moveToTarget.enabled)
+                {
+                    
+                    if (!CanPatrol)
+                    {
+                        _moveToTarget.MoveTowards(this.gameObject);
+                        return;
+                    }
+
+                    _patrol.enabled = false;
+                    _moveToTarget.MoveTowards(this.gameObject);
+                }
             }
         }
 
