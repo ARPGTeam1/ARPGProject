@@ -62,7 +62,7 @@ public class RangedEnemy : MonoBehaviour
                     //TODO: Spawn Projectile Prefab (perhaps has Tracking script on it?) and give it a target?
                     if (shouldShootSpawnProjectile)
                     {
-                        var instance = Instantiate(projectileToSpawn, this.projectileSpawnPoint.transform.position, Quaternion.identity);
+                        var instance = Instantiate(projectileToSpawn, this.projectileSpawnPoint.transform.position, this.projectileSpawnPoint.transform.rotation);
                         instance.GetComponent<IProjectile>()?.Spawn(_target, this.gameObject);
                         this._animator.SetTrigger("Fire");
                         attackTimeCooldown = originalAttackCoolDown;
