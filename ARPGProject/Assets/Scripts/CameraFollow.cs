@@ -16,4 +16,12 @@ public class CameraFollow : MonoBehaviour
         this.transform.position = Vector3.Lerp(this.transform.position, this.player.transform.position + this.offset,
             Time.deltaTime * this.followSpeed);
     }
+
+    private void Update()
+    {
+        #if UNITY_EDITOR
+            offset += new Vector3(0, -Input.mouseScrollDelta.y, Input.mouseScrollDelta.y);
+        #endif
+        
+    }
 }

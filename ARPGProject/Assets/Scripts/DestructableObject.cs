@@ -15,7 +15,7 @@ public class DestructableObject : MonoBehaviour
     
     private void OnCollisionEnter(Collision other)
     {
-        if (!other.gameObject.CompareTag("Player")) return;
+        //if (!other.gameObject.CompareTag("Player")) return;
         
         GetComponent<IDamagable>()?.TakeDamage(5, this.name);
         if(health.IsDead)

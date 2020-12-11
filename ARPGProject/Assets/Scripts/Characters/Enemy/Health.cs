@@ -1,6 +1,7 @@
 ﻿using System;
 using Menu;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Events;
 
 namespace Characters.Enemy
@@ -57,7 +58,9 @@ namespace Characters.Enemy
         public void Kill()
         {
             OnDeath?.Invoke();
-            animator.SetTrigger("Die");
+            
+            if (TryGetComponent<NavMeshAgent>(out var agent))
+                agent.enabled = false;
             Destroy(gameObject, 2);
         }
 
