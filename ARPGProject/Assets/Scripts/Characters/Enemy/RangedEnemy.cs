@@ -69,6 +69,7 @@ public class RangedEnemy : MonoBehaviour
                     }
                     else
                     {
+                        this._animator.SetTrigger("Fire");
                         DamageTarget();
                         attackTimeCooldown = originalAttackCoolDown;
 
