@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Characters.Player
 {
@@ -6,10 +7,14 @@ namespace Characters.Player
     {
         private Camera _cam;
         private Weapon _weapon;
-        private LayerMask _ground;
+        private LayerMask _ground, _targetableLayerMask;
         private HP _health;
+        private Animator _animator;
+        [SerializeField] private GameObject lightning;
+        [SerializeField] private string attackNameInAnimator; 
+        [SerializeField] [Min(1.0f)] private float speedBuff = 1f;
         
-        [SerializeField] private GameObject lightning; 
+        public bool IsAttacking => _animator.GetCurrentAnimatorStateInfo(0).IsName(attackNameInAnimator);
         
         private void Start()
         {
@@ -17,7 +22,8 @@ namespace Characters.Player
             _weapon = transform.GetComponentInChildren<Weapon>();
             _health = GetComponent<HP>();
             this._ground = LayerMask.GetMask("Ground");
-
+            this._targetableLayerMask = LayerMask.GetMask("Targetable");
+            _animator = GetComponent<Animator>();
         }
         
         private void Update()
@@ -26,44 +32,46 @@ namespace Characters.Player
             
             if (Input.GetMouseButtonDown(0))
             {
-                var ray = this._cam.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out var hit, this._cam.farClipPlane))
-                {
-                    if(Vector3.Distance(transform.position,hit.transform.position) <= _weapon.stats.attackRange)
-                    {
-                        if (hit.collider.gameObject.CompareTag("Player")) return;
-                        SwingWeapon(hit.transform.GetComponent<IDamagable>());
-                    }
-                    
-                }
+                if(!IsAttacking)
+                    MeleeAttack();
             }
 
             if (Input.GetMouseButtonDown(1))
             {
-                var ray = this._cam.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out var hit, this._cam.farClipPlane, _ground))
+                RangedAttack();
+            }
+        }
+
+        private void MeleeAttack()
+        {
+            var ray = this._cam.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out var hit, this._cam.farClipPlane, _targetableLayerMask))
+            {
+                if(Vector3.Distance(transform.position,hit.transform.position) <= _weapon.stats.attackRange)
                 {
-                    //todo: think about system for equipping different skills
-                        //ISkill with a Range Property and void doSkill() method?
-                    //if(Vector3.Distance(transform.position,hit.transform.position) <= equippedSpellRange)
-                    DoSpell(hit.point);
+                    _animator.SetTrigger(attackNameInAnimator);
+                    transform.LookAt(hit.transform);
+                    /*StartCoroutine(_weapon.Attack(_animator.GetCurrentAnimatorStateInfo(0).IsName(attackNameInAnimator) ? 
+                        _animator.GetCurrentAnimatorStateInfo(0).length : float.Epsilon));*/
                 }
+            }
+        }
+
+        private void RangedAttack()
+        {
+            var ray = this._cam.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out var hit, this._cam.farClipPlane, _ground))
+            {
+                //todo: think about system for equipping different skills
+                //ISkill with a Range Property and void doSkill() method?
+                //if(Vector3.Distance(transform.position,hit.transform.position) <= equippedSpellRange)
+                DoSpell(hit.point);
             }
         }
 
         private void DoSpell(Vector3 castLocation)
         {
             Instantiate(lightning, castLocation, Quaternion.identity);
-        }
-
-        private void SwingWeapon(IDamagable enemy)
-        {
-            //todo: _anim.SetBool("");
-            //todo: _weaponSwing sound?
-                //var clip = _weapon.stats.hitSound;
-                //But.. we will probably do this via fmod events im assuming
-                //more info when Linn has done the homework.
-            enemy?.TakeDamage(_weapon.stats.damage, this.name);
         }
     }
 }
