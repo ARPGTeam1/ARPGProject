@@ -64,7 +64,7 @@ public class RangedEnemy : MonoBehaviour
                     {
                         var instance = Instantiate(projectileToSpawn, this.projectileSpawnPoint.transform.position, Quaternion.identity);
                         instance.GetComponent<IProjectile>()?.Spawn(_target, this.gameObject);
-                        // this._animator.SetTrigger("Fire");
+                        this._animator.SetTrigger("Fire");
                         attackTimeCooldown = originalAttackCoolDown;
                     }
                     else

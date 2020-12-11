@@ -39,14 +39,14 @@ public class PortalToScene : MonoBehaviour
     private void OnBecameVisible()
     {
         destinationText.enabled = true;
-        Debug.Log($"{name} became VISIBLE");
+        // Debug.Log($"{name} became VISIBLE");
         //_particleSystem.Play();
     }
 
     private void OnBecameInvisible()
     {
         destinationText.enabled = false;
-        Debug.Log($"{name} became invisible");
+        // Debug.Log($"{name} became invisible");
         //_particleSystem.Stop();
     }
 }

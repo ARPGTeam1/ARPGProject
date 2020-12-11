@@ -12,13 +12,13 @@ public class Weapon : MonoBehaviour
     
     private void Start()
     {
-        _collider = GetComponent<Collider>();
+        _collider = GetComponent<BoxCollider>();
         _attack = GetComponent<Attack>();
     }
 
     private void Update()
     {
-        _collider.enabled = _attack.IsAttacking;
+        // _collider.enabled = _attack.IsAttacking;
     }
 
     private void OnCollisionEnter(Collision other)

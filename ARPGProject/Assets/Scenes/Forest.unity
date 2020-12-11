@@ -18454,7 +18454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 802219321045450584, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
       propertyPath: maxHP
-      value: 500
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 802219321045450585, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
       propertyPath: defeatUI
@@ -18711,6 +18711,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 888475608}
+    - target: {fileID: 3128097039203398986, guid: fc718623b9af9c94e941186d3df39124, type: 3}
+      propertyPath: DefeatUIText.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3128097039203398988, guid: fc718623b9af9c94e941186d3df39124, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -18799,6 +18803,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1162691645}
+    - target: {fileID: 3128097039792916050, guid: fc718623b9af9c94e941186d3df39124, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3128097040250130376, guid: fc718623b9af9c94e941186d3df39124, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -18815,7 +18823,8 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CheckpointRevive
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3128097039203398989, guid: fc718623b9af9c94e941186d3df39124, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fc718623b9af9c94e941186d3df39124, type: 3}
 --- !u!1001 &1531165681
 PrefabInstance:
@@ -19813,6 +19822,18 @@ PrefabInstance:
       propertyPath: scene
       value: 
       objectReference: {fileID: 102900000, guid: cd3a955faab3a442d821f46c95ac0db2, type: 3}
+    - target: {fileID: 528528525911453366, guid: 3d5946ca0d6d06b42aee8001c52fe59f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991053712872811310, guid: 3d5946ca0d6d06b42aee8001c52fe59f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882213700818247226, guid: 3d5946ca0d6d06b42aee8001c52fe59f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d5946ca0d6d06b42aee8001c52fe59f, type: 3}
 --- !u!1 &1706911089
