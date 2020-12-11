@@ -8,12 +8,15 @@ namespace Characters.Player
     public class HP : MonoBehaviour, IDamagable
     {
         public event Action OnDeath;
+        public event Action OnHealthChanged;
+        
         public int maxHP;
         [HideInInspector] public bool isDefeat;
         private NavMeshAgent _agent;
         private Animator _animator;
         private AudioSource _source;
         public AudioClip deathSound;
+        
         [HideInInspector] public UnityEvent<int> HPChanged;
         [HideInInspector] public UnityEvent<string> BeenDefeatedText;
         private int _currentHp;
