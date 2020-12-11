@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using Interfaces;
 using UnityEngine;
 
 
@@ -7,22 +9,23 @@ public interface IProjectile
     void Spawn(GameObject target, GameObject owner);
 }
 
-public class Projectile : MonoBehaviour, IProjectile
+public class Projectile : MonoBehaviour, IProjectile, IKillable
 {
 
     
     [SerializeField] private float projectileSpeed;
     [SerializeField] private int projectileDamage;
+    [SerializeField] private float lifetime;
     [SerializeField] private bool shouldTrack;
     [SerializeField] private Vector3 offset;
     [SerializeField] private GameObject collisionEffect;
     
     private GameObject trackingTarget;
     private GameObject _owner;
+    private float _elapsed;
     
     private bool Tracking => trackingTarget != null;
-    
-    
+
     public void Spawn(GameObject target, GameObject owner)
     {
         this._owner = owner;
@@ -31,11 +34,14 @@ public class Projectile : MonoBehaviour, IProjectile
     
     private void Update()
     {
+        _elapsed += Time.deltaTime;
         if (Tracking)
         {
             transform.LookAt(trackingTarget.transform.position + offset);
         }
         transform.Translate(Vector3.forward * (projectileSpeed * Time.deltaTime));
+        
+        if(_elapsed >= lifetime) Kill();
     }
 
     private void OnCollisionEnter(Collision other)
@@ -46,8 +52,12 @@ public class Projectile : MonoBehaviour, IProjectile
         }
         
         other.gameObject.GetComponent<IDamagable>()?.TakeDamage(this.projectileDamage, name);
-        if(collisionEffect) Instantiate(collisionEffect, this.gameObject.transform.position, Quaternion.identity);
-        
+        Kill();
+    }
+    
+    public void Kill()
+    {
+        if (collisionEffect) Instantiate(collisionEffect, this.gameObject.transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 

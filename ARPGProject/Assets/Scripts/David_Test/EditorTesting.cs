@@ -1,4 +1,5 @@
 ﻿using UnityEditor;
+using UnityEngine;
 
 namespace David_Test
 {
@@ -7,7 +8,7 @@ namespace David_Test
         [MenuItem("Whispers of Hope/You're Breathtaking!!")]
         public static void BreathTaking()
         {
-            
+            Debug.LogError("Your'e Breathtaking!!");
         }
     }
 }
