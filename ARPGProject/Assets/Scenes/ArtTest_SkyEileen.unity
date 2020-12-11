@@ -3802,7 +3802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8211589123080367041, guid: a9aacbfe1faeeda438dd6a2597b8dea5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.7599182
+      value: 2.08
       objectReference: {fileID: 0}
     - target: {fileID: 8211589123080367041, guid: a9aacbfe1faeeda438dd6a2597b8dea5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3859,7 +3859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1227431091012860696, guid: 0d3724311bbea36438662440f1952d7c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 359.47
+      value: 357.19
       objectReference: {fileID: 0}
     - target: {fileID: 1227431091012860696, guid: 0d3724311bbea36438662440f1952d7c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3900,6 +3900,14 @@ PrefabInstance:
     - target: {fileID: 1892469236478452130, guid: 0d3724311bbea36438662440f1952d7c, type: 3}
       propertyPath: m_Name
       value: HealthPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 1892469236478452130, guid: 0d3724311bbea36438662440f1952d7c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480106650972739963, guid: 0d3724311bbea36438662440f1952d7c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d3724311bbea36438662440f1952d7c, type: 3}
@@ -5336,6 +5344,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b44211814627534aaca113f196ce0a4, type: 3}
+--- !u!1001 &8250254671805089957
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2593914398636884497, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593914398636884497, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 359.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593914398636884497, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.49098
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593914398636884497, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 846.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593914398636884497, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593914398636884497, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593914398636884497, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593914398636884497, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593914398636884497, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593914398636884497, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593914398636884497, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933180138578614443, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
+      propertyPath: m_Name
+      value: HealthPickupSphere
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
 --- !u!1001 &8454014450464146037
 PrefabInstance:
   m_ObjectHideFlags: 0
