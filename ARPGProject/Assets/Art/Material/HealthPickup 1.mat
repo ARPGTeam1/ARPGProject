@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HealthPickup
-  m_Shader: {fileID: -6465566751694194690, guid: 206a19dc3c6b78b48b71d629ceb0a1a2, type: 3}
+  m_Name: HealthPickup 1
+  m_Shader: {fileID: -6465566751694194690, guid: dc03b10bc24bc0941888c83703e3a587, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -70,7 +70,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_1CEDAEE: {r: 0.17315878, g: 1.178747, b: 1.1841828, a: 0}
+    - Color_1CEDAEE: {r: 0.04096709, g: 1.7274455, b: 1.7411011, a: 0}
     - Color_E5B4648F: {r: 1.3224834, g: 2.670157, b: 2.5854864, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
