@@ -529,12 +529,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnDamageText: 0
   damageTextPrefab: {fileID: 0}
+  animator: {fileID: 0}
   maxHealth: 30
   onDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 506569551}
-        m_TargetAssemblyTypeName: Characters.Enemy.EnemyBehavior, Assembly-CSharp
+      - m_Target: {fileID: 506569546}
+        m_TargetAssemblyTypeName: Characters.Enemy.Health, Assembly-CSharp
         m_MethodName: Kill
         m_Mode: 1
         m_Arguments:
@@ -545,15 +546,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &506569551 stripped
+--- !u!114 &506569546 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3777453130216299768, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1738050737, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
   m_PrefabInstance: {fileID: 354292361}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506569544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 090cb0a1b5d3b6b47964c8836e69719a, type: 3}
+  m_Script: {fileID: 11500000, guid: b00010e16fa8bf842840c8797f2438d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!54 &506569553
@@ -1126,6 +1127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnDamageText: 1
   damageTextPrefab: {fileID: 6131599464639163245, guid: a36437762455c6640827158090c4ef1d, type: 3}
+  animator: {fileID: 0}
   maxHealth: 25
   onDeath:
     m_PersistentCalls:
@@ -1503,7 +1505,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 802219321045450584, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
       propertyPath: maxHP
-      value: 30
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 912180434493775020, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
       propertyPath: m_LocalPosition.x
