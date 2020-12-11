@@ -14,6 +14,7 @@ namespace Characters.Enemy
         public float visionAngle;
         [SerializeField] private new Collider collider;
         private Vector3 targetPosition;
+        [SerializeField] private Material[] lineMaterial;
 
         public void Awake()
         {
@@ -26,6 +27,7 @@ namespace Characters.Enemy
             agent = GetComponent<NavMeshAgent>();
             this.gameObject.AddComponent<LineRenderer>(); 
             line = GetComponent<LineRenderer>();
+            line.materials = lineMaterial;
         }
 
         public void OnTriggerEnter(Collider other)
@@ -36,8 +38,10 @@ namespace Characters.Enemy
         }
 
         public void OnTriggerExit(Collider other)
-        {
-           if(Escapeable) _target = null;
+        { 
+            if (!other.gameObject.CompareTag("Player"))
+                return;
+            if(Escapeable) _target = null;
            reachable = false;
            agent.destination = transform.position;
         }
