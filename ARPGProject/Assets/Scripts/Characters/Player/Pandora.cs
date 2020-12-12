@@ -20,6 +20,7 @@ namespace Characters.Player
         {
             _hp = GetComponent<HP>();
             _hp.OnHealthChanged += UpdateLight;
+            UpdateLight();
         }
 
         private void OnCollisionEnter(Collision other)
