@@ -17,7 +17,7 @@ namespace Menu
         {
             _text.SetText(damage.ToString());
             transform.position = location.position + offSet;
-            StartCoroutine(FadeAway());
+            //StartCoroutine(FadeAway());
         }
 
         private IEnumerator FadeAway()
@@ -38,7 +38,7 @@ namespace Menu
 
         private void Update()
         {
-            transform.Translate(Vector3.up * speed, Space.World);
+            transform.Translate(Vector3.up * (speed * Time.deltaTime), Space.World);
         }
 
         private void LateUpdate()

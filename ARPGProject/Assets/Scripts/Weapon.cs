@@ -1,27 +1,19 @@
-﻿using Characters.Player;
-using Interfaces;
+﻿using Interfaces;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
     public WeaponStats stats;
     private float _lastAttackedTime;
-    [SerializeField] private float damageInstanceDelay = 0.2f;
-    private BoxCollider _collider;
-    private Attack _attack;
     
-    private void Start()
+    public bool IsReady => Time.time > _lastAttackedTime + stats.attackCooldown;
+        
+    /*private void Update()
     {
-        _collider = GetComponent<BoxCollider>();
-        _attack = GetComponentInParent<Attack>();
-    }
-
-    private void Update()
-    {
-        /*if (_attack.IsAttacking)
+        if (_attack.IsAttacking)
             _collider.enabled = true;
 
-        _collider.enabled = false;*/
+        _collider.enabled = false;
     }
 
     private void OnCollisionEnter(Collision other)
@@ -32,18 +24,17 @@ public class Weapon : MonoBehaviour
     private void OnCollisionStay(Collision other)
     {
         DealDamage(other);
+    }*/
+    private void Start()
+    {
+        _lastAttackedTime = -stats.attackCooldown;
     }
 
-    private void DealDamage(Collision other)
+    public void DealDamage(IDamagable pTarget)
     {
-        if (other.gameObject.CompareTag("Player")) 
-            return;
-        
-        if (Time.time < _lastAttackedTime + damageInstanceDelay) 
-            return;
-        
         _lastAttackedTime = Time.time;
-        other.gameObject.GetComponent<IDamagable>()?.TakeDamage(stats.damage, stats.weaponName);
+        pTarget?.TakeDamage(stats.damage, ToString());
+        Debug.Log($"{stats.weaponName} damaged {pTarget} for {stats.damage}");
     }
 
     public override string ToString() => stats.weaponName;

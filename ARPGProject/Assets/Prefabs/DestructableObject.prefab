@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5608858709600063707}
   - component: {fileID: 5608858709600063706}
   - component: {fileID: 1343682340}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DestructableObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

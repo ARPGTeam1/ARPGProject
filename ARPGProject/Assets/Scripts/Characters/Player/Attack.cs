@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Interfaces;
 using UnityEngine;
 
 namespace Characters.Player
@@ -33,18 +33,13 @@ namespace Characters.Player
             
             if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log($"Attacking now : {IsAttacking}");
                 if(!IsAttacking)
-                {
                     MeleeAttack();
-                    Debug.Log($"Attacking now : {IsAttacking}");
-                }
+                
             }
 
             if (Input.GetMouseButtonDown(1))
-            {
                 RangedAttack();
-            }
         }
 
         private void MeleeAttack()
@@ -54,10 +49,14 @@ namespace Characters.Player
             {
                 if(Vector3.Distance(transform.position,hit.transform.position) <= _weapon.stats.attackRange)
                 {
-                    _animator.SetTrigger(attackNameInAnimator);
-                    transform.LookAt(hit.transform);
-                    /*StartCoroutine(_weapon.Attack(_animator.GetCurrentAnimatorStateInfo(0).IsName(attackNameInAnimator) ? 
-                        _animator.GetCurrentAnimatorStateInfo(0).length : float.Epsilon));*/
+                    if(_weapon.IsReady)
+                    {
+                        Debug.Log($"Attacking {hit.transform.gameObject.name}");
+                        _animator.SetTrigger(attackNameInAnimator);
+                        transform.LookAt(hit.transform);
+                        
+                        _weapon.DealDamage(hit.transform.GetComponent<IDamagable>());
+                    }
                 }
             }
         }
