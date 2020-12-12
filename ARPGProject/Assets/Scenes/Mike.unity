@@ -130,21 +130,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1018700006, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
-      propertyPath: speedBuff
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1018700006, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
-      propertyPath: attackNameInAnimator
-      value: Melee2
-      objectReference: {fileID: 0}
     - target: {fileID: 568412229135779350, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 802219321045450584, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
-      propertyPath: maxHP
-      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 802219321045450585, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
       propertyPath: defeatUI
@@ -194,36 +182,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4830360642776003956, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7256849138240839514, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
-      propertyPath: maxLight
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 7256849138240839514, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
-      propertyPath: minLight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7256849138240839514, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
-      propertyPath: hopeLight
-      value: 
-      objectReference: {fileID: 200920813}
-    - target: {fileID: 7256849138240839514, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
-      propertyPath: maxLightRadius
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 7256849138240839514, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
-      propertyPath: minLightRadius
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7256849138240839514, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
-      propertyPath: alsoBuffLightRadius
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4830360642776003956, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
 --- !u!1001 &107505728
 PrefabInstance:
@@ -282,11 +241,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
---- !u!108 &200920813 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 8290420522278468764, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
-  m_PrefabInstance: {fileID: 104453187}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &283685978
 PrefabInstance:
   m_ObjectHideFlags: 0

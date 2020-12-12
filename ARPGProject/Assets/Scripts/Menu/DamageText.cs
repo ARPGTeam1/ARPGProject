@@ -7,9 +7,8 @@ namespace Menu
     public class DamageText : MonoBehaviour
     {
         [SerializeField] private Vector3 offSet;
-        [SerializeField] private float duration;
-        [SerializeField] [Range(0f, 1f)] private float speed ;
-        
+        [SerializeField] [Range(0f, 3f)] private float speed;
+        [SerializeField] private float fadeMultiplier = 10f;
         [SerializeField] private TextMeshPro _text;
         private Camera _mainCam;
 
@@ -17,34 +16,25 @@ namespace Menu
         {
             _text.SetText(damage.ToString());
             transform.position = location.position + offSet;
-            //StartCoroutine(FadeAway());
+            StartCoroutine(FadeAway());
         }
 
         private IEnumerator FadeAway()
         {
             while (_text.alpha > 0)
             {
-                _text.alpha--;
-                yield return new WaitForSeconds(255 / (duration * 1000));
+                _text.alpha -= 0.1f * fadeMultiplier * Time.deltaTime;
+                yield return null; 
             }
             Destroy(gameObject);
         }
-        private void Start()
-        {
-            _mainCam = Camera.main;
-            //_text = GetComponent<TextMeshPro>();
-            
-        }
+        private void Start() => _mainCam = Camera.main;
 
-        private void Update()
-        {
+        private void Update() =>
             transform.Translate(Vector3.up * (speed * Time.deltaTime), Space.World);
-        }
 
-        private void LateUpdate()
-        {
+        private void LateUpdate() =>
             transform.LookAt(transform.position + _mainCam.transform.rotation * Vector3.forward, 
                                 _mainCam.transform.rotation * Vector3.up);
-        }
     }
 }

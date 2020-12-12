@@ -184,5 +184,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offSet: {x: 0, y: 5, z: 0}
   duration: 2
-  speed: 1
+  speed: 1.25
+  fadeMultiplier: 5
   _text: {fileID: 6162751109279857678}
