@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -6,36 +6,45 @@ namespace Menu
 {
     public class DamageText : MonoBehaviour
     {
-        private TextMeshPro _text;
         [SerializeField] private Vector3 offSet;
         [SerializeField] private float duration;
-        //[SerializeField] private float alphaReduction;
+        [SerializeField] [Range(0f, 1f)] private float speed ;
+        
+        [SerializeField] private TextMeshPro _text;
         private Camera _mainCam;
 
         public void Setup(Transform location, int damage)
         {
-            _text = GetComponent<TextMeshPro>();
             _text.SetText(damage.ToString());
             transform.position = location.position + offSet;
-            Destroy(gameObject, duration);
+            StartCoroutine(FadeAway());
         }
-    
+
+        private IEnumerator FadeAway()
+        {
+            while (_text.alpha > 0)
+            {
+                _text.alpha--;
+                yield return new WaitForSeconds(255 / (duration * 1000));
+            }
+            Destroy(gameObject);
+        }
         private void Start()
         {
             _mainCam = Camera.main;
+            //_text = GetComponent<TextMeshPro>();
+            
         }
 
         private void Update()
         {
-            transform.Translate(Vector3.up, Space.World);
+            transform.Translate(Vector3.up * speed, Space.World);
         }
 
         private void LateUpdate()
         {
             transform.LookAt(transform.position + _mainCam.transform.rotation * Vector3.forward, 
                                 _mainCam.transform.rotation * Vector3.up);
-
-            _text.alpha -= 2;
         }
     }
 }

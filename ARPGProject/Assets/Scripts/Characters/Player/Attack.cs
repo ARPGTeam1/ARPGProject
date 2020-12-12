@@ -14,7 +14,8 @@ namespace Characters.Player
         [SerializeField] private string attackNameInAnimator; 
         [SerializeField] [Min(1.0f)] private float speedBuff = 1f;
         
-        public bool IsAttacking => _animator.GetCurrentAnimatorStateInfo(0).IsName(attackNameInAnimator);
+        public bool IsAttacking => _animator.GetCurrentAnimatorStateInfo(0).IsName(attackNameInAnimator) && 
+                                   _animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1;
         
         private void Start()
         {
@@ -32,8 +33,12 @@ namespace Characters.Player
             
             if (Input.GetMouseButtonDown(0))
             {
+                Debug.Log($"Attacking now : {IsAttacking}");
                 if(!IsAttacking)
+                {
                     MeleeAttack();
+                    Debug.Log($"Attacking now : {IsAttacking}");
+                }
             }
 
             if (Input.GetMouseButtonDown(1))

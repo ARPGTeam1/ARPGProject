@@ -1,7 +1,9 @@
-﻿namespace Interfaces
+﻿using Characters.Player;
+
+namespace Interfaces
 {
     public interface IConsumable
     {
-        void Consume();
+        void Consume(Pandora pandora);
     }
 }

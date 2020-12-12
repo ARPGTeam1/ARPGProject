@@ -18,16 +18,15 @@ public class Weapon : MonoBehaviour
 
     private void Update()
     {
-        if (_attack.IsAttacking)
+        /*if (_attack.IsAttacking)
             _collider.enabled = true;
 
-        _collider.enabled = false;
+        _collider.enabled = false;*/
     }
 
     private void OnCollisionEnter(Collision other)
     {
         DealDamage(other);
-        
     }
 
     private void OnCollisionStay(Collision other)
@@ -43,9 +42,8 @@ public class Weapon : MonoBehaviour
         if (Time.time < _lastAttackedTime + damageInstanceDelay) 
             return;
         
-        
         _lastAttackedTime = Time.time;
-        other.gameObject.GetComponent<IDamagable>().TakeDamage(stats.damage, stats.weaponName);
+        other.gameObject.GetComponent<IDamagable>()?.TakeDamage(stats.damage, stats.weaponName);
     }
 
     public override string ToString() => stats.weaponName;

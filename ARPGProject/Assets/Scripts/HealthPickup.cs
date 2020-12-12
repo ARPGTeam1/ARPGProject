@@ -1,26 +1,23 @@
-﻿using System;
-using Characters.Player;
+﻿using Characters.Player;
+using Interfaces;
 using UnityEngine;
 
-public class HealthPickup : MonoBehaviour
+public class HealthPickup : MonoBehaviour, IConsumable
 {
 
     [SerializeField] private int healAmount;
     [SerializeField] private GameObject pickUpEffect;
-    private void OnCollisionEnter(Collision other)
+
+    public void Consume(Pandora pandora)
     {
-        if (!other.gameObject.CompareTag("Player")) return;
-        
         if(healAmount == 0)
-            other.gameObject.GetComponent<HP>().Heal();
+            pandora.gameObject.GetComponent<HP>().Heal();
         else
-            other.gameObject.GetComponent<HP>().Heal(healAmount);
+            pandora.gameObject.GetComponent<HP>().Heal(healAmount);
 
         if(pickUpEffect != null)
-            Instantiate(pickUpEffect, transform.position, Quaternion.identity);
+            Instantiate(pickUpEffect, transform.position, this.gameObject.transform.rotation);
 
-        other.gameObject.GetComponent<Pandora>()?.UpdateLight();
-        
         Destroy(gameObject);
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Interfaces;
+using UnityEngine;
 
 namespace Characters.Player
 {
@@ -21,18 +22,23 @@ namespace Characters.Player
             _hp.OnHealthChanged += UpdateLight;
         }
 
-        public void UpdateLight()
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.CompareTag("Player")) return;
+            
+            other.gameObject.GetComponent<IConsumable>()?.Consume(this);
+        }
+
+        private void OnDestroy()
+        {
+            _hp.OnHealthChanged -= UpdateLight;
+        }
+        
+        private void UpdateLight()
         {
             hopeLight.intensity = Mathf.Lerp(minLight, maxLight, (float)_hp.CurrentHp / _hp.maxHP);
             if(alsoBuffLightRadius)
                 hopeLight.range = Mathf.Lerp(minLightRadius, maxLightRadius, (float) _hp.CurrentHp / _hp.maxHP);
-            
-            Debug.Log(ToString());
-        }
-            
-        private void OnDestroy()
-        {
-            _hp.OnHealthChanged -= UpdateLight;
         }
 
         public override string ToString() => $"Pandora's Light : {hopeLight.intensity}, : Radius : {hopeLight.range}";

@@ -2,7 +2,6 @@
 using Interfaces;
 using UnityEngine;
 
-
 public interface IProjectile
 {
     void Spawn(GameObject target, GameObject owner);
@@ -10,6 +9,8 @@ public interface IProjectile
 
 public class Projectile : MonoBehaviour, IProjectile, IKillable
 {
+    public event Action OnDeath;
+    
     [SerializeField] private float projectileSpeed;
     [SerializeField] private int projectileDamage;
     [SerializeField] private float lifetime;
@@ -43,7 +44,7 @@ public class Projectile : MonoBehaviour, IProjectile, IKillable
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject == this._owner || other.gameObject.name == this.name)
+        if (other.gameObject == this._owner)// || other.gameObject.name == this.name)
         {
             return;
         }
@@ -52,12 +53,10 @@ public class Projectile : MonoBehaviour, IProjectile, IKillable
         Kill();
     }
 
-    public event Action OnDeath;
-
     public void Kill()
     {
-        if (collisionEffect) Instantiate(collisionEffect, this.gameObject.transform.position, Quaternion.identity);
         OnDeath?.Invoke();
+        if (collisionEffect) Destroy(Instantiate(collisionEffect, this.gameObject.transform.position, Quaternion.identity), 2f);
         Destroy(this.gameObject);
     }
 
