@@ -31,8 +31,11 @@ namespace Characters.Enemy
         }
 
 
+        public event Action OnDeath;
+
         public void Kill()
         {
+            OnDeath?.Invoke();
            Destroy(gameObject);
         }
         

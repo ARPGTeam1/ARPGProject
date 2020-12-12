@@ -1,56 +1,66 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-
+using UnityEngine.Events;
 
 public class DarkZone : MonoBehaviour
 {
-    
-    public event Action OnDark;
-    public event Action OnLight;
+    [SerializeField] private UnityEvent darkZoneEntered;
+    [SerializeField] private UnityEvent darkZoneLeft;
     
     [SerializeField] private Light sun;
     [SerializeField] private float darkness;
     [SerializeField] private float lightChangesPerTick = 0.05f;
     [SerializeField] private float delayBetweenTicks = 0.01f;
-    private float startingLight;
-    private void Start()
+
+    private enum Illumination { Light, Dark }
+    private Illumination _lightState = Illumination.Light;
+    private float _startingLight;
+    private float _elapsed;
+        
+    private void Lighten() => sun.intensity += lightChangesPerTick;
+    
+    private void Darken() => sun.intensity -= lightChangesPerTick;
+    
+    private void Start() => _startingLight = sun.intensity;
+
+    private void Update()
     {
-        startingLight = sun.intensity;
+        _elapsed += Time.deltaTime;
+        
+        if (_elapsed < delayBetweenTicks) return;
+        
+        switch (_lightState)
+        {
+            case Illumination.Dark:
+                if (sun.intensity <= darkness) 
+                    return;
+                Darken();
+                
+                break;
+            case Illumination.Light:
+                if (sun.intensity >= _startingLight) 
+                    return;
+                Lighten();
+                
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+
+        _elapsed -= delayBetweenTicks;
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
-            StartCoroutine(nameof(Darken));
-    }
-
-    private IEnumerator Lighten()
-    {
-        Debug.Log("Leaving DarkZone");
-        while (sun.intensity < startingLight)
-        {
-            sun.intensity += lightChangesPerTick;
-            yield return new WaitForSeconds(delayBetweenTicks);
-        }
+            _lightState = Illumination.Dark;
     }
 
     private void OnTriggerExit(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
-            StartCoroutine(nameof(Lighten));
-    }
-
-    private IEnumerator Darken()
-    {
-        Debug.Log("Entered DarkZone");
-        while (sun.intensity > darkness)
-        {
-            sun.intensity -= lightChangesPerTick;
-            yield return new WaitForSeconds(delayBetweenTicks);
-        }
+            _lightState = Illumination.Light;
     }
 }
 

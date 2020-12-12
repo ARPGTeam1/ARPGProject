@@ -1,4 +1,5 @@
 ﻿using Characters.Player;
+using Interfaces;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour

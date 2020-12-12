@@ -1,4 +1,5 @@
 ﻿using System;
+using Interfaces;
 using Menu;
 using UnityEngine;
 using UnityEngine.AI;
@@ -6,7 +7,7 @@ using UnityEngine.Events;
 
 namespace Characters.Enemy
 {
-    public class Health : MonoBehaviour, IDamagable
+    public class Health : MonoBehaviour, IDamagable, IKillable
     {
         [SerializeField] private bool spawnDamageText = true;
         [SerializeField] private GameObject damageTextPrefab;

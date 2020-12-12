@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 
 namespace Menu
@@ -7,7 +8,8 @@ namespace Menu
     {
         private TextMeshPro _text;
         [SerializeField] private Vector3 offSet;
-        [SerializeField] private float duration; 
+        [SerializeField] private float duration;
+        //[SerializeField] private float alphaReduction;
         private Camera _mainCam;
 
         public void Setup(Transform location, int damage)
@@ -23,11 +25,17 @@ namespace Menu
             _mainCam = Camera.main;
         }
 
+        private void Update()
+        {
+            transform.Translate(Vector3.up, Space.World);
+        }
+
         private void LateUpdate()
         {
-            //put moving text here with code or animate?
             transform.LookAt(transform.position + _mainCam.transform.rotation * Vector3.forward, 
                                 _mainCam.transform.rotation * Vector3.up);
+
+            _text.alpha -= 2;
         }
     }
 }

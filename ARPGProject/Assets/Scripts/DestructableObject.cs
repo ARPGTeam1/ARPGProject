@@ -1,29 +1,29 @@
 ﻿using System;
-using Characters.Enemy;
+using Interfaces;
 using UnityEngine;
+using UnityEngine.Events;
 
 [Serializable]
-public class DestructableObject : MonoBehaviour
+public class DestructableObject : MonoBehaviour, IKillable
 {
-    private DropLoot _dropLoot;
-    private Health health;
-    private void Start()
-    {
-        _dropLoot = GetComponent<DropLoot>();
-        health = GetComponent<Health>();
-    }
+    public UnityEvent onDestroyed;
+    public event Action OnDeath;
     
+    private LayerMask _groundMask;
+
+    private void Start() => _groundMask = LayerMask.GetMask("Ground");
+
     private void OnCollisionEnter(Collision other)
     {
-        //if (!other.gameObject.CompareTag("Player")) return;
-        
+        if (other.gameObject.layer == _groundMask) return;
         GetComponent<IDamagable>()?.TakeDamage(5, this.name);
-        if(health.IsDead)
-            Destroy(gameObject, 0.1f);
-
-       
-        //if colliding with PlayerProjectile/weapon, (IPlayerDamageHandler?) 
-        //get damageAmount from it (IPlayerDamageHandler.Damage)
-        //deduct if from health with TakeDamage()
+        Kill();
+    }
+   
+    public void Kill()
+    {
+        OnDeath?.Invoke();
+        onDestroyed.Invoke();
+        Destroy(gameObject);
     }
 }

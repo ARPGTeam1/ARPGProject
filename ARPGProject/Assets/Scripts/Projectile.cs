@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using Interfaces;
 using UnityEngine;
 
@@ -11,8 +10,6 @@ public interface IProjectile
 
 public class Projectile : MonoBehaviour, IProjectile, IKillable
 {
-
-    
     [SerializeField] private float projectileSpeed;
     [SerializeField] private int projectileDamage;
     [SerializeField] private float lifetime;
@@ -54,10 +51,13 @@ public class Projectile : MonoBehaviour, IProjectile, IKillable
         other.gameObject.GetComponent<IDamagable>()?.TakeDamage(this.projectileDamage, name);
         Kill();
     }
-    
+
+    public event Action OnDeath;
+
     public void Kill()
     {
         if (collisionEffect) Instantiate(collisionEffect, this.gameObject.transform.position, Quaternion.identity);
+        OnDeath?.Invoke();
         Destroy(this.gameObject);
     }
 

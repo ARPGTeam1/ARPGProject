@@ -46,21 +46,14 @@ public class DropLoot : MonoBehaviour
         }
     }
 
-    private Rigidbody AddRigidbody(GameObject pObject)
-    {
-        if (pObject.GetComponent<Rigidbody>()) return pObject.GetComponent<Rigidbody>();
-        pObject.AddComponent<Rigidbody>();
-        return pObject.GetComponent<Rigidbody>();
-    }
+    private Rigidbody AddRigidbody(GameObject pObject) => pObject.GetComponent<Rigidbody>() ? 
+        pObject.GetComponent<Rigidbody>() : pObject.AddComponent<Rigidbody>();
 
-    private Vector3 LaunchDirection()
-    {
-        return new Vector3(Random.Range(-1, 1), Random.Range(0, 1), Random.Range(-1,1));
-    }
+    private Vector3 LaunchDirection() => new Vector3(Random.Range(-1, 1), Random.Range(0, 1), Random.Range(-1,1));
 
-    private void Launch(Rigidbody gtfo)
+    private void Launch(Rigidbody loot)
     {
-        gtfo.AddForce(LaunchDirection() * launchSpeed);
-        gtfo.AddTorque(gtfo.gameObject.transform.position - GameObject.FindWithTag("Player").transform.position);
+        loot.AddForce(LaunchDirection() * launchSpeed);
+        loot.AddTorque(loot.gameObject.transform.position - GameObject.FindWithTag("Player").transform.position);
     }
 }

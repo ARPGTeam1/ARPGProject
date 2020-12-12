@@ -1,9 +1,7 @@
-﻿using System;
-using UnityEngine;
-
-public interface IDamagable
+﻿namespace Interfaces
 {
-    event Action OnDeath;
-    void TakeDamage(int damage, string souce);
-    void Kill();
+    public interface IDamagable
+    {
+        void TakeDamage(int damage, string souce);
+    }
 }

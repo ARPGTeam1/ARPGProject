@@ -1,4 +1,5 @@
 ﻿using System;
+using Interfaces;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
@@ -35,11 +36,13 @@ namespace Characters.Player
         public void Heal()
         {
             CurrentHp = maxHP;
+            OnHealthChanged?.Invoke();
         }
 
         public void Heal(int amount)
         {
             CurrentHp += amount;
+            OnHealthChanged?.Invoke();
         }
 
         private void Awake()
@@ -54,6 +57,7 @@ namespace Characters.Player
         public void TakeDamage(int amount, string source)
         {
             CurrentHp -= amount;
+            OnHealthChanged?.Invoke();
             //Play takeDamage sound or trigger fmod event?
             if (CurrentHp <= 0 && !isDefeat)
             {

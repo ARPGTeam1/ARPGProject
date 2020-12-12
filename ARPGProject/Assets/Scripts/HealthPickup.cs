@@ -6,8 +6,6 @@ public class HealthPickup : MonoBehaviour
 {
 
     [SerializeField] private int healAmount;
-    [SerializeField] private float lightIntensityBuffAmount;
-    [SerializeField] private float lightRadiusBuffAmount;
     [SerializeField] private GameObject pickUpEffect;
     private void OnCollisionEnter(Collision other)
     {
@@ -21,7 +19,7 @@ public class HealthPickup : MonoBehaviour
         if(pickUpEffect != null)
             Instantiate(pickUpEffect, transform.position, Quaternion.identity);
 
-        other.gameObject.GetComponent<Pandora>()?.ChangeLight(lightIntensityBuffAmount, lightRadiusBuffAmount);
+        other.gameObject.GetComponent<Pandora>()?.UpdateLight();
         
         Destroy(gameObject);
     }

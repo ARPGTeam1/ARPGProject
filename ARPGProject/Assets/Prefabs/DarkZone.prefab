@@ -57,7 +57,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c6ff4a86a723c4bbc7c05cad4c7459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  darkZoneEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  darkZoneLeft:
+    m_PersistentCalls:
+      m_Calls: []
   sun: {fileID: 0}
-  darkness: -10
+  darkness: 0
   lightChangesPerTick: 0.01
   delayBetweenTicks: 0.05

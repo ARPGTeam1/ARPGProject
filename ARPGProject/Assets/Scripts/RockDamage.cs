@@ -1,10 +1,10 @@
-﻿using Characters.Player;
+﻿using Interfaces;
 using UnityEngine;
 
 public class RockDamage : MonoBehaviour
 {
     [SerializeField] private float velocityThreshold;
-    [SerializeField] private int _damage;
+    [SerializeField] private int damage = 10;
     
     private Rigidbody _rb;
     
@@ -15,14 +15,11 @@ public class RockDamage : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            var rockSpeed = Mathf.Abs(_rb.velocity.x + _rb.velocity.z);
-            if (rockSpeed > velocityThreshold)
-            {
-                other.gameObject.GetComponent<HP>().TakeDamage(_damage, "Avalanche Rock");
-            }
-            
-        }
+        if (!other.gameObject.CompareTag("Player")) return;
+        
+        if(ShouldDealDamage())
+            other.gameObject.GetComponent<IDamagable>()?.TakeDamage(damage, "Avalanche Rock");
     }
+    
+    private bool ShouldDealDamage() => Mathf.Abs(_rb.velocity.x) + Mathf.Abs(_rb.velocity.y) + Mathf.Abs(_rb.velocity.z) > velocityThreshold;
 }

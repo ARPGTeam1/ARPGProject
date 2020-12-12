@@ -196,7 +196,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256849138240839514, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
       propertyPath: maxLight
-      value: 25
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256849138240839514, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
+      propertyPath: minLight
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7256849138240839514, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
       propertyPath: hopeLight
@@ -204,7 +208,7 @@ PrefabInstance:
       objectReference: {fileID: 200920813}
     - target: {fileID: 7256849138240839514, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
       propertyPath: maxLightRadius
-      value: 25
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7256849138240839514, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
       propertyPath: minLightRadius
@@ -2757,6 +2761,30 @@ PrefabInstance:
       propertyPath: sun
       value: 
       objectReference: {fileID: 1001056425}
+    - target: {fileID: 7094350536555049835, guid: a7a18dfe9679eed4aa96e4ae1e98157a, type: 3}
+      propertyPath: darkness
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094350536555049835, guid: a7a18dfe9679eed4aa96e4ae1e98157a, type: 3}
+      propertyPath: darkZoneEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094350536555049835, guid: a7a18dfe9679eed4aa96e4ae1e98157a, type: 3}
+      propertyPath: darkZoneEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094350536555049835, guid: a7a18dfe9679eed4aa96e4ae1e98157a, type: 3}
+      propertyPath: darkZoneEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094350536555049835, guid: a7a18dfe9679eed4aa96e4ae1e98157a, type: 3}
+      propertyPath: darkZoneEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094350536555049835, guid: a7a18dfe9679eed4aa96e4ae1e98157a, type: 3}
+      propertyPath: darkZoneEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7094350536555049877, guid: a7a18dfe9679eed4aa96e4ae1e98157a, type: 3}
       propertyPath: m_RootOrder
       value: 35
