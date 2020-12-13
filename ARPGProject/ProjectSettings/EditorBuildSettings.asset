@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/nextLevel_99.unity
     guid: cc735d8fabe75c34b9541702bcd089de
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: b7edefed4dca64f618025bcfa48eff74
   m_configObjects: {}
