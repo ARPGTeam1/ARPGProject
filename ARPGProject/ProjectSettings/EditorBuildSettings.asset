@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest.unity
     guid: b7edefed4dca64f618025bcfa48eff74
+  - enabled: 1
+    path: Assets/Scenes/Temple.unity
+    guid: 5646c4e0beb3a4978aa267f5245bc71e
   m_configObjects: {}

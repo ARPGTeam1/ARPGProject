@@ -20096,7 +20096,7 @@ PrefabInstance:
     - target: {fileID: 528528524810468098, guid: 3d5946ca0d6d06b42aee8001c52fe59f, type: 3}
       propertyPath: scene
       value: 
-      objectReference: {fileID: 102900000, guid: cd3a955faab3a442d821f46c95ac0db2, type: 3}
+      objectReference: {fileID: 102900000, guid: 5646c4e0beb3a4978aa267f5245bc71e, type: 3}
     - target: {fileID: 528528524810468098, guid: 3d5946ca0d6d06b42aee8001c52fe59f, type: 3}
       propertyPath: prefixToDestName
       value: Travel to
