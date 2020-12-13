@@ -101,7 +101,9 @@ GameObject:
   - component: {fileID: 7473095215975324673}
   - component: {fileID: 1204202446883970856}
   - component: {fileID: 7846464531110220315}
-  m_Layer: 0
+  - component: {fileID: 6852379104384601706}
+  - component: {fileID: 3305598081604095364}
+  m_Layer: 9
   m_Name: Enemy Patrol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +155,6 @@ MonoBehaviour:
   points:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
 --- !u!195 &1204202446883970856
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -164,7 +165,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 200
@@ -188,10 +189,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa947e69b03c2248bc499cde41b7724, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
-  attackRange: 3
+  damage: 20
+  attackRange: 5
   attackWindupTime: 0
   attackTimeCooldown: 2
+--- !u!114 &6852379104384601706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3777453130216299770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00010e16fa8bf842840c8797f2438d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDamageText: 1
+  damageTextPrefab: {fileID: 6131599464639163245, guid: a36437762455c6640827158090c4ef1d, type: 3}
+  maxHealth: 20
+  onDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6852379104384601706}
+        m_TargetAssemblyTypeName: Characters.Enemy.Health, Assembly-CSharp
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!135 &3305598081604095364
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3777453130216299770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.75
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &503966657852196323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -202,6 +246,10 @@ PrefabInstance:
     - target: {fileID: 3555054756247408018, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
       propertyPath: m_Name
       value: EnemyEyeRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3555054756247408018, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3555054756247408021, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
       propertyPath: m_RootOrder
@@ -245,6 +293,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3555054756247408021, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944227491741114689, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438155213335581434, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088819768421287401, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088819768645258686, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088819768673167589, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

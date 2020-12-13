@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2125114026358220353}
   - component: {fileID: 1432472609500073773}
   - component: {fileID: 6767436151399222401}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3777453130044117930}
   - component: {fileID: 3777453130044117929}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Guard Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 720426947362663528}
   - component: {fileID: 371787278116314807}
   - component: {fileID: 4481716787875896032}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy Guard Killable
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -272,6 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnDamageText: 1
   damageTextPrefab: {fileID: 6131599464639163245, guid: a36437762455c6640827158090c4ef1d, type: 3}
+  animator: {fileID: 0}
   maxHealth: 20
   onDeath:
     m_PersistentCalls:
@@ -300,7 +301,7 @@ GameObject:
   - component: {fileID: 3777453130932444405}
   - component: {fileID: 3777453130932444406}
   - component: {fileID: 3777453130932444407}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy Guard Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7255537278371096379}
   - component: {fileID: 2019832464271398300}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Vision Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
