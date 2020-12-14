@@ -4,11 +4,11 @@ namespace Characters.Player
 {
     public class TakeDamageTest : MonoBehaviour
     {
-        private HP hitPoint;
+        private HealthManager hitPoint;
 
         private void Start()
         {
-            hitPoint = GetComponent<HP>();
+            hitPoint = GetComponent<HealthManager>();
         }
 
         public void TakeDamage()

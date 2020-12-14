@@ -8,7 +8,7 @@ namespace Characters.Player
         private Camera _cam;
         private Weapon _weapon;
         private LayerMask _ground, _targetableLayerMask;
-        private HP _health;
+        private HealthManager _health;
         private Animator _animator;
         [SerializeField] private GameObject lightning;
         [SerializeField] private string attackNameInAnimator; 
@@ -21,7 +21,7 @@ namespace Characters.Player
         {
             _cam = Camera.main;
             _weapon = transform.GetComponentInChildren<Weapon>();
-            _health = GetComponent<HP>();
+            _health = GetComponent<HealthManager>();
             this._ground = LayerMask.GetMask("Ground");
             this._targetableLayerMask = LayerMask.GetMask("Targetable");
             _animator = GetComponent<Animator>();
@@ -29,7 +29,7 @@ namespace Characters.Player
         
         private void Update()
         {
-            if (_health.isDefeat) return;
+            if (_health.IsDead) return;
             
             if (Input.GetMouseButtonDown(0))
             {

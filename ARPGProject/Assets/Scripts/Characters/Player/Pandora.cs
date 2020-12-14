@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Characters.Player
 {
-    [RequireComponent(typeof(HP))]
+    [RequireComponent(typeof(HealthManager))]
     public class Pandora : MonoBehaviour
     {
         public Light hopeLight;
-        private HP _hp;
+        private HealthManager _hp;
         
         [SerializeField] private float minLight;
         [SerializeField] private float maxLight;
@@ -18,7 +18,7 @@ namespace Characters.Player
 
         private void Start()
         {
-            _hp = GetComponent<HP>();
+            _hp = GetComponent<HealthManager>();
             _hp.OnHealthChanged += UpdateLight;
             UpdateLight();
         }
@@ -37,9 +37,9 @@ namespace Characters.Player
         
         private void UpdateLight()
         {
-            hopeLight.intensity = Mathf.Lerp(minLight, maxLight, (float)_hp.CurrentHp / _hp.maxHP);
+            hopeLight.intensity = Mathf.Lerp(minLight, maxLight, _hp.HealthFillRatio());
             if(alsoBuffLightRadius)
-                hopeLight.range = Mathf.Lerp(minLightRadius, maxLightRadius, (float) _hp.CurrentHp / _hp.maxHP);
+                hopeLight.range = Mathf.Lerp(minLightRadius, maxLightRadius, _hp.HealthFillRatio());
         }
 
         public override string ToString() => $"Pandora's Light : {hopeLight.intensity}, : Radius : {hopeLight.range}";

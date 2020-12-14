@@ -14,7 +14,7 @@ namespace Characters.Enemy
         
         private GameObject _target;
         private Animator _animator;
-        private HP _targetHpRef;
+        private HealthManager _targetHpRef;
         private float originalAttackCoolDown;
         //private float _elapsedTime;
         
@@ -38,7 +38,7 @@ namespace Characters.Enemy
             }
             else
             {
-                if (HasTarget && !_targetHpRef.isDefeat)
+                if (HasTarget && !_targetHpRef.IsDead)
                 {
                     float distance = Vector3.Distance(this.transform.position, _target.transform.position);
                     if (distance < attackRange)
@@ -68,7 +68,7 @@ namespace Characters.Enemy
         public void GetTarget(GameObject target)
         {
             this._target = target;
-            this._targetHpRef = _target.GetComponent<HP>();
+            this._targetHpRef = _target.GetComponent<HealthManager>();
         }
         
         public void ForgetTarget()

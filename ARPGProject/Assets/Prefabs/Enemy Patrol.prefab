@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 1204202446883970856}
   - component: {fileID: 7846464531110220315}
   - component: {fileID: 7353118586823585308}
-  - component: {fileID: 6852379104384601706}
+  - component: {fileID: 5659224070127877384}
   - component: {fileID: 3305598081604095364}
   m_Layer: 9
   m_Name: Enemy Patrol
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c5f9a4ea91b2469df9dff5df79e03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6852379104384601706
+--- !u!114 &5659224070127877384
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3777453130216299770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b00010e16fa8bf842840c8797f2438d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e9732723f8841318db6aac194178a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnDamageText: 1
@@ -224,12 +224,14 @@ MonoBehaviour:
   HPChanged:
     m_PersistentCalls:
       m_Calls: []
-  maxHealth: 20
+  BeKilledBy:
+    m_PersistentCalls:
+      m_Calls: []
   onDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6852379104384601706}
-        m_TargetAssemblyTypeName: Characters.Enemy.Health, Assembly-CSharp
+      - m_Target: {fileID: 5659224070127877384}
+        m_TargetAssemblyTypeName: Characters.HealthManager, Assembly-CSharp
         m_MethodName: Kill
         m_Mode: 1
         m_Arguments:
@@ -240,6 +242,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  deathSound: {fileID: 0}
+  maxHealth: 20
 --- !u!135 &3305598081604095364
 SphereCollider:
   m_ObjectHideFlags: 0

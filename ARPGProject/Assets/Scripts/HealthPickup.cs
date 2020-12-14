@@ -1,4 +1,5 @@
-﻿using Characters.Player;
+﻿using Characters;
+using Characters.Player;
 using Interfaces;
 using UnityEngine;
 
@@ -11,9 +12,9 @@ public class HealthPickup : MonoBehaviour, IConsumable
     public void Consume(Pandora pandora)
     {
         if(healAmount == 0)
-            pandora.gameObject.GetComponent<HP>().Heal();
+            pandora.gameObject.GetComponent<HealthManager>().Heal();
         else
-            pandora.gameObject.GetComponent<HP>().Heal(healAmount);
+            pandora.gameObject.GetComponent<HealthManager>().Heal(healAmount);
 
         if(pickUpEffect != null)
             Instantiate(pickUpEffect, transform.position, this.gameObject.transform.rotation);

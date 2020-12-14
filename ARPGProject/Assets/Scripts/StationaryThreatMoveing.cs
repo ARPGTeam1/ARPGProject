@@ -1,4 +1,5 @@
 ﻿using System;
+using Characters;
 using Characters.Player;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ public class StationaryThreatMoveing : MonoBehaviour
     [SerializeField] private float startDamageTimerSeconds;
     [SerializeField] private float repeatDamageTimerSeconds;
    
-    private HP target;
+    private HealthManager target;
     //[SerializeField] private GameObject moveToTarget;
 
     [SerializeField] private Vector3 moveToVector;
@@ -45,8 +46,8 @@ public class StationaryThreatMoveing : MonoBehaviour
     {
         if (!other.gameObject.CompareTag("Player"))
                 return;
-        target = other.gameObject.GetComponent<HP>();
-        if (target != null && !target.isDefeat)
+        target = other.gameObject.GetComponent<HealthManager>();
+        if (target != null && !target.IsDead)
         {
             InvokeRepeating(nameof(DamageTarget), startDamageTimerSeconds, repeatDamageTimerSeconds);         
         }

@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 857704565916300595}
   - component: {fileID: 4223056057862683376}
   - component: {fileID: 5552422840263829041}
-  - component: {fileID: 237327366061940948}
+  - component: {fileID: 9115360232925058648}
   m_Layer: 5
   m_Name: HP Bar
   m_TagString: Untagged
@@ -331,7 +331,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &237327366061940948
+--- !u!114 &9115360232925058648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8814788458943255865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b51323640734aedaf1bf14a5ee7ae7b, type: 3}
+  m_Script: {fileID: 11500000, guid: e10e60b32afa43938049d0fa5d0296cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BarValueChanged:
