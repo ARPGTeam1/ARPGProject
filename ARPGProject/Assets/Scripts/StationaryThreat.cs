@@ -1,4 +1,5 @@
-﻿using Characters.Player;
+﻿using Characters;
+using Characters.Player;
 using UnityEngine;
 
 public class StationaryThreat : MonoBehaviour
@@ -11,14 +12,14 @@ public class StationaryThreat : MonoBehaviour
     [SerializeField] private AudioClip _audioClip;
     [SerializeField] private AudioSource _audioSource;
     
-    private HP _target;
+    private HealthManager _target;
 
     private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.CompareTag("Player"))
                 return;
-        _target = other.gameObject.GetComponent<HP>();
-        if (_target != null && !_target.isDefeat )
+        _target = other.gameObject.GetComponent<HealthManager>();
+        if (_target != null && !_target.IsDead )
         {
             InvokeRepeating(nameof(DamageTarget), startDamageTimerSeconds, repeatDamageTimerSeconds);         
         }
@@ -28,7 +29,7 @@ public class StationaryThreat : MonoBehaviour
     {
         if (_audioClip != null)
         {
-            if (!_target.isDefeat)
+            if (!_target.IsDead)
             {
                 _audioSource.PlayOneShot(_audioClip);    
             }

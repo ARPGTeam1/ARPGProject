@@ -10,7 +10,7 @@ namespace Characters.Player
         private NavMeshAgent _agent;
         private Camera _cam;
         private LayerMask _ground;
-        private HP _hitPoint;
+        private HealthManager _hitPoint;
         private Animator _animator;
         private Rigidbody _rb;
         private Attack _attack;
@@ -24,7 +24,7 @@ namespace Characters.Player
             this._agent = GetComponent<NavMeshAgent>();
             this._cam = Camera.main;
             this._ground = LayerMask.GetMask("Ground");
-            this._hitPoint = GetComponent<HP>();
+            this._hitPoint = GetComponent<HealthManager>();
             this._animator = GetComponent<Animator>();
             this._rb = GetComponent<Rigidbody>();
             this._attack = GetComponent<Attack>();
@@ -54,7 +54,7 @@ namespace Characters.Player
             this._agent.ResetPath(); 
             this._rb.velocity = Vector3.zero;
             var ray = this._cam.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out var hit, this._cam.farClipPlane, this._ground) && !this._hitPoint.isDefeat)
+            if (Physics.Raycast(ray, out var hit, this._cam.farClipPlane, this._ground) && !this._hitPoint.IsDead)
             {
                 this._agent.destination = hit.point;
                 if (HasEffect)

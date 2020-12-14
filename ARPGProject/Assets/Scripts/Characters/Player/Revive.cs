@@ -7,7 +7,7 @@ namespace Characters.Player
 {
     public class Revive : MonoBehaviour
     {
-        private HP _hp;
+        private HealthManager _hp;
         private NavMeshAgent _agent;
         private AudioSource _source;
         private Animator _animator;
@@ -26,7 +26,7 @@ namespace Characters.Player
 
         private void Awake()
         {
-            this._hp = GetComponent<HP>();
+            this._hp = GetComponent<HealthManager>();
             this._animator = GetComponent<Animator>();
             this._agent = GetComponent<NavMeshAgent>();
             this._source = GetComponent<AudioSource>();
@@ -37,7 +37,7 @@ namespace Characters.Player
 
         public void CorpseRevive()
         {
-            switch (this._hp.isDefeat)
+            switch (this._hp.IsDead)
             {
                 case true:
                     // this._source.PlayOneShot(this.clip);
@@ -55,12 +55,12 @@ namespace Characters.Player
         private void ReviveLogic()
         {
             this._hp.Heal();
-            this._hp.isDefeat = false;
+            // this._hp.IsDead = false;
         }
 
         public void CheckpointRevive()
         {
-            switch (this._hp.isDefeat)
+            switch (this._hp.IsDead)
             {
                 case true:
                     this._agent.Warp(this.checkPoint);

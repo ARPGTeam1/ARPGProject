@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Characters;
 using Characters.Player;
 using UnityEngine;
 
@@ -18,7 +19,7 @@ public class RangedEnemy : MonoBehaviour
     
     
     private GameObject _target;
-    private HP _targetHpRef;
+    private HealthManager _targetHpRef;
     private float originalAttackCoolDown;
 
     private bool HasTarget => _target != null;
@@ -54,7 +55,7 @@ public class RangedEnemy : MonoBehaviour
         }
         else
         {
-            if (HasTarget && !_targetHpRef.isDefeat)
+            if (HasTarget && !_targetHpRef.IsDead)
             {
                 float distance = Vector3.Distance(this.transform.position, _target.transform.position);
                 if (distance < attackMaxRange && distance > attackMinRange)
@@ -91,7 +92,7 @@ public class RangedEnemy : MonoBehaviour
     public void GetTarget(GameObject target)
     {
         this._target = target;
-        this._targetHpRef = _target.GetComponent<HP>();
+        this._targetHpRef = _target.GetComponent<HealthManager>();
     }
         
     public void ForgetTarget()

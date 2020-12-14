@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 
 namespace Characters.Enemy
 {
-    [RequireComponent(typeof(Health))]
+    [RequireComponent(typeof(HealthManager))]
     public class EnemyBehavior : MonoBehaviour, IColliderListener, IKillable
     {
 
@@ -16,7 +16,7 @@ namespace Characters.Enemy
         private Patrol _patrol;
         private MeleeEnemy _meleeEnemy;
         private RangedEnemy _rangedEnemy;
-        private Health _health;
+        private HealthManager _health;
         private Tracking _tracking;
         
         private bool HasTarget => _target != null;
@@ -47,7 +47,7 @@ namespace Characters.Enemy
             _meleeEnemy = this.gameObject.GetComponent<MeleeEnemy>();
             _rangedEnemy = this.gameObject.GetComponent<RangedEnemy>();
             _tracking = this.gameObject.GetComponent<Tracking>();
-            _health = GetComponent<Health>();
+            _health = GetComponent<HealthManager>();
         }
         
         private void Update()

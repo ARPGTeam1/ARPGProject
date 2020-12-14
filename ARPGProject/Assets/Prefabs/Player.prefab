@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 802219321045450586}
   - component: {fileID: 802219321045450587}
   - component: {fileID: 802219321045450584}
+  - component: {fileID: 3970167866301039737}
   - component: {fileID: 802219321045450585}
   - component: {fileID: 1018700006}
   - component: {fileID: 7256849138240839514}
@@ -350,9 +351,34 @@ MonoBehaviour:
   HPChanged:
     m_PersistentCalls:
       m_Calls: []
-  BeenDefeatedText:
+  BeKilledBy:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3970167866301039737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568412229135779350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e9732723f8841318db6aac194178a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDamageText: 0
+  damageTextPrefab: {fileID: 0}
+  HPChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  BeKilledBy:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  deathSound: {fileID: 8300000, guid: 03306655b86180d44ab5291a95cd33b8, type: 3}
+  maxHealth: 500
 --- !u!114 &802219321045450585
 MonoBehaviour:
   m_ObjectHideFlags: 0

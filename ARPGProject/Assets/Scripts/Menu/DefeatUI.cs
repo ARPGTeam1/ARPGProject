@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using Characters.Player;
+using Characters;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,13 +11,13 @@ namespace Menu
         public GameObject defeatUI;
         public SpriteRenderer fadeSquare;
         public UnityEvent<string> DefeatUIText;
-        private HP hitPoint;
+        private HealthManager hitPoint;
 
 
         private void Start()
         {
-            this.hitPoint = this.player.GetComponent<HP>();
-            this.hitPoint.BeenDefeatedText.AddListener(onDefeated);
+            this.hitPoint = this.player.GetComponent<HealthManager>();
+            this.hitPoint.BeKilledBy.AddListener(onDefeated);
             this.defeatUI.SetActive(false);
         }
 
