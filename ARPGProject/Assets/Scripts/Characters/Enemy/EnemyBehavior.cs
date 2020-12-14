@@ -56,7 +56,9 @@ namespace Characters.Enemy
             {
                 if (!CanPatrol) return;
                 _patrol.enabled = false;
+                if (!CanTrack) return;
                 _tracking.enabled = false;
+                
                 return;
             }
             BehaviourTree();
