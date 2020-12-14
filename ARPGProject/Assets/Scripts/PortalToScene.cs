@@ -1,4 +1,5 @@
 ﻿using System;
+using Menu;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,7 +12,8 @@ public class PortalToScene : MonoBehaviour
     [SerializeField] private string prefixToDestName;
     [SerializeField] private bool textFacesPlayer;
     //[SerializeField] private ParticleSystem _particleSystem;
-    private Camera mainCam; 
+    private Camera mainCam;
+    public DefeatUI dUI;
     
     private void Start()
     {
@@ -32,9 +34,14 @@ public class PortalToScene : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.CompareTag("Player"))
-            SceneManager.LoadScene(scene.name);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            StartCoroutine(this.dUI.FadeSquare());
+            Invoke(nameof(InitializeScene), 2);
+        }
     }
+
+    private void InitializeScene() => SceneManager.LoadScene(this.scene.name);
 
     private void OnBecameVisible()
     {
