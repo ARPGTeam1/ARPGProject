@@ -43,6 +43,10 @@ namespace Characters.Enemy
                     float distance = Vector3.Distance(this.transform.position, _target.transform.position);
                     if (distance < attackRange)
                     {
+                        if (Vector3.Dot(this.transform.forward, _target.transform.position - this.transform.position) < 0)
+                        {
+                            return;
+                        }
                         this._animator.SetTrigger("Melee");
                         DamageTarget();
                         attackTimeCooldown = originalAttackCoolDown;

@@ -117,6 +117,7 @@ MonoBehaviour:
   collider: {fileID: 6487334675246271769}
   lineMaterial:
   - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  stoppingDistance: 3
 --- !u!195 &6344310275866603768
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -127,7 +128,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -151,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa947e69b03c2248bc499cde41b7724, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 15
   attackRange: 4
   attackWindupTime: 0
   attackTimeCooldown: 1
@@ -182,7 +183,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnDamageText: 1
   damageTextPrefab: {fileID: 6131599464639163245, guid: a36437762455c6640827158090c4ef1d, type: 3}
-  animator: {fileID: 0}
+  HPChanged:
+    m_PersistentCalls:
+      m_Calls: []
   maxHealth: 50
   onDeath:
     m_PersistentCalls:

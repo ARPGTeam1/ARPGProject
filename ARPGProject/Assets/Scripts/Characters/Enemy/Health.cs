@@ -12,6 +12,7 @@ namespace Characters.Enemy
         [SerializeField] private bool spawnDamageText = true;
         [SerializeField] private GameObject damageTextPrefab;
         [HideInInspector] public UnityEvent<int> HPChanged;
+        private Animator _animator;
         
         public int CurrentHealth
         {
@@ -41,6 +42,7 @@ namespace Characters.Enemy
         private void Start()
         {
             CurrentHealth = MaxHealth;
+            this._animator = GetComponentInChildren<Animator>();
         }
 
         public void TakeDamage(int damage, string source)
@@ -49,6 +51,7 @@ namespace Characters.Enemy
             
             OnHealthChanged?.Invoke();
             OnDamaged?.Invoke(damage);
+            this._animator.SetTrigger("GetHit");
             
             
             if (spawnDamageText)
@@ -64,9 +67,10 @@ namespace Characters.Enemy
         {
             OnDeath?.Invoke();
             
-            if (TryGetComponent<NavMeshAgent>(out var agent))
-                agent.enabled = false;
-            Destroy(gameObject, 2);
+            // if (TryGetComponent<NavMeshAgent>(out var agent))
+            //     agent.enabled = false;
+            this._animator.SetTrigger("Die");
+            Destroy(gameObject, 1);
         }
 
         public void Heal()
