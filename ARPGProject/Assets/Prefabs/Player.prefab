@@ -121,7 +121,6 @@ GameObject:
   - component: {fileID: 7287841087915531673}
   - component: {fileID: 802219321045450586}
   - component: {fileID: 802219321045450587}
-  - component: {fileID: 802219321045450584}
   - component: {fileID: 3970167866301039737}
   - component: {fileID: 802219321045450585}
   - component: {fileID: 1018700006}
@@ -333,27 +332,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickDestinationPrefab: {fileID: 1267775975643832, guid: afc3ac08dff68aa46915da574d41d350, type: 3}
---- !u!114 &802219321045450584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568412229135779350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2fc4ee5d9b34831bab6f2c4fb1fe720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHP: 500
-  isDefeat: 0
-  deathSound: {fileID: 8300000, guid: 03306655b86180d44ab5291a95cd33b8, type: 3}
-  HPChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  BeKilledBy:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &3970167866301039737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,8 +344,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e9732723f8841318db6aac194178a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnDamageText: 0
-  damageTextPrefab: {fileID: 0}
+  spawnDamageText: 1
+  damageTextPrefab: {fileID: 6131599464639163245, guid: a36437762455c6640827158090c4ef1d, type: 3}
   HPChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -376,7 +354,19 @@ MonoBehaviour:
       m_Calls: []
   onDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3970167866301039737}
+        m_TargetAssemblyTypeName: Characters.HealthManager, Assembly-CSharp
+        m_MethodName: Kill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   deathSound: {fileID: 8300000, guid: 03306655b86180d44ab5291a95cd33b8, type: 3}
   maxHealth: 500
 --- !u!114 &802219321045450585
@@ -407,7 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightning: {fileID: 1998893266685322, guid: dc99b5d38f546af47b2ea53fe8993998, type: 3}
-  attackNameInAnimator: Melee2
+  attackNameInAnimator: Melee
   speedBuff: 1
 --- !u!114 &7256849138240839514
 MonoBehaviour:
