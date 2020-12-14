@@ -1,5 +1,384 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7793076058171572797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character - Pandora/Death - Pandora
+  m_EditorClassIdentifier: 
+  Path: event:/Character - Pandora/Death - Pandora
+  guid: 8f16a5a00bc03141881e2029f7dec5f6
+  Banks:
+  - {fileID: -5241004399243470626}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4430
+--- !u!114 &-7717796239558950093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Enemies.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/WOH - Sound/Build/Desktop/Enemies.bank
+  Name: Enemies
+  lastModified: 637435360420000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-7690504939593880355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/WOH - Sound/Build/Desktop/Ambience.bank
+  Name: Ambience
+  lastModified: 637435360410000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-7565230142534633539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience & Environments/Ambience Level 1
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience & Environments/Ambience Level 1
+  guid: e09674615d99c2479986f220006a6486
+  Banks:
+  - {fileID: -7690504939593880355}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 206451
+--- !u!114 &-7244686403574206458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/VO.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/WOH - Sound/Build/Desktop/VO.bank
+  Name: VO
+  lastModified: 637435360420000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-6950122552164743450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Rocks Falling
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Rocks Falling
+  guid: 57613c539f75dd41be8ad700906a152d
+  Banks:
+  - {fileID: -7717796239558950093}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 10000
+--- !u!114 &-5759540660827154988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character - Pandora/Attack Lightning
+  m_EditorClassIdentifier: 
+  Path: event:/Character - Pandora/Attack Lightning
+  guid: 49d3f586ba49334bb7baa45f32e5d411
+  Banks:
+  - {fileID: -5241004399243470626}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3000
+--- !u!114 &-5241004399243470626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Character.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/WOH - Sound/Build/Desktop/Character.bank
+  Name: Character
+  lastModified: 637435360410000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-4209577542440249678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Hope Pickup Sound
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Hope Pickup Sound
+  guid: a24af4d3fb21fe48b092ff223edd6f4e
+  Banks:
+  - {fileID: -679797463866740842}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
+--- !u!114 &-4184126748452977729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy Death Tracking
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy Death Tracking
+  guid: 90644cf9f11be6408ca8bf8707a79f3e
+  Banks:
+  - {fileID: -7717796239558950093}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2500
+--- !u!114 &-3553862393720003637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Portal Sound - Olive Tree
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Portal Sound - Olive Tree
+  guid: 64852d6a76e89b45bc16c797b8d49fe7
+  Banks:
+  - {fileID: -679797463866740842}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4000
+--- !u!114 &-3107561416278977432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/WOH - Sound/Build/Desktop/UI.bank
+  Name: UI
+  lastModified: 637435360420000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2962529148547115928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy Revieve Damage Range
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy Revieve Damage Range
+  guid: c14809726019d7448d4581597efda04d
+  Banks:
+  - {fileID: -7717796239558950093}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 350
+--- !u!114 &-2355686057978388991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/WOH - Sound/Build/Desktop/Master.bank
+  Name: Master
+  lastModified: 637435360420000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-715087744161569956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy Recieve Damage Tracking
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy Recieve Damage Tracking
+  guid: cb0347c0d6124d4a9d32bf30a282ea0d
+  Banks:
+  - {fileID: -7717796239558950093}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 500
+--- !u!114 &-679797463866740842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/WOH - Sound/Build/Desktop/SFX.bank
+  Name: SFX
+  lastModified: 637435360420000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-354200890768318455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Stationary Fire
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Stationary Fire
+  guid: 728b03ee28099d4d80417f7d09d71d33
+  Banks:
+  - {fileID: -7717796239558950093}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 59409
+--- !u!114 &-125087312540593125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character - Pandora/Revive
+  m_EditorClassIdentifier: 
+  Path: event:/Character - Pandora/Revive
+  guid: d7f3ff0668f0964894ab34df900f3436
+  Banks:
+  - {fileID: -5241004399243470626}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3600
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,10 +391,257 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
+  EditorBanks:
+  - {fileID: 1397613506601568709}
+  - {fileID: -7690504939593880355}
+  - {fileID: -5241004399243470626}
+  - {fileID: -7717796239558950093}
+  - {fileID: 4550614792526989344}
+  - {fileID: -2355686057978388991}
+  - {fileID: 318345171499982710}
+  - {fileID: -679797463866740842}
+  - {fileID: -3107561416278977432}
+  - {fileID: -7244686403574206458}
+  EditorEvents:
+  - {fileID: 8375493994374415291}
+  - {fileID: -7565230142534633539}
+  - {fileID: 3138765778009299180}
+  - {fileID: -5759540660827154988}
+  - {fileID: 3281826294275867055}
+  - {fileID: 7857059037212453163}
+  - {fileID: -7793076058171572797}
+  - {fileID: 5838187551786907733}
+  - {fileID: -125087312540593125}
+  - {fileID: -6950122552164743450}
+  - {fileID: -354200890768318455}
+  - {fileID: 5330828178824993609}
+  - {fileID: -4184126748452977729}
+  - {fileID: -2962529148547115928}
+  - {fileID: -715087744161569956}
+  - {fileID: -3553862393720003637}
+  - {fileID: -4209577542440249678}
+  - {fileID: 6718329724950898355}
   EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
-  stringsBankWriteTime: 0
+  MasterBanks:
+  - {fileID: -2355686057978388991}
+  StringsBanks:
+  - {fileID: 1397613506601568709}
+  stringsBankWriteTime: 637435360420000000
   cacheVersion: 5
+--- !u!114 &318345171499982710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/WOH - Sound/Build/Desktop/Music.bank
+  Name: Music
+  lastModified: 637435360420000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1397613506601568709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/WOH - Sound/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  lastModified: 637435360420000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2028
+  Exists: 1
+--- !u!114 &3138765778009299180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character - Pandora/Attack Spear
+  m_EditorClassIdentifier: 
+  Path: event:/Character - Pandora/Attack Spear
+  guid: 13863b738faf954e86d77f47214c45a9
+  Banks:
+  - {fileID: -5241004399243470626}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 880
+--- !u!114 &3281826294275867055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character - Pandora/Running - Pandora
+  m_EditorClassIdentifier: 
+  Path: event:/Character - Pandora/Running - Pandora
+  guid: 4b530b9258c5ca4aa5b89e18d1868724
+  Banks:
+  - {fileID: -5241004399243470626}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2784
+--- !u!114 &4550614792526989344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Level 01.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/WOH - Sound/Build/Desktop/Level 01.bank
+  Name: Level 01
+  lastModified: 637435360420000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &5330828178824993609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy Attack Fireball
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy Attack Fireball
+  guid: 7377ebaf284b9d4c8b4ef77890daa336
+  Banks:
+  - {fileID: -7717796239558950093}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
+--- !u!114 &5838187551786907733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character - Pandora/Recieve Damage - Pandora
+  m_EditorClassIdentifier: 
+  Path: event:/Character - Pandora/Recieve Damage - Pandora
+  guid: a84fce9b1a59754cbd257c90da6d243c
+  Banks:
+  - {fileID: -5241004399243470626}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &6718329724950898355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Click
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Click
+  guid: 036b4706c2468141b18596614e0a6ebb
+  Banks:
+  - {fileID: -3107561416278977432}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 326
+--- !u!114 &7857059037212453163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character - Pandora/Walking - Pandora
+  m_EditorClassIdentifier: 
+  Path: event:/Character - Pandora/Walking - Pandora
+  guid: 645eca714f7f45448d9ff242ca23b396
+  Banks:
+  - {fileID: -5241004399243470626}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4913
+--- !u!114 &8375493994374415291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience & Environments/Ambience Tempel
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience & Environments/Ambience Tempel
+  guid: 74e8dbf714d10547961494b885e6ab7e
+  Banks:
+  - {fileID: -7690504939593880355}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 273432

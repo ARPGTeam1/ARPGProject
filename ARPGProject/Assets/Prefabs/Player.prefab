@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 802219321045450585}
   - component: {fileID: 1018700006}
   - component: {fileID: 7256849138240839514}
+  - component: {fileID: -7926159684715248656}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -400,6 +401,20 @@ MonoBehaviour:
   alsoBuffLightRadius: 1
   minLightRadius: 2
   maxLightRadius: 35
+--- !u!114 &-7926159684715248656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568412229135779350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
 --- !u!1 &852011760065721699
 GameObject:
   m_ObjectHideFlags: 0
