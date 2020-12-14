@@ -17,11 +17,21 @@ public class Projectile : MonoBehaviour, IProjectile, IKillable
     [SerializeField] private bool shouldTrack;
     [SerializeField] private Vector3 offset;
     [SerializeField] private GameObject collisionEffect;
+    [FMODUnity.EventRef] public string FireballEvent = "";
+    FMOD.Studio.EventInstance _fireballState;
     
     private GameObject trackingTarget;
     private GameObject _owner;
     private float _elapsed;
-    
+
+
+    private void Start()
+    {
+        _fireballState = FMODUnity.RuntimeManager.CreateInstance(FireballEvent);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(_fireballState, transform, GetComponent<Rigidbody>());
+        _fireballState.start();
+    }
+
     private bool Tracking => trackingTarget != null;
 
     public void Spawn(GameObject target, GameObject owner)
