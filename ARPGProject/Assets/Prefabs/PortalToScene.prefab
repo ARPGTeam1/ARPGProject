@@ -48,11 +48,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed983e4cfeab87e45a67ba17ba8dc603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: {fileID: 0}
+  scene: {fileID: 102900000, guid: 5646c4e0beb3a4978aa267f5245bc71e, type: 3}
   destinationText: {fileID: 4250087541440225086}
-  prefixToDestName: Teleport to
+  prefixToDestName: Travel to
   textFacesPlayer: 1
-  _particleSystem: {fileID: 0}
+  dUI: {fileID: 0}
 --- !u!65 &528528524810468099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -323,7 +323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &358462258102268976
 Transform:
   m_ObjectHideFlags: 0
