@@ -30575,6 +30575,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 802219321045450585, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
+      propertyPath: defeatUI
+      value: 
+      objectReference: {fileID: 1776632143}
     - target: {fileID: 912180434493775020, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -30621,6 +30625,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
+--- !u!114 &1076319468 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 802219321045450585, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
+  m_PrefabInstance: {fileID: 1076319467}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538399916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d305b1d9c6282024ca54c41040ba5e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1077517470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51659,6 +51674,22 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 41855909}
+    - target: {fileID: 3128097040250130376, guid: fc718623b9af9c94e941186d3df39124, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1076319468}
+    - target: {fileID: 3128097040250130376, guid: fc718623b9af9c94e941186d3df39124, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CorpseRevive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3128097040311594025, guid: fc718623b9af9c94e941186d3df39124, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1076319468}
+    - target: {fileID: 3128097040311594025, guid: fc718623b9af9c94e941186d3df39124, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckpointRevive
+      objectReference: {fileID: 0}
     - target: {fileID: 3185910151898738664, guid: fc718623b9af9c94e941186d3df39124, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -51713,6 +51744,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc718623b9af9c94e941186d3df39124, type: 3}
+--- !u!1 &1776632143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3128097039283665096, guid: fc718623b9af9c94e941186d3df39124, type: 3}
+  m_PrefabInstance: {fileID: 1776632142}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1778310882
 PrefabInstance:
   m_ObjectHideFlags: 0
