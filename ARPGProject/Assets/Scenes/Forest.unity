@@ -1934,7 +1934,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 552664607933081652, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
       propertyPath: damage
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 552664607933081652, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
       propertyPath: attackRange
@@ -6234,6 +6234,10 @@ PrefabInstance:
     - target: {fileID: 3777453130216299770, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: m_Name
       value: Enemy Patrol 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4629839170214060530, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7473095215975324673, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: points.Array.size
@@ -23714,6 +23718,10 @@ PrefabInstance:
     - target: {fileID: 3777453130216299770, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
       propertyPath: m_Name
       value: Enemy Guard (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864254133440587559, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: damage
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
@@ -43085,6 +43093,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Guard
       objectReference: {fileID: 0}
+    - target: {fileID: 6864254133440587559, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: damage
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
 --- !u!4 &1499940122 stripped
@@ -49111,6 +49123,10 @@ PrefabInstance:
     - target: {fileID: 3777453130216299770, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
       propertyPath: m_Name
       value: Enemy Guard (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864254133440587559, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: damage
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
