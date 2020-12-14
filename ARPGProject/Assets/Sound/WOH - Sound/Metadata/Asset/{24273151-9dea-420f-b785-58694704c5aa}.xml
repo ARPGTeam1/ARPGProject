@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EncodableAsset" id="{24273151-9dea-420f-b785-58694704c5aa}">
+		<property name="assetPath">
+			<value>WOH - Sound Folder/Voice/Pandora - Voice Over/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{21f83914-020c-49ab-b400-c6483308aa52}</destination>
+		</relationship>
+	</object>
+</objects>

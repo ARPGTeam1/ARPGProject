@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{f423c1be-612d-4572-9a61-f686c3a1558d}">
+		<property name="assetPath">
+			<value>WOH - Sound Folder/Voice/Hope - Voice Over/He will do everything to break you.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>4.4582312925170067</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{21f83914-020c-49ab-b400-c6483308aa52}</destination>
+		</relationship>
+	</object>
+</objects>

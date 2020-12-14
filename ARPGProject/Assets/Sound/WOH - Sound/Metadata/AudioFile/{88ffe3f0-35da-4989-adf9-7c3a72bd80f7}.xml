@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{88ffe3f0-35da-4989-adf9-7c3a72bd80f7}">
+		<property name="assetPath">
+			<value>WOH - Sound Folder/SFX/SfxHopePickup.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.1524716553287981</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{21f83914-020c-49ab-b400-c6483308aa52}</destination>
+		</relationship>
+	</object>
+</objects>

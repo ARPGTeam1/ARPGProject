@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EncodableAsset" id="{8c86d0e9-444b-4990-ad64-7bcb23cb1daf}">
+		<property name="assetPath">
+			<value>WOH - Sound Folder/Character/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{21f83914-020c-49ab-b400-c6483308aa52}</destination>
+		</relationship>
+	</object>
+</objects>

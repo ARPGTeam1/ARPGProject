@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EventFolder" id="{c0f23174-9bd2-44db-90bf-b7c130257060}">
+		<property name="note">
+			<value>Enemies
+In the game the player will encounter 6 different types of enemies or threats.
+
+5.4.1 Hades Flames, Stationary Trap
+This threat is stuck in the ground, when the player crosses their attack range the player will be damaged by fire. The player has to pass by accordingly to not get hurt.
+
+5.4.2 Sisyphus Rocks
+This threat appears in some parts of the level where there are higher terrains. They fall from a high slope that the player has to get past.
+
+5.4.3 Aplistía, Melee threat
+This enemy is the first challenge the player faces. These enemies will attack you as soon as the player enters their area. They are named after Greed, for so is their evil form they’ve taken on since Pandora’s box was opened.
+
+Aplistía are easier to conquer, they don’t have very high HP but it’s a lot of them. Like Orcs in Lord of the Rings, but instead they’re flying snake-mouth-creatures. They hurt the player with their mouth. Sometimes there is one a little bigger, they are still pretty easy to kill.
+
+They are known for their disgusting look.
+
+Aplistía, is an enemy who makes the player feel: Scared and disgusted
+
+5.4.4 Pónos, Patrolling threat
+This enemy is the second challenge the player faces. These enemies are flying eyeballs. They’re patrolling around in a predicted order keeping an eye out for any intruders. If they caught you with their eye, they will attack you with magic for as long as you are in their attack range. Pónos means pain, and they look like souls who have levitated around forever in agony, for so is their evil form.
+
+The best way to overcome this threat is to outsmart them by sneaking behind them when they can not see, they are always facing their back to the player once in a while. They have higher HP than Alpistía, but are not more clever.
+
+They are known for no mercy, and the guardians of the temples.
+ENEMY IS RED EYE
+
+5.4.5 Metanióno, The Range threat
+This enemy can spot you from a mile away, they have very good eyesight and can feel your spirit coming near. These enemies throw fire magic at you that fill you with guilt, taking a lot of playerhealth if being hit. They look similar to the Aplistía, but with different colors. Metanióno means regret, which can give any creature pain.
+
+They are very good at damaging the player from far away. But not in Melee, then the player usually has an advantage and can kill them on the spot. Metanióno their body to fight in melee. They have pretty good HP.
+
+They are known for damaging souls and are the eyes and ears of Zeus.
+
+5.4.6 Échthra, The Tracker threat
+This enemy sneaks up on the player when they least suspect it. If they sense the player in their presence they will go for attack, it usually ends up in a chase if the player is not prepared to kill it right away. They are very fast and hard to notice. Échthra means hatred, and looks like a dead flying head with their mouth fully open to scream. They are very evil creatures.
+
+The best way to kill an Échthra is to be quick on the controllers, they don’t have such high HP and get killed pretty easily. If the player catches it.
+
+They are known for being loud and fast, like an experiment gone wrong.
+ENEMY IS PURPLE EYE</value>
+		</property>
+		<property name="name">
+			<value>Enemies</value>
+		</property>
+		<relationship name="folder">
+			<destination>{a1ede372-8c8c-489e-8969-9247643ba62f}</destination>
+		</relationship>
+	</object>
+</objects>
