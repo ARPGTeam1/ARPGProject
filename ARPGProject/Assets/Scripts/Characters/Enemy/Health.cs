@@ -11,12 +11,16 @@ namespace Characters.Enemy
     {
         [SerializeField] private bool spawnDamageText = true;
         [SerializeField] private GameObject damageTextPrefab;
-        public Animator animator;
+        [HideInInspector] public UnityEvent<int> HPChanged;
         
         public int CurrentHealth
         {
             get => _currentHealth;
-            private set => _currentHealth = Mathf.Clamp(value, 0, MaxHealth);
+            private set
+            {
+                _currentHealth = Mathf.Clamp(value, 0, MaxHealth);
+                HPChanged.Invoke(_currentHealth);
+            } 
         }
         private int _currentHealth;
 
@@ -27,7 +31,7 @@ namespace Characters.Enemy
         }
         [SerializeField] private int maxHealth;
 
-        public event Action<int> OnHealthChanged;
+        public event Action OnHealthChanged;
         public event Action<int> OnDamaged;
         public event Action OnDeath;
         public UnityEvent onDeath;
@@ -43,7 +47,7 @@ namespace Characters.Enemy
         {
             if(IsDead) return;
             
-            OnHealthChanged?.Invoke(damage);
+            OnHealthChanged?.Invoke();
             OnDamaged?.Invoke(damage);
             
             
@@ -68,13 +72,13 @@ namespace Characters.Enemy
         public void Heal()
         {
             CurrentHealth = MaxHealth;
-            OnHealthChanged?.Invoke(MaxHealth);
+            OnHealthChanged?.Invoke();
         }
 
         public void Heal(int amount)
         {
             CurrentHealth += amount;
-            OnHealthChanged?.Invoke(amount);
+            OnHealthChanged?.Invoke();
         }
 
         public void DamageText(int damage)
