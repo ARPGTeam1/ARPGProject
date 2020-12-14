@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5229133108380289346}
   - component: {fileID: 5229133108380289345}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Guard Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,8 @@ GameObject:
   - component: {fileID: 7803479205096097216}
   - component: {fileID: 1160121845149370611}
   - component: {fileID: 9006540925250267059}
-  m_Layer: 0
+  - component: {fileID: 8125584927060723046}
+  m_Layer: 9
   m_Name: "P\xF3nos"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,6 +162,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c5f9a4ea91b2469df9dff5df79e03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8125584927060723046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5229133108610106898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00010e16fa8bf842840c8797f2438d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDamageText: 1
+  damageTextPrefab: {fileID: 0}
+  animator: {fileID: 0}
+  maxHealth: 0
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8862259798078254592
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1572599109511556094}
   - component: {fileID: 6693500478131455119}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Vision Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,6 +236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyEyeRed
       objectReference: {fileID: 0}
+    - target: {fileID: 3555054756247408018, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3555054756247408021, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -259,6 +283,26 @@ PrefabInstance:
     - target: {fileID: 3555054756247408021, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944227491741114689, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438155213335581434, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088819768421287401, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088819768645258686, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088819768673167589, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0dbc457c2a096742b67e0d6014fdf57, type: 3}

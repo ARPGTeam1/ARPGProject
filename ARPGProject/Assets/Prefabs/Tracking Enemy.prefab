@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5459756074439279224}
   - component: {fileID: 6487334675246271769}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: VisionCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 552664607933081652}
   - component: {fileID: 664047108803499833}
   - component: {fileID: 1459208395}
+  - component: {fileID: 5335104051336823026}
   m_Layer: 9
   m_Name: Tracking Enemy
   m_TagString: Enemy
@@ -198,6 +199,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!135 &5335104051336823026
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6344310275866603771}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 1.07, z: 0}
 --- !u!1 &7146324214373211162
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 964646656378342267}
   - component: {fileID: 7620342148419665521}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: GuardCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,19 +265,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5818635946450148302, guid: 760514b558d905d438563357618fe4ff, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5818635946936923457, guid: 760514b558d905d438563357618fe4ff, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5818635947048609071, guid: 760514b558d905d438563357618fe4ff, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5818635947413346765, guid: 760514b558d905d438563357618fe4ff, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5818635947726084870, guid: 760514b558d905d438563357618fe4ff, type: 3}
       propertyPath: m_Name
@@ -271,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5818635947726084870, guid: 760514b558d905d438563357618fe4ff, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5818635947726084870, guid: 760514b558d905d438563357618fe4ff, type: 3}
       propertyPath: m_IsActive
@@ -323,7 +337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5818635947959359341, guid: 760514b558d905d438563357618fe4ff, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 760514b558d905d438563357618fe4ff, type: 3}

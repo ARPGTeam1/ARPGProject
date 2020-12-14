@@ -77,5 +77,10 @@ namespace Characters.Enemy
         {
             _targetHpRef.TakeDamage(damage, this.name);
         }
+
+        public float GetRange()
+        {
+            return this.attackRange;
+        }
     }
 }

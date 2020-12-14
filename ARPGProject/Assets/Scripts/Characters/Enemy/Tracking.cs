@@ -15,6 +15,7 @@ namespace Characters.Enemy
         [SerializeField] private new Collider collider;
         private Vector3 targetPosition;
         [SerializeField] private Material[] lineMaterial;
+        [SerializeField] private float stoppingDistance = 3f;
 
         public void Awake()
         {
@@ -57,6 +58,11 @@ namespace Characters.Enemy
             return false;
         }
 
+        public bool checkFOV()
+        {
+            return fieldVision(_target);
+        }
+
         private void Update()
         {
             
@@ -64,8 +70,24 @@ namespace Characters.Enemy
             {
                 //targetPosition = new Vector3(_target.transform.position.x,_target.transform.position.y + 1f,_target.transform.position.z);
                 targetPosition = _target.transform.position + new Vector3(0, 2.5f, 0);
-                reachable = !Physics.Linecast(transform.position, targetPosition, out var hit, LayerMask.GetMask("Ground"));
-                agent.destination = reachable?_target.transform.position: this.transform.position;
+                Vector3 lineCastNormalizedY = new Vector3(this.transform.position.x, this.transform.position.y + 1f, this.transform.position.z);
+                reachable = !Physics.Linecast(lineCastNormalizedY, targetPosition, out var hit, LayerMask.GetMask("Ground"));
+                //agent.destination = reachable?_target.transform.position: this.transform.position;
+                
+                
+                float distance = Vector3.Distance(this.transform.position, _target.transform.position);
+
+                if (reachable)
+                {
+                    if (distance >= stoppingDistance)
+                    {
+                        this.agent.SetDestination(_target.transform.position);                
+                    }
+                    else
+                    {
+                        this.agent.SetDestination(this.transform.position);
+                    }
+                }
             }
 
             Drawline(reachable);

@@ -17,18 +17,17 @@ namespace Characters.Enemy
         private MeleeEnemy _meleeEnemy;
         private RangedEnemy _rangedEnemy;
         private Health _health;
+        private Tracking _tracking;
         
         private bool HasTarget => _target != null;
         private bool CanMove => _moveToTarget != null;
         private bool CanPatrol => _patrol != null;
         private bool CanAttack => _meleeEnemy != null || _rangedEnemy != null;
+
+        private bool CanTrack => _tracking != null;
         
         private bool IsDead => _health != null && _health.IsDead;
 
-        public void Awake()
-        {
-   
-        }
 
 
         public event Action OnDeath;
@@ -47,12 +46,19 @@ namespace Characters.Enemy
             _patrol = this.gameObject.GetComponent<Patrol>();
             _meleeEnemy = this.gameObject.GetComponent<MeleeEnemy>();
             _rangedEnemy = this.gameObject.GetComponent<RangedEnemy>();
+            _tracking = this.gameObject.GetComponent<Tracking>();
             _health = GetComponent<Health>();
         }
         
         private void Update()
         {
-            if (IsDead) return;
+            if (IsDead)
+            {
+                if (!CanPatrol) return;
+                _patrol.enabled = false;
+                _tracking.enabled = false;
+                return;
+            }
             BehaviourTree();
         }
 
@@ -61,17 +67,22 @@ namespace Characters.Enemy
         {
             if (!HasTarget)
             {
-                if (!CanPatrol)
-                {
-                    return;
-                }
-                
+                if (!CanPatrol) return;
                 _patrol.enabled = true;
                 return;
             }
             
             _targetTransform = new Vector3(_target.transform.position.x, this.transform.position.y, _target.transform.position.z);
-            this.transform.LookAt(_targetTransform);
+
+            if (CanTrack)
+            {
+                if (_tracking.checkFOV()) 
+                    this.transform.LookAt(_targetTransform);
+            }
+            else 
+                this.transform.LookAt(_targetTransform);
+                
+                
 
             if (CanAttack)
             {
@@ -105,12 +116,12 @@ namespace Characters.Enemy
                     // TODO: Perhaps run away if only Ranged and target is too close?
                     // OR Only Ranged enemy has no minimum range?
                     
-                    _moveToTarget.MoveTowards(this.gameObject);
+                    _moveToTarget.MoveTowards(this.gameObject, 0f);
                     return;
                 }
 
                 _patrol.enabled = false;
-                _moveToTarget.MoveTowards(this.gameObject);
+                _moveToTarget.MoveTowards(this.gameObject, 0f);
             }
         }
 
@@ -125,13 +136,13 @@ namespace Characters.Enemy
                 {
                     
                     if (!CanPatrol)
-                   {
-                        _moveToTarget.MoveTowards(_target);
+                    {
+                        _moveToTarget.MoveTowards(_target,  _meleeEnemy.GetRange());
                         return;
                     }
 
                     _patrol.enabled = false;
-                    _moveToTarget.MoveTowards(_target);
+                    _moveToTarget.MoveTowards(_target,  _meleeEnemy.GetRange());
                 }    
             }
             else
@@ -141,12 +152,12 @@ namespace Characters.Enemy
                     
                     if (!CanPatrol)
                     {
-                        _moveToTarget.MoveTowards(this.gameObject);
+                        _moveToTarget.MoveTowards(this.gameObject, 0f);
                         return;
                     }
 
                     _patrol.enabled = false;
-                    _moveToTarget.MoveTowards(this.gameObject);
+                    _moveToTarget.MoveTowards(this.gameObject, 0f);
                 }
             }
         }
@@ -158,12 +169,12 @@ namespace Characters.Enemy
             {
                 if (!CanPatrol)
                 {
-                    _moveToTarget.MoveTowards(_target);
+                    _moveToTarget.MoveTowards(_target,  _meleeEnemy.GetRange());
                     return;
                 }
 
                 _patrol.enabled = false;
-                _moveToTarget.MoveTowards(_target);
+                _moveToTarget.MoveTowards(_target, _meleeEnemy.GetRange());
             }
         }
 

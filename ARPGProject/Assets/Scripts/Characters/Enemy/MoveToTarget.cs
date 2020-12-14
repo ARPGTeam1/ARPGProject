@@ -5,19 +5,17 @@ namespace Characters.Enemy
 {
     public class MoveToTarget : MonoBehaviour
     {
-        
         private NavMeshAgent _agent;
 
         void Start()
         {
-            
             _agent = GetComponentInParent<NavMeshAgent>();
         }
 
-        public void MoveTowards(GameObject target)
+        public void MoveTowards(GameObject target, float attackRange)
         {
             float distance = Vector3.Distance(this.transform.position, target.transform.position);
-            if (distance > 2f)
+            if (distance >= attackRange)
             {
                 this._agent.SetDestination(target.transform.position);                
             }
