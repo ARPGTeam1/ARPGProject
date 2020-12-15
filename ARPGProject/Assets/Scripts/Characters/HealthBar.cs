@@ -31,11 +31,12 @@ namespace Characters
 
         public static Color SetHPBarValue(float value)
         {
-            if (value < 0.2f)
-                return Color.red;
-            if (value < 0.4f)
-                return Color.yellow;
-            return Color.green;
+            // if (value < 0.2f)
+            //     return Color.red;
+            // if (value < 0.4f)
+            //     return Color.yellow;
+            // return Color.green;
+            return Color.Lerp(Color.red, Color.green, value);
         }
 
         private void LateUpdate()

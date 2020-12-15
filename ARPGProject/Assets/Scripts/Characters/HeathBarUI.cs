@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Characters
 {
-    [RequireComponent(typeof(HealthBar),typeof(Canvas))]
+    [RequireComponent(typeof(HealthBar))]
     public class HeathBarUI : MonoBehaviour
     {
         private void Start()
