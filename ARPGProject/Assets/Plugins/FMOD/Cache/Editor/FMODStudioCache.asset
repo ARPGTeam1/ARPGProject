@@ -14,9 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/UI.assets.bank
   Name: UI.assets
-  lastModified: 637436339690000000
+  lastModified: 637436351701830913
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &-9027128433829152120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Enemy Stationary Give Damage/EnemyHitStationary
+  m_EditorClassIdentifier: 
+  Name: EnemyHitStationary
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &-8938208190316125580
 MonoBehaviour:
@@ -38,7 +58,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -5595245856042432438}
+  - {fileID: 1535489955867403929}
   MinDistance: 0
   MaxDistance: 0
   Length: 2100
@@ -79,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/Level 01.assets.bank
   Name: Level 01.assets
-  lastModified: 637436339690000000
+  lastModified: 637436351700834150
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -97,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Master
-  lastModified: 637436339690000000
+  lastModified: 637436351701142904
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -220,7 +240,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-7169518300563605392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,7 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/Character.assets.bank
   Name: Character.assets
-  lastModified: 637436339690000000
+  lastModified: 637436351700235177
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -373,7 +393,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-5241004399243470626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,7 +426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/SFX.assets.bank
   Name: SFX.assets
-  lastModified: 637436339690000000
+  lastModified: 637436351701601540
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -539,9 +559,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/SFX.bank
   Name: SFX
-  lastModified: 637436339690000000
+  lastModified: 637436351701721506
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &-3444449010935574502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking - Pandora/pandWalk
+  m_EditorClassIdentifier: 
+  Name: pandWalk
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &-3261839383734108854
 MonoBehaviour:
@@ -557,7 +597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/VO.bank
   Name: VO
-  lastModified: 637436339690000000
+  lastModified: 637436351702150063
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -616,7 +656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/Level 01.bank
   Name: Level 01
-  lastModified: 637436339690000000
+  lastModified: 637436351700943296
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -634,7 +674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/Ambience.bank
   Name: Ambience
-  lastModified: 637436339690000000
+  lastModified: 637436351700095557
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -670,7 +710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/Music.assets.bank
   Name: Music.assets
-  lastModified: 637436339690000000
+  lastModified: 637436351701372148
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -711,7 +751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/Enemies.assets.bank
   Name: Enemies.assets
-  lastModified: 637436339690000000
+  lastModified: 637436351700614162
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -816,7 +856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/Enemies.bank
   Name: Enemies
-  lastModified: 637436339690000000
+  lastModified: 637436351700763779
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -904,7 +944,7 @@ MonoBehaviour:
   - {fileID: -8339499959746134317}
   StringsBanks:
   - {fileID: 1863090598737165214}
-  stringsBankWriteTime: 637436339690000000
+  stringsBankWriteTime: 637436351701262426
   cacheVersion: 5
 --- !u!114 &318345171499982710
 MonoBehaviour:
@@ -984,7 +1024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/Ambience.assets.bank
   Name: Ambience.assets
-  lastModified: 637436339690000000
+  lastModified: 637436351699975878
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1008,7 +1048,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 8944544728424966068}
+  - {fileID: 2646445882414985795}
   MinDistance: 0
   MaxDistance: 0
   Length: 380
@@ -1055,6 +1095,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 9500
+--- !u!114 &1535489955867403929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Running - Pandora/pandRun
+  m_EditorClassIdentifier: 
+  Name: pandRun
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &1863090598737165214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1069,7 +1129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637436339690000000
+  lastModified: 637436351701262426
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -1089,9 +1149,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/UI.bank
   Name: UI
-  lastModified: 637436339690000000
+  lastModified: 637436351701930648
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &2646445882414985795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Recieve Damage - Pandora/pandReciveDmg
+  m_EditorClassIdentifier: 
+  Name: pandReciveDmg
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &2807050736811433267
 MonoBehaviour:
@@ -1112,7 +1192,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &3138765778009299180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1219,7 +1299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/Character.bank
   Name: Character
-  lastModified: 637436339690000000
+  lastModified: 637436351700374801
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1237,7 +1317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/VO.assets.bank
   Name: VO.assets
-  lastModified: 637436339690000000
+  lastModified: 637436351702040373
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1319,7 +1399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/Music.bank
   Name: Music
-  lastModified: 637436339690000000
+  lastModified: 637436351701481864
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1366,7 +1446,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -7210025774747931531}
+  - {fileID: -3444449010935574502}
   MinDistance: 0
   MaxDistance: 0
   Length: 4400
@@ -1430,7 +1510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/Master.assets.bank
   Name: Master.assets
-  lastModified: 637436339690000000
+  lastModified: 637436351701043022
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1477,7 +1557,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 2807050736811433267}
+  - {fileID: -9027128433829152120}
   MinDistance: 0
   MaxDistance: 0
   Length: 1700
@@ -1615,4 +1695,4 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
