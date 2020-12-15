@@ -15,12 +15,19 @@ namespace Characters.Player
         [SerializeField] private bool alsoBuffLightRadius;
         [SerializeField] private float minLightRadius;
         [SerializeField] private float maxLightRadius;
+        
+        //[FMODUnity.EventRef] public string HealEvent = "";
+        
+        
 
         private void Start()
         {
             _hp = GetComponent<HealthManager>();
             _hp.OnHealthChanged += UpdateLight;
             UpdateLight();
+            
+            //playerState = FMODUnity.RuntimeManager.CreateInstance(PlayerStateEvent);
+            //playerState.start();
         }
 
         private void OnCollisionEnter(Collision other)
