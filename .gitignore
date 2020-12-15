@@ -80,9 +80,16 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
-ARPGProject/fmod_editor.log
-ARPGProject/Assets/Plugins/FMOD/.cache/
-ARPGProject/Assets/Plugins/FMOD/.unsaved/
-ARPGProject/Assets/Plugins/FMOD/.user/
-ARPGProject/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
-ARPGProject/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset
+
+#FMOD Stuff
+!/[Aa]ssets/Plugins/FMOD/**/*.dll
+!/[Aa}ssets/Gizmos/FMOD/*
+!/[Aa}ssets/Editor Default Resources/FMOD/*
+
+/[Aa]ssets/**/FMODStudioCache.asset
+/[Aa]ssets/**/FMODStudioCache.asset.meta
+/[Aa]ssets/Plugins/FMOD/Cache.meta
+/[Aa]ssets/Plugins/FMOD/Cache/Editor.meta
+
+fmod.log
+fmod_editor.log
