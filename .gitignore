@@ -95,6 +95,3 @@ crashlytics-build.properties
 
 fmod.log
 fmod_editor.log
-ARPGProject/fmod_editor.log
-ARPGProject/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset
-ARPGProject/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
