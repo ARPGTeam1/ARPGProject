@@ -82,16 +82,14 @@ sysinfo.txt
 crashlytics-build.properties
 
 #FMOD Stuff
-!/[Aa]ssets/Plugins/FMOD/**/*.dll
-!/[Aa}ssets/Gizmos/FMOD/*
-!/[Aa}ssets/Editor Default Resources/FMOD/*
+**.user
+**.unsaved
+**.cache
+**.restore
 
-/[Aa]ssets/**/FMODStudioCache.asset
-/[Aa]ssets/**/FMODStudioCache.asset.meta
-/[Aa]ssets/Plugins/FMOD/Cache.meta
-/[Aa]ssets/Plugins/FMOD/Cache/Editor.meta
-/Assets/Sound/WOH - Sound/.cache
-/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
-
+**/FMODStudioCache.asset
+**/FMODStudioCache.asset.meta
 fmod.log
 fmod_editor.log
+
+
