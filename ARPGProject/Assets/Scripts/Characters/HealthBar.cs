@@ -11,10 +11,11 @@ namespace Characters
         public UnityEvent<Color> BarColorChanged;
         public UnityEvent<string> BarTextChanged;
         private HealthManager hitPoint;
+        [SerializeField] private GameObject player;
 
         private void Start()
         {
-            hitPoint = GetComponentInParent<HealthManager>();
+            hitPoint = (player != null) ? player.GetComponent<HealthManager>() :GetComponentInParent<HealthManager>();
             HPBarImage = GetComponent<Image>();
             hitPoint.HPChanged.AddListener(OnHPChanged);
             OnHPChanged(hitPoint.MaxHealth);
