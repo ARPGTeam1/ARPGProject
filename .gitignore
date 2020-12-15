@@ -82,6 +82,6 @@ sysinfo.txt
 crashlytics-build.properties
 
 #FMOD Stuff
-**/[Aa]ssets/Plugins/FMOD/Cache
+[Aa]ssets/Plugins/FMOD/Cache
 fmod.log
 fmod_editor.log
