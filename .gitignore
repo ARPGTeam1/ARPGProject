@@ -91,6 +91,7 @@ crashlytics-build.properties
 /[Aa]ssets/Plugins/FMOD/Cache.meta
 /[Aa]ssets/Plugins/FMOD/Cache/Editor.meta
 /Assets/Sound/WOH - Sound/.cache
+/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
 
 fmod.log
 fmod_editor.log
