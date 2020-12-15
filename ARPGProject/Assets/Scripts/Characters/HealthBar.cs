@@ -11,7 +11,7 @@ namespace Characters
         public UnityEvent<Color> BarColorChanged;
         public UnityEvent<string> BarTextChanged;
         private HealthManager hitPoint;
-        [SerializeField] private GameObject player;
+        [SerializeField] public GameObject player;
 
         private void Start()
         {

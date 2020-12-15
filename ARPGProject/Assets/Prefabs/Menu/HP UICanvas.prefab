@@ -232,8 +232,9 @@ GameObject:
   - component: {fileID: 3128097039203398990}
   - component: {fileID: 3128097039203398321}
   - component: {fileID: 7298846258894183233}
+  - component: {fileID: 3020922715722514913}
   m_Layer: 5
-  m_Name: HP UICanva
+  m_Name: HP UICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,6 +367,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   player: {fileID: 0}
+--- !u!114 &3020922715722514913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3128097039203398320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e333f4346f4fc894f8068f2b8039da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3465072730982054711
 GameObject:
   m_ObjectHideFlags: 0
