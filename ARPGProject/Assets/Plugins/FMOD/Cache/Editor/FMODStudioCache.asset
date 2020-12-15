@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9172561789311184587
+--- !u!114 &-9184338405631365940
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,15 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/UI.assets.bank
+  m_Name: bank:/Master.assets.bank
   m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/UI.assets.bank
-  Name: UI.assets
-  lastModified: 637436339690000000
+  Path: Assets/StreamingAssets/Desktop/Master.assets.bank
+  Name: Master.assets
+  lastModified: 637436396320000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &-8938208190316125580
+--- !u!114 &-8814870285296599742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.assets.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Desktop/SFX.assets.bank
+  Name: SFX.assets
+  lastModified: 637436396320000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-8591190888068436075
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28,62 +46,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character - Pandora/Running - Pandora
+  m_Name: event:/Character - Pandora/Recieve Damage - Pandora
   m_EditorClassIdentifier: 
-  Path: event:/Character - Pandora/Running - Pandora
-  guid: 4b530b9258c5ca4aa5b89e18d1868724
+  Path: event:/Character - Pandora/Recieve Damage - Pandora
+  guid: a84fce9b1a59754cbd257c90da6d243c
   Banks:
-  - {fileID: 4085727857603324343}
+  - {fileID: 2412768817285017076}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -5595245856042432438}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2100
---- !u!114 &-8855862973379121611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character - Pandora/Heartbeats
-  m_EditorClassIdentifier: 
-  Path: event:/Character - Pandora/Heartbeats
-  guid: ea90f227e5eed549bb222f965a207742
-  Banks:
-  - {fileID: 4085727857603324343}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 6800
---- !u!114 &-8691394797359350779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Level 01.assets.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/Level 01.assets.bank
-  Name: Level 01.assets
-  lastModified: 637436339690000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-8339499959746134317
+  Length: 380
+--- !u!114 &-8324835316642227307
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,7 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Master
-  lastModified: 637436339690000000
+  lastModified: 637436396320000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -183,6 +159,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 206451
+--- !u!114 &-7387537526403463441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Desktop/Music.bank
+  Name: Music
+  lastModified: 637436396320000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-7244686403574206458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,49 +195,6 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &-7210025774747931531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Walking - Pandora/pandWalk
-  m_EditorClassIdentifier: 
-  Name: pandWalk
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-7169518300563605392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Hope Pickup Sound
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Hope Pickup Sound
-  guid: a24af4d3fb21fe48b092ff223edd6f4e
-  Banks:
-  - {fileID: -3523481568001158836}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2000
 --- !u!114 &-6950122552164743450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,47 +218,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 10000
---- !u!114 &-6582446380019652579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Character.assets.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/Character.assets.bank
-  Name: Character.assets
-  lastModified: 637436339690000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-6404881612220748080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemies/Enemy Stationary Fire
-  m_EditorClassIdentifier: 
-  Path: event:/Enemies/Enemy Stationary Fire
-  guid: 728b03ee28099d4d80417f7d09d71d33
-  Banks:
-  - {fileID: -244369415227512418}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 126000
 --- !u!114 &-5759540660827154988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,7 +241,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3000
---- !u!114 &-5743291797424421348
+--- !u!114 &-5666666377447664133
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -340,39 +250,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character - Pandora/Revive - Pandora
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Level 01.assets.bank
   m_EditorClassIdentifier: 
-  Path: event:/Character - Pandora/Revive - Pandora
-  guid: d7f3ff0668f0964894ab34df900f3436
-  Banks:
-  - {fileID: 4085727857603324343}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 3600
---- !u!114 &-5595245856042432438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Running - Pandora/pandRun
-  m_EditorClassIdentifier: 
-  Name: pandRun
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
+  Path: Assets/StreamingAssets/Desktop/Level 01.assets.bank
+  Name: Level 01.assets
+  lastModified: 637436396320000000
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &-5241004399243470626
 MonoBehaviour:
@@ -392,7 +277,7 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &-5090051020373608950
+--- !u!114 &-4539389173597373614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -402,13 +287,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.assets.bank
+  m_Name: bank:/Enemies.bank
   m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/SFX.assets.bank
-  Name: SFX.assets
-  lastModified: 637436339690000000
+  Path: Assets/StreamingAssets/Desktop/Enemies.bank
+  Name: Enemies
+  lastModified: 637436396320000000
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &-4519420864780130533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking - Pandora/pandWalk
+  m_EditorClassIdentifier: 
+  Name: pandWalk
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &-4209577542440249678
 MonoBehaviour:
@@ -456,7 +361,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2500
---- !u!114 &-3800745398293953156
+--- !u!114 &-4136231760759485296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -466,20 +371,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemies/Enemy Range Moving Snake
+  m_Name: event:/Ambience & Environments/Olive Tree Safe Point
   m_EditorClassIdentifier: 
-  Path: event:/Enemies/Enemy Range Moving Snake
-  guid: 685536d3b08a4546bd980977086c10d7
+  Path: event:/Ambience & Environments/Olive Tree Safe Point
+  guid: 53406a4cd7181647a3c7023e2a6a6239
   Banks:
-  - {fileID: -244369415227512418}
+  - {fileID: 8137582622873927825}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 11000
---- !u!114 &-3764264091821205740
+  Length: 32000
+--- !u!114 &-4046981961381418595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/VO.assets.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Desktop/VO.assets.bank
+  Name: VO.assets
+  lastModified: 637436396320000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-3938088541974731373
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -489,19 +412,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character - Pandora/Attack Spear
+  m_Name: event:/Enemies/Enemy Tracking Give Damage
   m_EditorClassIdentifier: 
-  Path: event:/Character - Pandora/Attack Spear
-  guid: 13863b738faf954e86d77f47214c45a9
+  Path: event:/Enemies/Enemy Tracking Give Damage
+  guid: cb0347c0d6124d4a9d32bf30a282ea0d
   Banks:
-  - {fileID: 4085727857603324343}
+  - {fileID: -4539389173597373614}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 500
+  Length: 580
+--- !u!114 &-3601144099971503192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy Stationary Fire
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy Stationary Fire
+  guid: 728b03ee28099d4d80417f7d09d71d33
+  Banks:
+  - {fileID: -4539389173597373614}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 126000
 --- !u!114 &-3553862393720003637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,7 +471,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 4000
---- !u!114 &-3523481568001158836
+--- !u!114 &-3505687884329251719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -535,29 +481,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
+  m_Name: bank:/UI.bank
   m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/SFX.bank
-  Name: SFX
-  lastModified: 637436339690000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-3261839383734108854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/VO.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/VO.bank
-  Name: VO
-  lastModified: 637436339690000000
+  Path: Assets/StreamingAssets/Desktop/UI.bank
+  Name: UI
+  lastModified: 637436396320000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -576,6 +504,24 @@ MonoBehaviour:
   Path: Assets/Sound/WOH - Sound/Build/Desktop/UI.bank
   Name: UI
   lastModified: 637435360420000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-3000498953853649357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Enemies.assets.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Desktop/Enemies.assets.bank
+  Name: Enemies.assets
+  lastModified: 637436396320000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -602,7 +548,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 350
---- !u!114 &-2951578216346412061
+--- !u!114 &-2842474424927810005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -611,16 +557,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Level 01.bank
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Enemy Stationary Give Damage/EnemyHitStationary
   m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/Level 01.bank
-  Name: Level 01
-  lastModified: 637436339690000000
-  LoadResult: 0
-  FileSizes: []
+  Name: EnemyHitStationary
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
---- !u!114 &-2373949245534190564
+--- !u!114 &-2753011818063108342
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -629,15 +577,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambience.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Hope Pickup Sound
   m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/Ambience.bank
-  Name: Ambience
-  lastModified: 637436339690000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
+  Path: event:/SFX/Hope Pickup Sound
+  guid: a24af4d3fb21fe48b092ff223edd6f4e
+  Banks:
+  - {fileID: 5969382675414635238}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
 --- !u!114 &-2355686057978388991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,25 +609,7 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &-2004343739834323711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Music.assets.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/Music.assets.bank
-  Name: Music.assets
-  lastModified: 637436339690000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-1149567470722729384
+--- !u!114 &-2212914797225350898
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -684,20 +619,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character - Pandora/Attack Lightning
+  m_Name: event:/Character - Pandora/Death - Pandora
   m_EditorClassIdentifier: 
-  Path: event:/Character - Pandora/Attack Lightning
-  guid: 49d3f586ba49334bb7baa45f32e5d411
+  Path: event:/Character - Pandora/Death - Pandora
+  guid: 8f16a5a00bc03141881e2029f7dec5f6
   Banks:
-  - {fileID: 4085727857603324343}
+  - {fileID: 2412768817285017076}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 3500
---- !u!114 &-918410894368025652
+  Length: 4430
+--- !u!114 &-1773126740082385642
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -707,14 +642,84 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Enemies.assets.bank
+  m_Name: bank:/Level 01.bank
   m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/Enemies.assets.bank
-  Name: Enemies.assets
-  lastModified: 637436339690000000
+  Path: Assets/StreamingAssets/Desktop/Level 01.bank
+  Name: Level 01
+  lastModified: 637436396320000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-1686329430366645599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy Range Moving Snake
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy Range Moving Snake
+  guid: 685536d3b08a4546bd980977086c10d7
+  Banks:
+  - {fileID: -4539389173597373614}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 11000
+--- !u!114 &-1202131504613557199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy Range Death
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy Range Death
+  guid: b1e711d0bc67314a927f0129fc6242e2
+  Banks:
+  - {fileID: -4539389173597373614}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2966
+--- !u!114 &-1196678684328404242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character - Pandora/Running - Pandora
+  m_EditorClassIdentifier: 
+  Path: event:/Character - Pandora/Running - Pandora
+  guid: 4b530b9258c5ca4aa5b89e18d1868724
+  Banks:
+  - {fileID: 2412768817285017076}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3848064695717730416}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2100
 --- !u!114 &-715087744161569956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,29 +761,6 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &-446493376430258801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience & Environments/Ambience Tempel
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience & Environments/Ambience Tempel
-  guid: 74e8dbf714d10547961494b885e6ab7e
-  Banks:
-  - {fileID: -2373949245534190564}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 340000
 --- !u!114 &-354200890768318455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,7 +784,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 59409
---- !u!114 &-244369415227512418
+--- !u!114 &-295629555934004341
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -811,15 +793,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Enemies.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience & Environments/Ambience Tempel
   m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/Enemies.bank
-  Name: Enemies
-  lastModified: 637436339690000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
+  Path: event:/Ambience & Environments/Ambience Tempel
+  guid: 74e8dbf714d10547961494b885e6ab7e
+  Banks:
+  - {fileID: 8137582622873927825}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 340000
 --- !u!114 &-125087312540593125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,56 +843,102 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 1863090598737165214}
-  - {fileID: 995040598299034935}
-  - {fileID: -2373949245534190564}
-  - {fileID: -6582446380019652579}
-  - {fileID: 4085727857603324343}
-  - {fileID: -918410894368025652}
-  - {fileID: -244369415227512418}
-  - {fileID: -8691394797359350779}
-  - {fileID: -2951578216346412061}
-  - {fileID: 6721291132259889372}
-  - {fileID: -8339499959746134317}
-  - {fileID: -2004343739834323711}
-  - {fileID: 5666428050721411096}
-  - {fileID: -5090051020373608950}
-  - {fileID: -3523481568001158836}
-  - {fileID: -9172561789311184587}
-  - {fileID: 2311489769796529164}
-  - {fileID: 4391715194469751248}
-  - {fileID: -3261839383734108854}
+  - {fileID: 2029297169838827823}
+  - {fileID: 8554221118964693112}
+  - {fileID: 8137582622873927825}
+  - {fileID: 7270235450263620016}
+  - {fileID: 2412768817285017076}
+  - {fileID: -3000498953853649357}
+  - {fileID: -4539389173597373614}
+  - {fileID: -5666666377447664133}
+  - {fileID: -1773126740082385642}
+  - {fileID: -9184338405631365940}
+  - {fileID: -8324835316642227307}
+  - {fileID: 1496150689483339726}
+  - {fileID: -7387537526403463441}
+  - {fileID: -8814870285296599742}
+  - {fileID: 5969382675414635238}
+  - {fileID: 1689893720078782537}
+  - {fileID: -3505687884329251719}
+  - {fileID: -4046981961381418595}
+  - {fileID: 9018606601600052501}
   EditorEvents:
-  - {fileID: 6021592181395596808}
-  - {fileID: -446493376430258801}
-  - {fileID: 5391841016612784279}
-  - {fileID: -3764264091821205740}
-  - {fileID: -1149567470722729384}
-  - {fileID: -8938208190316125580}
-  - {fileID: 5988585465663146113}
-  - {fileID: 709402269927826607}
-  - {fileID: 1295750567008559782}
-  - {fileID: -5743291797424421348}
-  - {fileID: -8855862973379121611}
-  - {fileID: 1473768888263039429}
-  - {fileID: -3800745398293953156}
-  - {fileID: -6404881612220748080}
-  - {fileID: 3975338917146999448}
-  - {fileID: 7303073562809300542}
-  - {fileID: 7332578672744453667}
-  - {fileID: 381856129131547059}
-  - {fileID: 8680083663714595464}
-  - {fileID: 8738615440139803762}
-  - {fileID: 3672787263318487554}
-  - {fileID: -7169518300563605392}
-  - {fileID: 7162710146817494400}
+  - {fileID: -4136231760759485296}
+  - {fileID: -295629555934004341}
+  - {fileID: 6432379277644476192}
+  - {fileID: 6425816053967784169}
+  - {fileID: 4097031867485615180}
+  - {fileID: -1196678684328404242}
+  - {fileID: 7910423753107420380}
+  - {fileID: -2212914797225350898}
+  - {fileID: -8591190888068436075}
+  - {fileID: 174002216116740075}
+  - {fileID: 7088221453421717000}
+  - {fileID: 6026261146499835216}
+  - {fileID: -1686329430366645599}
+  - {fileID: -3601144099971503192}
+  - {fileID: 5631200511202785711}
+  - {fileID: 4086724827183606372}
+  - {fileID: 2918165134807924085}
+  - {fileID: -1202131504613557199}
+  - {fileID: 3859939182872467345}
+  - {fileID: -3938088541974731373}
+  - {fileID: 27606054234502126}
+  - {fileID: -2753011818063108342}
+  - {fileID: 6116858320705773266}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -8339499959746134317}
+  - {fileID: -8324835316642227307}
   StringsBanks:
-  - {fileID: 1863090598737165214}
-  stringsBankWriteTime: 637436339690000000
+  - {fileID: 2029297169838827823}
+  stringsBankWriteTime: 637436396320000000
   cacheVersion: 5
+--- !u!114 &27606054234502126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Portal Sound - Olive Tree
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Portal Sound - Olive Tree
+  guid: 64852d6a76e89b45bc16c797b8d49fe7
+  Banks:
+  - {fileID: 5969382675414635238}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4000
+--- !u!114 &174002216116740075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character - Pandora/Revive - Pandora
+  m_EditorClassIdentifier: 
+  Path: event:/Character - Pandora/Revive - Pandora
+  guid: d7f3ff0668f0964894ab34df900f3436
+  Banks:
+  - {fileID: 2412768817285017076}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3600
 --- !u!114 &318345171499982710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -924,94 +957,6 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &381856129131547059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemies/Enemy Range Death
-  m_EditorClassIdentifier: 
-  Path: event:/Enemies/Enemy Range Death
-  guid: b1e711d0bc67314a927f0129fc6242e2
-  Banks:
-  - {fileID: -244369415227512418}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2966
---- !u!114 &709402269927826607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character - Pandora/Death - Pandora
-  m_EditorClassIdentifier: 
-  Path: event:/Character - Pandora/Death - Pandora
-  guid: 8f16a5a00bc03141881e2029f7dec5f6
-  Banks:
-  - {fileID: 4085727857603324343}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 4430
---- !u!114 &995040598299034935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambience.assets.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/Ambience.assets.bank
-  Name: Ambience.assets
-  lastModified: 637436339690000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &1295750567008559782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character - Pandora/Recieve Damage - Pandora
-  m_EditorClassIdentifier: 
-  Path: event:/Character - Pandora/Recieve Damage - Pandora
-  guid: a84fce9b1a59754cbd257c90da6d243c
-  Banks:
-  - {fileID: 4085727857603324343}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 8944544728424966068}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 380
 --- !u!114 &1397613506601568709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1032,7 +977,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2028
   Exists: 1
---- !u!114 &1473768888263039429
+--- !u!114 &1496150689483339726
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1041,21 +986,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemies/Rocks Falling
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.assets.bank
   m_EditorClassIdentifier: 
-  Path: event:/Enemies/Rocks Falling
-  guid: 57613c539f75dd41be8ad700906a152d
-  Banks:
-  - {fileID: -244369415227512418}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 9500
---- !u!114 &1863090598737165214
+  Path: Assets/StreamingAssets/Desktop/Music.assets.bank
+  Name: Music.assets
+  lastModified: 637436396320000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1689893720078782537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.assets.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Desktop/UI.assets.bank
+  Name: UI.assets
+  lastModified: 637436396320000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &2029297169838827823
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1069,13 +1027,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637436339690000000
+  lastModified: 637436396320000000
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 2962
+    Value: 2910
   Exists: 1
---- !u!114 &2311489769796529164
+--- !u!114 &2412768817285017076
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1085,15 +1043,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/UI.bank
+  m_Name: bank:/Character.bank
   m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/UI.bank
-  Name: UI
-  lastModified: 637436339690000000
+  Path: Assets/StreamingAssets/Desktop/Character.bank
+  Name: Character
+  lastModified: 637436396320000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &2807050736811433267
+--- !u!114 &2918165134807924085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1102,17 +1060,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Enemy Stationary Give Damage/EnemyHitStationary
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Enemy  Tracking Death
   m_EditorClassIdentifier: 
-  Name: EnemyHitStationary
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
+  Path: event:/Enemies/Enemy  Tracking Death
+  guid: 90644cf9f11be6408ca8bf8707a79f3e
+  Banks:
+  - {fileID: -4539389173597373614}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2500
 --- !u!114 &3138765778009299180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,7 +1120,27 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2784
---- !u!114 &3672787263318487554
+--- !u!114 &3848064695717730416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Running - Pandora/pandRun
+  m_EditorClassIdentifier: 
+  Name: pandRun
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &3859939182872467345
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1169,20 +1150,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Portal Sound - Olive Tree
+  m_Name: event:/Enemies/Enemy Range Give Damage
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Portal Sound - Olive Tree
-  guid: 64852d6a76e89b45bc16c797b8d49fe7
+  Path: event:/Enemies/Enemy Range Give Damage
+  guid: c14809726019d7448d4581597efda04d
   Banks:
-  - {fileID: -3523481568001158836}
+  - {fileID: -4539389173597373614}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 4000
---- !u!114 &3975338917146999448
+  Length: 350
+--- !u!114 &4086724827183606372
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1192,55 +1173,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemies/Enemy Attack Fireball
+  m_Name: event:/Enemies/Enemy Stationary Give Damage
   m_EditorClassIdentifier: 
-  Path: event:/Enemies/Enemy Attack Fireball
-  guid: 7377ebaf284b9d4c8b4ef77890daa336
+  Path: event:/Enemies/Enemy Stationary Give Damage
+  guid: 8970ea5746016a49885b90b842f9a707
   Banks:
-  - {fileID: -244369415227512418}
+  - {fileID: -4539389173597373614}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2842474424927810005}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1700
+--- !u!114 &4097031867485615180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character - Pandora/Attack Lightning
+  m_EditorClassIdentifier: 
+  Path: event:/Character - Pandora/Attack Lightning
+  guid: 49d3f586ba49334bb7baa45f32e5d411
+  Banks:
+  - {fileID: 2412768817285017076}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 2200
---- !u!114 &4085727857603324343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Character.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/Character.bank
-  Name: Character
-  lastModified: 637436339690000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &4391715194469751248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/VO.assets.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/VO.assets.bank
-  Name: VO.assets
-  lastModified: 637436339690000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
+  Length: 3500
 --- !u!114 &4550614792526989344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1282,7 +1251,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
---- !u!114 &5391841016612784279
+--- !u!114 &5631200511202785711
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1292,37 +1261,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience & Environments/Ambience Level 1
+  m_Name: event:/Enemies/Enemy Attack Fireball
   m_EditorClassIdentifier: 
-  Path: event:/Ambience & Environments/Ambience Level 1
-  guid: e09674615d99c2479986f220006a6486
+  Path: event:/Enemies/Enemy Attack Fireball
+  guid: 7377ebaf284b9d4c8b4ef77890daa336
   Banks:
-  - {fileID: -2373949245534190564}
+  - {fileID: -4539389173597373614}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 230000
---- !u!114 &5666428050721411096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Music.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/Music.bank
-  Name: Music
-  lastModified: 637436339690000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
+  Length: 2200
 --- !u!114 &5838187551786907733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1346,7 +1297,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
---- !u!114 &5988585465663146113
+--- !u!114 &5969382675414635238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Desktop/SFX.bank
+  Name: SFX
+  lastModified: 637436396320000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6026261146499835216
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1356,21 +1325,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Character - Pandora/Walking - Pandora
+  m_Name: event:/Enemies/Rocks Falling
   m_EditorClassIdentifier: 
-  Path: event:/Character - Pandora/Walking - Pandora
-  guid: 645eca714f7f45448d9ff242ca23b396
+  Path: event:/Enemies/Rocks Falling
+  guid: 57613c539f75dd41be8ad700906a152d
   Banks:
-  - {fileID: 4085727857603324343}
+  - {fileID: -4539389173597373614}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -7210025774747931531}
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 4400
---- !u!114 &6021592181395596808
+  Length: 9500
+--- !u!114 &6116858320705773266
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1380,19 +1348,65 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience & Environments/Olive Tree Safe Point
+  m_Name: event:/UI/Click
   m_EditorClassIdentifier: 
-  Path: event:/Ambience & Environments/Olive Tree Safe Point
-  guid: 53406a4cd7181647a3c7023e2a6a6239
+  Path: event:/UI/Click
+  guid: 036b4706c2468141b18596614e0a6ebb
   Banks:
-  - {fileID: -2373949245534190564}
+  - {fileID: -3505687884329251719}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 326
+--- !u!114 &6425816053967784169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character - Pandora/Attack Spear
+  m_EditorClassIdentifier: 
+  Path: event:/Character - Pandora/Attack Spear
+  guid: 13863b738faf954e86d77f47214c45a9
+  Banks:
+  - {fileID: 2412768817285017076}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 500
+--- !u!114 &6432379277644476192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience & Environments/Ambience Level 1
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience & Environments/Ambience Level 1
+  guid: e09674615d99c2479986f220006a6486
+  Banks:
+  - {fileID: 8137582622873927825}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 32000
+  Length: 336000
 --- !u!114 &6718329724950898355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1416,7 +1430,30 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 326
---- !u!114 &6721291132259889372
+--- !u!114 &7088221453421717000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character - Pandora/Heartbeats
+  m_EditorClassIdentifier: 
+  Path: event:/Character - Pandora/Heartbeats
+  guid: ea90f227e5eed549bb222f965a207742
+  Banks:
+  - {fileID: 2412768817285017076}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 6800
+--- !u!114 &7270235450263620016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1426,84 +1463,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.assets.bank
+  m_Name: bank:/Character.assets.bank
   m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/Master.assets.bank
-  Name: Master.assets
-  lastModified: 637436339690000000
+  Path: Assets/StreamingAssets/Desktop/Character.assets.bank
+  Name: Character.assets
+  lastModified: 637436396320000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &7162710146817494400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI/Click
-  m_EditorClassIdentifier: 
-  Path: event:/UI/Click
-  guid: 036b4706c2468141b18596614e0a6ebb
-  Banks:
-  - {fileID: 2311489769796529164}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 326
---- !u!114 &7303073562809300542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemies/Enemy Stationary Give Damage
-  m_EditorClassIdentifier: 
-  Path: event:/Enemies/Enemy Stationary Give Damage
-  guid: 8970ea5746016a49885b90b842f9a707
-  Banks:
-  - {fileID: -244369415227512418}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 2807050736811433267}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1700
---- !u!114 &7332578672744453667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemies/Enemy  Tracking Death
-  m_EditorClassIdentifier: 
-  Path: event:/Enemies/Enemy  Tracking Death
-  guid: 90644cf9f11be6408ca8bf8707a79f3e
-  Banks:
-  - {fileID: -244369415227512418}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2500
 --- !u!114 &7857059037212453163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1527,6 +1494,48 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 4913
+--- !u!114 &7910423753107420380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character - Pandora/Walking - Pandora
+  m_EditorClassIdentifier: 
+  Path: event:/Character - Pandora/Walking - Pandora
+  guid: 645eca714f7f45448d9ff242ca23b396
+  Banks:
+  - {fileID: 2412768817285017076}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -4519420864780130533}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4400
+--- !u!114 &8137582622873927825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Desktop/Ambience.bank
+  Name: Ambience
+  lastModified: 637436396320000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &8375493994374415291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1550,7 +1559,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 273432
---- !u!114 &8680083663714595464
+--- !u!114 &8554221118964693112
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1559,21 +1568,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemies/Enemy Range Give Damage
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambience.assets.bank
   m_EditorClassIdentifier: 
-  Path: event:/Enemies/Enemy Range Give Damage
-  guid: c14809726019d7448d4581597efda04d
-  Banks:
-  - {fileID: -244369415227512418}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 350
---- !u!114 &8738615440139803762
+  Path: Assets/StreamingAssets/Desktop/Ambience.assets.bank
+  Name: Ambience.assets
+  lastModified: 637436396320000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &9018606601600052501
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1582,37 +1586,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemies/Enemy Tracking Give Damage
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/VO.bank
   m_EditorClassIdentifier: 
-  Path: event:/Enemies/Enemy Tracking Give Damage
-  guid: cb0347c0d6124d4a9d32bf30a282ea0d
-  Banks:
-  - {fileID: -244369415227512418}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 580
---- !u!114 &8944544728424966068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Recieve Damage - Pandora/pandReciveDmg
-  m_EditorClassIdentifier: 
-  Name: pandReciveDmg
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
+  Path: Assets/StreamingAssets/Desktop/VO.bank
+  Name: VO
+  lastModified: 637436396320000000
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
