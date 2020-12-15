@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocityThreshold: 3
-  _damage: 10
+  damage: 50
 --- !u!1001 &5401524226036263352
 PrefabInstance:
   m_ObjectHideFlags: 0

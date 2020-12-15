@@ -13,6 +13,8 @@ namespace Characters
         private HealthManager hitPoint;
         [SerializeField] public GameObject player;
 
+        private bool HasPlayer => player != null;
+        
         private void Start()
         {
             hitPoint = (player != null) ? player.GetComponent<HealthManager>() :GetComponentInParent<HealthManager>();
@@ -41,6 +43,8 @@ namespace Characters
 
         private void LateUpdate()
         {
+            if (HasPlayer)
+                return;
             transform.LookAt(Camera.main.transform);
             transform.Rotate(0, 180, 0);
         }
