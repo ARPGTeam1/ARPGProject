@@ -11,7 +11,6 @@ namespace DefaultNamespace
         private GameObject player;
         private Movement stop;
         private float _stopDistance = 3;
-        
 
 
         private void Awake()
@@ -29,7 +28,7 @@ namespace DefaultNamespace
             {
                 this._agent.ResetPath();
                 this._agent.velocity = Vector3.zero;
-                this.player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;  
+                this.player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             }
         }
 

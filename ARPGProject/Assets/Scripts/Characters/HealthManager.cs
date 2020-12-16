@@ -26,6 +26,8 @@ namespace Characters
         [SerializeField] [FMODUnity.EventRef] private string DeathSound;
         FMOD.Studio.EventInstance DeathSoundInstance;
 
+        public bool reload;
+        
         public int CurrentHealth
         {
             get => _currentHealth;
@@ -49,7 +51,13 @@ namespace Characters
         {
             CurrentHealth = MaxHealth;
             this._animator = GetComponentInChildren<Animator>();
+            
             DeathSoundInstance = FMODUnity.RuntimeManager.CreateInstance(DeathSound);
+        }
+
+        private void Start()
+        {
+            reload = true;
         }
 
         public void TakeDamage(int damage, string source)

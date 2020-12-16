@@ -1,3 +1,4 @@
+using System;
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,13 +15,13 @@ namespace Characters
         [SerializeField] public GameObject player;
 
         private bool HasPlayer => player != null;
-        
+
         private void Start()
         {
             hitPoint = (player != null) ? player.GetComponent<HealthManager>() :GetComponentInParent<HealthManager>();
             HPBarImage = GetComponent<Image>();
             hitPoint.HPChanged.AddListener(OnHPChanged);
-            OnHPChanged(hitPoint.MaxHealth);
+            OnHPChanged(hitPoint.CurrentHealth);
         }
 
         private void OnHPChanged(int value)

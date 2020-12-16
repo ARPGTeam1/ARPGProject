@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Portal
+  - PlayerStateManager
+  - PlayerHPBarUI
   layers:
   - Default
   - TransparentFX
