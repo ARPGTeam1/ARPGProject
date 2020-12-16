@@ -120,10 +120,11 @@ GameObject:
   - component: {fileID: 802219321045450598}
   - component: {fileID: 7287841087915531673}
   - component: {fileID: 802219321045450586}
+  - component: {fileID: 4432012016404049734}
   - component: {fileID: 802219321045450587}
+  - component: {fileID: 2950930965222286530}
   - component: {fileID: 3970167866301039737}
   - component: {fileID: 802219321045450585}
-  - component: {fileID: 1018700006}
   - component: {fileID: 7256849138240839514}
   - component: {fileID: -7926159684715248656}
   m_Layer: 0
@@ -319,6 +320,21 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4432012016404049734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568412229135779350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc7c2bb8ad4d0a94191a0faa73e762e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combat: {fileID: 0}
+  movement: {fileID: 0}
+  mainCam: {fileID: 0}
 --- !u!114 &802219321045450587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +348,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickDestinationPrefab: {fileID: 1267775975643832, guid: afc3ac08dff68aa46915da574d41d350, type: 3}
+--- !u!114 &2950930965222286530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568412229135779350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9eaf1c864140e94f94c0f58006de3d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combatState: 0
+  damage: 10
+  attackSpeed: 1
+  attackRange: 3
 --- !u!114 &3970167866301039737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,21 +416,6 @@ MonoBehaviour:
   defeatUI: {fileID: 0}
   clip: {fileID: 8300000, guid: 62e0f5dc08082c841b6fd0bd4662d764, type: 3}
   checkPoint: {x: 0, y: 0, z: 0}
---- !u!114 &1018700006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568412229135779350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aedc09fff8b58144b22a77acd857c7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightning: {fileID: 1998893266685322, guid: dc99b5d38f546af47b2ea53fe8993998, type: 3}
-  attackNameInAnimator: Melee
-  speedBuff: 1
 --- !u!114 &7256849138240839514
 MonoBehaviour:
   m_ObjectHideFlags: 0

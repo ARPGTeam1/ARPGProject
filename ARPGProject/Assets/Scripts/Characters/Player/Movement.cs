@@ -7,7 +7,9 @@ namespace Characters.Player
     [RequireComponent(typeof(NavMeshAgent))]
     public class Movement : MonoBehaviour
     {
-        private NavMeshAgent _agent;
+        private Controller controller;
+        
+        public NavMeshAgent agent;
         private Camera _cam;
         private LayerMask _ground;
         private HealthManager _hitPoint;
@@ -21,7 +23,9 @@ namespace Characters.Player
         
         private void Awake()
         {
-            this._agent = GetComponent<NavMeshAgent>();
+            this.controller = GetComponent<Controller>();
+            
+            this.agent = GetComponent<NavMeshAgent>();
             this._cam = Camera.main;
             this._ground = LayerMask.GetMask("Ground");
             this._hitPoint = GetComponent<HealthManager>();
@@ -32,48 +36,33 @@ namespace Characters.Player
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                if(!_attack.IsAttacking) 
-                    MoveToMouse();
-                
-            }
-
             if (ShouldStop())
             {
-                this._agent.ResetPath();
-                this._agent.velocity = Vector3.zero;
+                this.agent.ResetPath();
+                this.agent.velocity = Vector3.zero;
                 this._rb.angularVelocity = Vector3.zero;
             }
 
             UpdateAnimation();
         }
         
-        private void MoveToMouse()
+        public void MoveToMouse()
         {
-            this._agent.ResetPath(); 
+            this.agent.ResetPath(); 
             this._rb.velocity = Vector3.zero;
-            var ray = this._cam.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out var hit, this._cam.farClipPlane, this._ground) && !this._hitPoint.IsDead)
-            {
-                this._agent.destination = hit.point;
-                if (HasEffect)
-                {
-                    var instance = Instantiate(clickDestinationPrefab, hit.point, Quaternion.identity);
-                    Destroy(instance, instance.GetComponent<ParticleSystem>().main.duration);
-                    
-                }
-            }
+            var instance = Instantiate(this.clickDestinationPrefab, this.controller.Hit.point, Quaternion.identity);
+            this.agent.destination = this.controller.Hit.point;
+            Destroy(instance, 1.5f);
         }
         
         private bool ShouldStop()
         {
-            return Vector3.Distance(this._agent.destination, this.transform.position) <= 0f;
+            return Vector3.Distance(this.agent.destination, this.transform.position) <= 0f;
         }
 
         private void UpdateAnimation()
         {
-            switch (this._agent.velocity.magnitude > 0)
+            switch (this.agent.velocity.magnitude > 0)
             {
                 case true:
                     this._animator.SetBool("isMoving", true);
