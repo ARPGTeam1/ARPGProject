@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 528528524810468099}
   - component: {fileID: 4882213700818247226}
   - component: {fileID: 2552360161328350111}
-  m_Layer: 10
+  m_Layer: 20
   m_Name: PortalToScene
   m_TagString: Portal
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 528528525911453361}
-  m_Layer: 10
+  m_Layer: 20
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 7665212538540186089}
   - component: {fileID: 8863838373828269502}
   - component: {fileID: 4250087541440225086}
-  m_Layer: 10
+  m_Layer: 20
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 358462258102268976}
   - component: {fileID: 7551617677421341352}
   - component: {fileID: 4534898694567719372}
-  m_Layer: 10
+  m_Layer: 20
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
