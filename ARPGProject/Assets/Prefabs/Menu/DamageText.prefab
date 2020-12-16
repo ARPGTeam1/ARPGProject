@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5535081007991879296}
   m_Layer: 0
   m_Name: DamageText
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,10 +113,10 @@ MonoBehaviour:
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0.4716981, g: 0.06007476, b: 0.06007476, a: 1}
+    topRight: {r: 0.33247083, g: 0.41509432, b: 0.22908507, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 0.6761929, g: 0.7169812, b: 0.3009968, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offSet: {x: 0, y: 5, z: 0}
-  duration: 2
   speed: 1.25
   fadeMultiplier: 5
   _text: {fileID: 6162751109279857678}
+  damageTextColor: {r: 0.46532902, g: 0.077162705, b: 0.9622642, a: 1}
