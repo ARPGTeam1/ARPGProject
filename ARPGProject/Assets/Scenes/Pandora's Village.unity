@@ -2665,7 +2665,7 @@ TerrainCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249789488}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 32602313828c79e4a8de21389d773c49, type: 2}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 277d621fd406dea499cd578358e283f3, type: 2}
   m_EnableTreeColliders: 1
@@ -13504,15 +13504,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 528528524810468096, guid: 3d5946ca0d6d06b42aee8001c52fe59f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 325.65
+      value: 328.24
       objectReference: {fileID: 0}
     - target: {fileID: 528528524810468096, guid: 3d5946ca0d6d06b42aee8001c52fe59f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.24
+      value: 5.54
       objectReference: {fileID: 0}
     - target: {fileID: 528528524810468096, guid: 3d5946ca0d6d06b42aee8001c52fe59f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 189.86
+      value: 191.32
       objectReference: {fileID: 0}
     - target: {fileID: 528528524810468096, guid: 3d5946ca0d6d06b42aee8001c52fe59f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13577,6 +13577,14 @@ PrefabInstance:
     - target: {fileID: 4250087541440225086, guid: 3d5946ca0d6d06b42aee8001c52fe59f, type: 3}
       propertyPath: m_isRightToLeft
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665212538540186089, guid: 3d5946ca0d6d06b42aee8001c52fe59f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665212538540186089, guid: 3d5946ca0d6d06b42aee8001c52fe59f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d5946ca0d6d06b42aee8001c52fe59f, type: 3}
