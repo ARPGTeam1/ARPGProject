@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Portal
+  - PlayerStateManager
+  - PlayerHPBarUI
   layers:
   - Default
   - TransparentFX
@@ -16,6 +19,7 @@ TagManager:
   - 
   - Ground
   - Targetable
+  - HideIfBehind
   - 
   - 
   - 
@@ -25,8 +29,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Portal
   - 
   - 
   - 

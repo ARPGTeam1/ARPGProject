@@ -33,7 +33,7 @@ public class BlackScreenFadeInRoomChange : MonoBehaviour
 
             if (tempcolor.a >= 1f)
             {
-                SceneManager.LoadScene(sceneToChangeTo.ToString());
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
     }

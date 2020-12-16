@@ -399,6 +399,7 @@ GameObject:
   - component: {fileID: 226252560}
   - component: {fileID: 226252561}
   - component: {fileID: 226252563}
+  - component: {fileID: 226252566}
   - component: {fileID: 226252565}
   m_Layer: 5
   m_Name: Button_Play
@@ -425,7 +426,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 124.48513}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &226252560
 MonoBehaviour:
@@ -554,20 +555,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 226252558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: 46163468cc713344fa70d959271e6097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/UI/Click
-  PlayEvent: 15
-  StopEvent: 16
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  onClickSound: event:/UI/Click
+--- !u!114 &226252566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226252558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46163468cc713344fa70d959271e6097, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClickSound: event:/UI/Click
 --- !u!1 &265628705
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,7 +706,6 @@ GameObject:
   - component: {fileID: 422387159}
   - component: {fileID: 422387163}
   - component: {fileID: 422387161}
-  - component: {fileID: 422387164}
   m_Layer: 5
   m_Name: Button_Quit
   m_TagString: Untagged
@@ -728,7 +731,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 124.48513}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &422387159
 MonoBehaviour:
@@ -835,29 +838,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b584ec4eeac2eca45be72aa1f76d7b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &422387164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 422387157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/UI/Click
-  PlayEvent: 15
-  StopEvent: 16
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1 &1067468438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,7 +1296,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 124.48513}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1762998062
 MonoBehaviour:
@@ -1434,20 +1414,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1762998060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: 46163468cc713344fa70d959271e6097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/UI/Click
-  PlayEvent: 13
-  StopEvent: 14
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  onClickSound: event:/UI/Click
 --- !u!1 &1866382712
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,7 +1429,7 @@ GameObject:
   - component: {fileID: 1866382714}
   - component: {fileID: 1866382713}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: MenuMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1478,7 +1448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/Ambience & Environments/Ambience Tempel
+  Event: event:/UI/Menu Music
   PlayEvent: 11
   StopEvent: 12
   AllowFadeout: 1
@@ -1529,7 +1499,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061052441}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &2061052443
 Camera:
   m_ObjectHideFlags: 0
@@ -1729,7 +1699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeInRate: 0.005
   fadein: 0
-  sceneToChangeTo: {fileID: 102900000, guid: 1acc1bb25623eab42b08a0f9de91f785, type: 3}
+  sceneToChangeTo: {fileID: 102900000, guid: ccb3f594ca89e4a40bd36dcbb98fef90, type: 3}
 --- !u!222 &4439250822861926119
 CanvasRenderer:
   m_ObjectHideFlags: 0
