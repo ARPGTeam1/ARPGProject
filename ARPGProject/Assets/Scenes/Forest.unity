@@ -32362,6 +32362,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3970167866301039737, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
+      propertyPath: DeathSound
+      value: event:/Character - Pandora/Death - Pandora
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
 --- !u!114 &1076319468 stripped

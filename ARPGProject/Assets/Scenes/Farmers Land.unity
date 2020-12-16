@@ -37222,6 +37222,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3970167866301039737, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
+      propertyPath: DeathSound
+      value: event:/Character - Pandora/Death - Pandora
+      objectReference: {fileID: 0}
     - target: {fileID: 7256849138240839514, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
       propertyPath: maxLight
       value: 35
