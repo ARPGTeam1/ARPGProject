@@ -157,6 +157,7 @@ MonoBehaviour:
   attackRange: 4
   attackWindupTime: 0
   attackTimeCooldown: 1
+  meleeAttackSound: event:/Enemies/EnemyTrackingGiveDmg3D
 --- !u!114 &664047108803499833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +221,7 @@ MonoBehaviour:
         m_CallState: 2
   maxHealth: 50
   DeathSound: event:/Enemies/Enemy  Tracking Death
+  reload: 0
 --- !u!1 &7146324214373211162
 GameObject:
   m_ObjectHideFlags: 0

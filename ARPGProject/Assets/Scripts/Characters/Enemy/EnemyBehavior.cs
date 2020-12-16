@@ -80,7 +80,7 @@ namespace Characters.Enemy
                 _target = null;
                 _targetHealth = null;
             }
-
+            else
                 _targetTransform = new Vector3(_target.transform.position.x, this.transform.position.y, _target.transform.position.z);
 
             if (CanTrack)

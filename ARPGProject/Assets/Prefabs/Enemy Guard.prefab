@@ -161,10 +161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa947e69b03c2248bc499cde41b7724, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 15
   attackRange: 7
-  attackWindupTime: 0
   attackTimeCooldown: 1
+  meleeAttackSound: event:/Enemies/EnemyRaneGiveDmg3D
 --- !u!114 &339321553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,11 +180,11 @@ MonoBehaviour:
   damage: 5
   attackMinRange: 7
   attackMaxRange: 14
-  attackWindupTime: 0
   attackTimeCooldown: 1
   shouldShootSpawnProjectile: 1
   projectileToSpawn: {fileID: 5801624073439031333, guid: 1dd2cfc7c0489ce48a508cacd17bf20d, type: 3}
   projectileSpawnPoint: {fileID: 1934179738}
+  rangedAttackSound: event:/Enemies/EnemyAttFireball3D
 --- !u!114 &6886978981633574238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +222,7 @@ MonoBehaviour:
         m_CallState: 2
   maxHealth: 100
   DeathSound: event:/Enemies/Enemy Range Death
+  reload: 0
 --- !u!1 &4582945053365865646
 GameObject:
   m_ObjectHideFlags: 0
