@@ -32,7 +32,6 @@ public class Weapon : MonoBehaviour
 
     public void DealDamage(IDamagable pTarget)
     {
-        _lastAttackedTime = Time.time;
         pTarget?.TakeDamage(stats.damage, ToString());
         Debug.Log($"{stats.weaponName} damaged {pTarget} for {stats.damage}");
     }

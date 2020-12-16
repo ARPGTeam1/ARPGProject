@@ -53,6 +53,8 @@ namespace Characters.Player
                     break;
             }
         }
-        
+
+        public void SwordAttack() => this._equipped.DealDamage(this._target.GetComponent<IDamagable>());
+
     }
 }

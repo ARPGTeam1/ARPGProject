@@ -41,7 +41,6 @@ namespace Characters.Player
             if (!Physics.Raycast(ray, out this.Hit, this.mainCam.farClipPlane, this.raycastLayers)) return;
 
             var hitLayer = this.Hit.transform.gameObject.layer;
-            Debug.Log(hitLayer);
             switch (hitLayer)
             {
                 case 8: //Layer 8 = Ground Layer
