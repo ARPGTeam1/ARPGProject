@@ -1,47 +1,35 @@
-﻿using Characters;
-using Characters.Player;
+﻿using Interfaces;
 using UnityEngine;
 
 public class StationaryThreat : MonoBehaviour
 {
-
     [SerializeField] private int damage;
-    [SerializeField] private float startDamageTimerSeconds;
     [SerializeField] private float repeatDamageTimerSeconds;
 
-    [SerializeField] private AudioClip _audioClip;
-    [SerializeField] private AudioSource _audioSource;
-    
-    private HealthManager _target;
+    private float _lastDamaged;
+
+    [FMODUnity.EventRef] [SerializeField] private string burnSound;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.CompareTag("Player"))
-                return;
-        _target = other.gameObject.GetComponent<HealthManager>();
-        if (_target != null && !_target.IsDead )
-        {
-            InvokeRepeating(nameof(DamageTarget), startDamageTimerSeconds, repeatDamageTimerSeconds);         
-        }
+        DamageTarget(other.GetComponent<IDamagable>());
+        _lastDamaged = Time.time;
     }
 
-    private void DamageTarget()
+    private void OnTriggerStay(Collider other)
     {
-        if (_audioClip != null)
-        {
-            if (!_target.IsDead)
-            {
-                _audioSource.PlayOneShot(_audioClip);    
-            }
-        }
-        _target.TakeDamage(damage, this.name);
+       
+        if (!(Time.time >= _lastDamaged + repeatDamageTimerSeconds)) return;
+        
+        DamageTarget(other.GetComponent<IDamagable>());
     }
 
-    private void OnTriggerExit(Collider other)
+    private void DamageTarget(IDamagable target)
     {
-        if (_target == null)
-            return;
-        CancelInvoke(nameof(DamageTarget));
-        _target = null;
+        target?.TakeDamage(damage, this.name);
+        _lastDamaged = Time.time;
+        FMODUnity.RuntimeManager.PlayOneShot(burnSound, transform.position);
     }
+
+
 }
