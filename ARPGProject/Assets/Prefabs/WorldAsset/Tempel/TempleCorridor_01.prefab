@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6513985128312549116}
   - component: {fileID: 752544961733591553}
   - component: {fileID: 4160493871100430884}
+  - component: {fileID: 6841245759090449380}
   m_Layer: 0
   m_Name: TempleCorridor_01 (2)
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6841245759090449380
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442542081038696166}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.1120787, y: 6.825775, z: 1.4290148}
+  m_Center: {x: -3.4716918, y: 3.4124813, z: 0.0056723827}
 --- !u!1 &951705010131601161
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,6 +187,7 @@ GameObject:
   - component: {fileID: 5042876944037260498}
   - component: {fileID: 3838621333629550636}
   - component: {fileID: 4680941724896301250}
+  - component: {fileID: 4531730409484089359}
   m_Layer: 0
   m_Name: TempleCorridor_01 (4)
   m_TagString: Untagged
@@ -243,6 +258,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4531730409484089359
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103585122211817623}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.1120787, y: 6.825775, z: 1.4290148}
+  m_Center: {x: -3.4716918, y: 3.4124813, z: 0.0056876414}
 --- !u!1 &1120091826741398131
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,6 +444,7 @@ GameObject:
   - component: {fileID: 5420885256759245390}
   - component: {fileID: 5026594448981491855}
   - component: {fileID: 7821192659927300508}
+  - component: {fileID: 2497173265160374856}
   m_Layer: 0
   m_Name: TempleCorridor_01 (5)
   m_TagString: Untagged
@@ -486,6 +515,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2497173265160374856
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3444532760585305406}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.1120763, y: 6.8257732, z: 1.4290136}
+  m_Center: {x: -3.4716918, y: 3.4124813, z: 0.005686816}
 --- !u!1 &4772947379131289078
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +539,7 @@ GameObject:
   - component: {fileID: 1307128724349345338}
   - component: {fileID: 2289531803390024760}
   - component: {fileID: 9223246779230942047}
+  - component: {fileID: 7591774574273260397}
   m_Layer: 0
   m_Name: TempleCorridor_01
   m_TagString: Untagged
@@ -567,6 +610,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7591774574273260397
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4772947379131289078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.1120787, y: 6.825775, z: 1.4290148}
+  m_Center: {x: -3.4716918, y: 3.4124813, z: 0.0056876414}
 --- !u!1 &5539416597652970479
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +634,7 @@ GameObject:
   - component: {fileID: 433794223694808756}
   - component: {fileID: 7146875123344437222}
   - component: {fileID: 4216215391896369101}
+  - component: {fileID: 1334380775435033324}
   m_Layer: 0
   m_Name: TempleCorridor_01 (7)
   m_TagString: Untagged
@@ -648,6 +705,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1334380775435033324
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5539416597652970479}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.1120787, y: 6.825775, z: 1.4290148}
+  m_Center: {x: -3.4716918, y: 3.4124813, z: 0.0056876414}
 --- !u!1 &5766803877352394586
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,6 +821,7 @@ GameObject:
   - component: {fileID: 6540086227410050134}
   - component: {fileID: 8408263443111136316}
   - component: {fileID: 4207852771792089403}
+  - component: {fileID: 5489503440548412984}
   m_Layer: 0
   m_Name: TempleCorridor_01 (3)
   m_TagString: Untagged
@@ -821,6 +892,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5489503440548412984
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7322308789127705460}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.1120787, y: 6.825775, z: 1.4290148}
+  m_Center: {x: -3.4716918, y: 3.4124813, z: 0.0056723827}
 --- !u!1 &8296891028307146493
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +916,7 @@ GameObject:
   - component: {fileID: 5602589821222417151}
   - component: {fileID: 7244472241535644652}
   - component: {fileID: 2578440419053814506}
+  - component: {fileID: 412197679592016163}
   m_Layer: 0
   m_Name: TempleCorridor_01 (6)
   m_TagString: Untagged
@@ -902,6 +987,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &412197679592016163
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296891028307146493}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.1120787, y: 6.825775, z: 1.4290148}
+  m_Center: {x: -3.4716918, y: 3.4124813, z: 0.0056876414}
 --- !u!1 &8334063822718005167
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,6 +1011,7 @@ GameObject:
   - component: {fileID: 3031045250039148275}
   - component: {fileID: 3854988836132314620}
   - component: {fileID: 6270841451559206262}
+  - component: {fileID: 470120990568873178}
   m_Layer: 0
   m_Name: TempleCorridor_01 (1)
   m_TagString: Untagged
@@ -983,3 +1082,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &470120990568873178
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8334063822718005167}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.1120763, y: 6.8257732, z: 1.4290136}
+  m_Center: {x: -3.4717224, y: 3.4124813, z: 0.005686816}
