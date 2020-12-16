@@ -117,12 +117,12 @@ Material:
     - Color_C3EDBF70: {r: 0.77254903, g: 0.91764706, b: 0.58431375, a: 0}
     - Vector2_6EAE26DF: {r: 1, g: 0, b: 0, a: 1}
     - Vector2_C0A0577E: {r: 0, g: 1, b: 0, a: 0}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.9245283, g: 0.76424056, b: 0.44045925, a: 1}
     - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
-    - _EmissionColor: {r: 2, g: 1.9764706, b: 1.9764706, a: 1}
+    - _EmissionColor: {r: 2.0907834, g: 1.325738, b: 0.5621446, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
