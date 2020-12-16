@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.SqlTypes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -16,10 +17,13 @@ public class PauseMenu : MonoBehaviour
     public AudioClip WOHMenuSoundtrack;
 
     private InstructionPopup _instruction;
+    private SaveLoadScene _saveLoadScene;
 
     private void Start()
     {
         audiosource = GetComponentInChildren<AudioSource>();
+        _saveLoadScene = new SaveLoadScene();
+        
     }
 
     void Update()
@@ -70,6 +74,7 @@ public class PauseMenu : MonoBehaviour
 
     void MainMenu()
     {
+        _saveLoadScene.SaveScene();
         SceneManager.LoadScene(0);
     }
     
@@ -98,6 +103,8 @@ public class PauseMenu : MonoBehaviour
     
     public void Quit()
     {
+        _saveLoadScene.SaveScene();
+        
         #if UNITY_STANDALONE
         Application.Quit();
         #endif
