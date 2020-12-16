@@ -18,12 +18,13 @@ namespace Characters
         public event Action OnDeath;
         public UnityEvent onDeath;
         private Animator _animator;
-        private AudioSource _source;
-        public AudioClip deathSound;
         
         private int _currentHealth;
         
         [SerializeField] private int maxHealth;
+        
+        [SerializeField] [FMODUnity.EventRef] private string DeathSound;
+        FMOD.Studio.EventInstance DeathSoundInstance;
 
         public int CurrentHealth
         {
@@ -48,7 +49,7 @@ namespace Characters
         {
             CurrentHealth = MaxHealth;
             this._animator = GetComponentInChildren<Animator>();
-            this._source = GetComponent<AudioSource>();
+            DeathSoundInstance = FMODUnity.RuntimeManager.CreateInstance(DeathSound);
         }
 
         public void TakeDamage(int damage, string source)
@@ -82,7 +83,6 @@ namespace Characters
             if (CompareTag("Player"))
             {
                 _animator.SetBool("Dead", true);
-                _source.PlayOneShot(deathSound);
             }
 
             if (CompareTag("Enemy"))
@@ -90,6 +90,8 @@ namespace Characters
                 _animator.SetTrigger("Die");
                 Destroy(gameObject, 1);
             }
+            
+            DeathSoundInstance.start();
         }
 
         public void Heal()

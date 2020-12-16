@@ -242,8 +242,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  deathSound: {fileID: 0}
   maxHealth: 20
+  DeathSound: event:/Enemies/Enemy  Tracking Death
 --- !u!135 &3305598081604095364
 SphereCollider:
   m_ObjectHideFlags: 0

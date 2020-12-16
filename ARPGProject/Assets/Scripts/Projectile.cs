@@ -78,4 +78,9 @@ public class Projectile : MonoBehaviour, IProjectile, IKillable
         }
         this.trackingTarget = target;
     }
+
+    private void OnDestroy()
+    {
+        _fireballState.release();
+    }
 }

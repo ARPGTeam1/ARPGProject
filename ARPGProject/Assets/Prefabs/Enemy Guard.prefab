@@ -220,8 +220,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  deathSound: {fileID: 0}
   maxHealth: 100
+  DeathSound: event:/Enemies/Enemy Range Death
 --- !u!1 &4582945053365865646
 GameObject:
   m_ObjectHideFlags: 0
