@@ -45,7 +45,7 @@ namespace Characters
         
         public bool IsDead => CurrentHealth <= 0;
 
-        private void Start()
+        private void Awake()
         {
             CurrentHealth = MaxHealth;
             this._animator = GetComponentInChildren<Animator>();
