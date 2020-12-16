@@ -318,7 +318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4131308627761395777, guid: 20d7114ca43d89d45b95a3d186c31cd4, type: 3}
       propertyPath: m_Name
-      value: EnemyGhostGreen
+      value: EnemyGhostPurple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20d7114ca43d89d45b95a3d186c31cd4, type: 3}
