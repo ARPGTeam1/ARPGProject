@@ -33,7 +33,12 @@ namespace Characters.Player
             this._dUI = FindObjectOfType<DefeatUI>();
             this._reviveDelay = this.clip.length;
         }
-        
+
+        private void Start()
+        {
+            this.checkPoint = GameObject.FindWithTag("Checkpoint").transform.position;
+        }
+
 
         public void CorpseRevive()
         {
