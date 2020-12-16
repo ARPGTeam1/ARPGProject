@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 6578665308014188000}
   - component: {fileID: 7846333414798006853}
   - component: {fileID: 5406344727102549647}
+  - component: {fileID: 3032041351267443342}
   m_Layer: 0
-  m_Name: temple_wall_module_01 (7)
+  m_Name: TempleWallSingle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3032041351267443342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5766803877352394586}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.112076, y: 6.825773, z: 1.4290128}
+  m_Center: {x: -3.4716916, y: 3.412481, z: 0.0056868196}
