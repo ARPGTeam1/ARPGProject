@@ -1,6 +1,9 @@
 ﻿using System.Collections;
+using Characters;
+using Interfaces;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Menu
 {
@@ -10,10 +13,17 @@ namespace Menu
         [SerializeField] [Range(0f, 3f)] private float speed;
         [SerializeField] private float fadeMultiplier = 10f;
         [SerializeField] private TextMeshPro _text;
+        [SerializeField] private Color damageTextColor;
+        
         private Camera _mainCam;
-
+        
         public void Setup(Transform location, int damage)
         {
+            if (location.gameObject.CompareTag("Player"))
+                _text.color = Color.red;
+            else
+                _text.color = damageTextColor;
+            
             _text.SetText(damage.ToString());
             transform.position = location.position + offSet;
             StartCoroutine(FadeAway());
@@ -28,11 +38,20 @@ namespace Menu
             }
             Destroy(gameObject);
         }
-        private void Start() => _mainCam = Camera.main;
+        private void Start()
+        {
+            GameObject.FindWithTag("Player");
+            _mainCam = Camera.main;
+        }
 
-        private void Update() =>
+        private void Update()
+        {
+           
             transform.Translate(Vector3.up * (speed * Time.deltaTime), Space.World);
+            
+        }
 
+       
         private void LateUpdate() =>
             transform.LookAt(transform.position + _mainCam.transform.rotation * Vector3.forward, 
                                 _mainCam.transform.rotation * Vector3.up);

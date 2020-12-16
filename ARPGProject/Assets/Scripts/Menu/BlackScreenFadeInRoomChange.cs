@@ -9,14 +9,16 @@ using Object = UnityEngine.Object;
 public class BlackScreenFadeInRoomChange : MonoBehaviour
 {
     public float fadeInRate = 0.005f;
-    public bool fadein = false;
-    public Object sceneToChangeTo;
+    public bool fadein;
+    private SaveLoadScene sceneToChangeTo;
     private void Start()
     {
+        fadein = false;
         var image = GetComponent<Image>();
         var tempcolor = image.color;
         tempcolor = new Color(0,0,0,0);
         image.color = tempcolor;
+        sceneToChangeTo = new SaveLoadScene();
     }
 
     void FixedUpdate()
@@ -30,15 +32,21 @@ public class BlackScreenFadeInRoomChange : MonoBehaviour
 
             tempcolor.a += fadeInRate;
             image.color = tempcolor;
+            
 
             if (tempcolor.a >= 1f)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                if (SceneManager.GetActiveScene().buildIndex != sceneToChangeTo.SavedScene)
+                {
+                    sceneToChangeTo.LoadSavedScene();
+                }
+                else
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+                
             }
         }
     }
-
-
-        
 }
 
