@@ -53,4 +53,4 @@ MonoBehaviour:
   minSize: 0.2
   maxSize: 0.4
   torque: 500
-  RockSlideAudio: event:/Enemies/Rocks Falling
+  RockSlideAudio: event:/Enemies/EnemyRocksFalling3D
