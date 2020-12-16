@@ -126,7 +126,6 @@ GameObject:
   - component: {fileID: 3970167866301039737}
   - component: {fileID: 802219321045450585}
   - component: {fileID: 7256849138240839514}
-  - component: {fileID: -7926159684715248656}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -334,7 +333,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   combat: {fileID: 0}
   movement: {fileID: 0}
+  health: {fileID: 0}
   mainCam: {fileID: 0}
+  anim: {fileID: 0}
+  raycastLayers:
+    serializedVersion: 2
+    m_Bits: 768
 --- !u!114 &802219321045450587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,6 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 885ec8d354aaaeb429110cd7907791bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agent: {fileID: 0}
   clickDestinationPrefab: {fileID: 1267775975643832, guid: afc3ac08dff68aa46915da574d41d350, type: 3}
 --- !u!114 &2950930965222286530
 MonoBehaviour:
@@ -361,9 +366,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatState: 0
-  damage: 10
-  attackSpeed: 1
-  attackRange: 3
 --- !u!114 &3970167866301039737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,8 +401,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  deathSound: {fileID: 8300000, guid: 03306655b86180d44ab5291a95cd33b8, type: 3}
   maxHealth: 500
+  DeathSound: event:/Character - Pandora/Death - Pandora
+  reload: 0
 --- !u!114 &802219321045450585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,20 +437,6 @@ MonoBehaviour:
   alsoBuffLightRadius: 1
   minLightRadius: 2
   maxLightRadius: 35
---- !u!114 &-7926159684715248656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568412229135779350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
-  ListenerNumber: -1
 --- !u!1 &852011760065721699
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,8 +830,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749917935137541821}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.17494202, y: 7.106961, z: -0.09942164}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.2, y: 10.2, z: -7.9}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 912180434493775020}

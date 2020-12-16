@@ -4929,7 +4929,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2933180138578614443}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 359.47, y: 0.49098, z: 846.45}
   m_LocalScale: {x: 0.67586, y: 0.67586, z: 0.67586}
   m_Children:
@@ -4968,6 +4968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healAmount: 0
   pickUpEffect: {fileID: 1298029560938040, guid: d74e73c0044f5cd43a6f1f506f0df790, type: 3}
+  pickUpSound: event:/SFX/Hope Pickup Sound
 --- !u!1 &3672643119980738107
 GameObject:
   m_ObjectHideFlags: 0
