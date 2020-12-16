@@ -11,6 +11,7 @@ namespace Characters.Enemy
 
         [FormerlySerializedAs("collider")] [SerializeField] private Collider visionCollider;
         private GameObject _target;
+        private HealthManager _targetHealth;
         private Vector3 _targetTransform;
         private MoveToTarget _moveToTarget;
         private Patrol _patrol;
@@ -73,8 +74,14 @@ namespace Characters.Enemy
                 _patrol.enabled = true;
                 return;
             }
-            
-            _targetTransform = new Vector3(_target.transform.position.x, this.transform.position.y, _target.transform.position.z);
+
+            if (_targetHealth.IsDead)
+            {
+                _target = null;
+                _targetHealth = null;
+            }
+
+                _targetTransform = new Vector3(_target.transform.position.x, this.transform.position.y, _target.transform.position.z);
 
             if (CanTrack)
             {
@@ -196,6 +203,7 @@ namespace Characters.Enemy
             if (!other.gameObject.CompareTag("Player"))
                 return;
             _target = other.gameObject;
+            _targetHealth = _target.GetComponent<HealthManager>();
             
             if (CanAttack)
             {
@@ -211,6 +219,7 @@ namespace Characters.Enemy
             if (!other.gameObject.CompareTag("Player"))
                 return;
             _target = null;
+            _targetHealth = null;
             
             if (CanAttack)
             {
