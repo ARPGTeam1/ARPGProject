@@ -9812,7 +9812,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919822338}
   m_LocalRotation: {x: -0.0022368794, y: -0.9675449, z: 0.25253484, w: -0.008834318}
-  m_LocalPosition: {x: -0.37002563, y: 2.7999656, z: 2.0566406}
+  m_LocalPosition: {x: -0.36, y: 3.76, z: 2.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8275373268256407059}
@@ -9836,7 +9836,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -10051,7 +10051,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8275373268256407059}
   - component: {fileID: 3849654022354166637}
-  - component: {fileID: 5872756663988210197}
   m_Layer: 0
   m_Name: WOH_Asset_PortalTree
   m_TagString: Untagged
@@ -10094,29 +10093,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: Player
-  Event: event:/Ambience & Environments/Olive Tree Safe Point
-  PlayEvent: 3
-  StopEvent: 4
+  Event: event:/Ambience & Environments/ambolivetreesafepoint3D
+  PlayEvent: 1
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
---- !u!135 &5872756663988210197
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8760583779273139369}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 30
-  m_Center: {x: 0, y: 0, z: 0}
+  OverrideAttenuation: 1
+  OverrideMinDistance: 20
+  OverrideMaxDistance: 45
 --- !u!1001 &8454014448701770757
 PrefabInstance:
   m_ObjectHideFlags: 0
