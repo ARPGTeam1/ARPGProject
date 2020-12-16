@@ -21,6 +21,8 @@ namespace Characters.Player
         
         private Transform _target;
 
+        private bool _targetIsDead => _target.GetComponent<HealthManager>().IsDead;
+
         private void Start()
         {
             this.controller = GetComponent<Controller>();
@@ -35,6 +37,12 @@ namespace Characters.Player
             {
                 case CombatState.Attack:
                     this._target = this.controller.Hit.transform;
+                    if (_targetIsDead)
+                    {
+                        this.combatState = CombatState.Idle;
+                        return;
+                    }
+                    
                     if (Vector3.Distance(this._target.position, this.transform.position) > this._equipped.stats.attackRange)
                     {
                         var enemyToPlayer = this.transform.position - this._target.position;
@@ -54,7 +62,9 @@ namespace Characters.Player
             }
         }
 
-        public void SwordAttack() => this._equipped.DealDamage(this._target.GetComponent<IDamagable>());
+        public void SwordAttack() {
+            this._equipped.DealDamage(this._target.GetComponent<IDamagable>());
+        }
 
     }
 }
