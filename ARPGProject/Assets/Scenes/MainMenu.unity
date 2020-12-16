@@ -425,7 +425,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 544, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &226252560
 MonoBehaviour:
@@ -728,7 +728,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 544, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &422387159
 MonoBehaviour:
@@ -1316,7 +1316,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 544, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1762998062
 MonoBehaviour:
@@ -1459,7 +1459,7 @@ GameObject:
   - component: {fileID: 1866382714}
   - component: {fileID: 1866382713}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: MenuMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1529,7 +1529,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061052441}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &2061052443
 Camera:
   m_ObjectHideFlags: 0
@@ -1729,7 +1729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeInRate: 0.005
   fadein: 0
-  sceneToChangeTo: {fileID: 102900000, guid: 1acc1bb25623eab42b08a0f9de91f785, type: 3}
+  sceneToChangeTo: {fileID: 102900000, guid: ccb3f594ca89e4a40bd36dcbb98fef90, type: 3}
 --- !u!222 &4439250822861926119
 CanvasRenderer:
   m_ObjectHideFlags: 0
