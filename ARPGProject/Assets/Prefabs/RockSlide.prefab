@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8096972310231157050}
   - component: {fileID: 8096972310231157051}
+  - component: {fileID: -8313077759021213044}
   m_Layer: 0
   m_Name: RockSlide
   m_TagString: Untagged
@@ -53,4 +54,26 @@ MonoBehaviour:
   minSize: 0.2
   maxSize: 0.4
   torque: 500
-  RockSlideAudio: event:/Enemies/EnemyRocksFalling3D
+--- !u!114 &-8313077759021213044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8096972310231157048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Enemies/EnemyRocksFalling3D
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 20
+  OverrideMaxDistance: 40

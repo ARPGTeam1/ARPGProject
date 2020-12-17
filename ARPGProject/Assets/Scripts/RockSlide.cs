@@ -21,14 +21,9 @@ public class RockSlide : MonoBehaviour
     
     private int _counter;
     private bool _alreadyTriggered = false;
-
-    [SerializeField] [FMODUnity.EventRef] private string RockSlideAudio;
-    //FMOD.Studio.EventInstance RockSlideAudioInstance;
-    
     
     private void SpawnRock()
     {
-        
         var random = Random.Range(minSize, maxSize);
         var instance = Instantiate(rockSlidePrefab, transform.position, Quaternion.identity, transform);
         instance.transform.localScale = new Vector3(random, random, random);
@@ -38,11 +33,9 @@ public class RockSlide : MonoBehaviour
         _counter++;
         if(_counter >= rocks) Stop();
     }
-
+    
     private void Start()
     {
-        //RockSlideAudioInstance = FMODUnity.RuntimeManager.CreateInstance(RockSlideAudio);
-        
         if (neverEndingRockSlide)
         {
             StartCoroutine(Periodic(periodBetweenSlides));
@@ -53,8 +46,6 @@ public class RockSlide : MonoBehaviour
     {
         _counter = 0;
         InvokeRepeating(nameof(SpawnRock), delayBeforeStart, repeatRate);
-        FMODUnity.RuntimeManager.PlayOneShotAttached(RockSlideAudio, gameObject);
-        
     }
 
     public void Stop() => CancelInvoke("SpawnRock");
