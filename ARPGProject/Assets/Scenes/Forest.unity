@@ -28288,6 +28288,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 102900000, guid: 82417d9d073ad40c69e53ff357751bc4, type: 3}
     - target: {fileID: 4350808577985529398, guid: e75c14a94ca541c4195c97a65ae0462c, type: 3}
+      propertyPath: toSceneName
+      value: Temple
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350808577985529398, guid: e75c14a94ca541c4195c97a65ae0462c, type: 3}
       propertyPath: textFacesPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -35463,15 +35467,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3937602940342775725, guid: 5f06daa376ed14142be33daef2b38a1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 192.13046
+      value: 184.7
       objectReference: {fileID: 0}
     - target: {fileID: 3937602940342775725, guid: 5f06daa376ed14142be33daef2b38a1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00001335144
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 3937602940342775725, guid: 5f06daa376ed14142be33daef2b38a1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 434.48666
+      value: 433
       objectReference: {fileID: 0}
     - target: {fileID: 3937602940342775725, guid: 5f06daa376ed14142be33daef2b38a1f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -56850,6 +56854,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -49.8609
       objectReference: {fileID: 0}
+    - target: {fileID: 7699737231388723614, guid: fc718623b9af9c94e941186d3df39124, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1538399916}
     - target: {fileID: 8864044464348894692, guid: fc718623b9af9c94e941186d3df39124, type: 3}
       propertyPath: m_IsActive
       value: 0

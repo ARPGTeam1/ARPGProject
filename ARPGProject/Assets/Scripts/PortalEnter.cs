@@ -10,7 +10,7 @@ namespace DefaultNamespace
         private NavMeshAgent _agent;
         private GameObject player;
         private Movement stop;
-        private float _stopDistance = 3;
+        private float _stopDistance = 5;
 
 
         private void Awake()
@@ -22,14 +22,14 @@ namespace DefaultNamespace
 
         private void LateUpdate()
         {
-            if (Input.GetMouseButtonDown(0)) MoveToPortal();
-            
-            if (Vector3.Distance(this.transform.position, this.player.transform.position) <= _stopDistance)
-            {
-                this._agent.ResetPath();
-                this._agent.velocity = Vector3.zero;
-                this.player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-            }
+            // if (Input.GetMouseButtonDown(0)) MoveToPortal();
+            //
+            // if (Vector3.Distance(this.transform.position, this.player.transform.position) <= _stopDistance)
+            // {
+            //     this._agent.ResetPath();
+            //     this._agent.velocity = Vector3.zero;
+            //     this.player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            // }
         }
 
         private void MoveToPortal()

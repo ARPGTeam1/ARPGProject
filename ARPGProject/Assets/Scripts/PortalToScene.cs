@@ -7,9 +7,9 @@ using Object = UnityEngine.Object;
 
 public class PortalToScene : MonoBehaviour
 {
-    public Object scene;
     [SerializeField] private TextMeshPro destinationText;
     [SerializeField] private string prefixToDestName;
+    [SerializeField] string toSceneName;
     [SerializeField] private bool textFacesPlayer;
     //[SerializeField] private ParticleSystem _particleSystem;
     private Camera mainCam;
@@ -17,7 +17,7 @@ public class PortalToScene : MonoBehaviour
     
     private void Start()
     {
-        destinationText.SetText($"{prefixToDestName} {scene.name}");
+        destinationText.SetText($"{prefixToDestName} {toSceneName}");
         destinationText.enabled = false;
         mainCam = Camera.main;
         //_particleSystem.Stop();
@@ -25,6 +25,7 @@ public class PortalToScene : MonoBehaviour
 
     private void FixedUpdate()
     {
+        destinationText.SetText($"{prefixToDestName} {toSceneName}");
         if (destinationText.enabled && textFacesPlayer)
         {
             destinationText.transform.LookAt(mainCam.transform);
@@ -37,11 +38,11 @@ public class PortalToScene : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             StartCoroutine(this.dUI.FadeSquare());
-            Invoke(nameof(InitializeScene), 2);
+            Invoke(nameof(InitializeScene), 2f);
         }
     }
 
-    private void InitializeScene() => SceneManager.LoadScene(this.scene.name);
+    private void InitializeScene() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     private void OnBecameVisible()
     {
