@@ -1700,7 +1700,6 @@ Transform:
   - {fileID: 1270097723}
   - {fileID: 1821128137}
   - {fileID: 1681359716}
-  - {fileID: 543450652518941983}
   - {fileID: 921623812}
   - {fileID: 318087453}
   m_Father: {fileID: 0}
@@ -1945,10 +1944,6 @@ PrefabInstance:
     - target: {fileID: 3777453130216299770, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
       propertyPath: m_Name
       value: Enemy Guard 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
-      propertyPath: DeathSound
-      value: event:/Enemies/EnemyRangeDeath3D
       objectReference: {fileID: 0}
     - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
@@ -2555,6 +2550,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1102423190}
     m_Modifications:
+    - target: {fileID: -8313077759021213044, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8096972310231157048, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
       propertyPath: m_Name
       value: RockSlide (1)
@@ -10271,7 +10270,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 754a76f4613f545478c918acd55c86f9, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 754a76f4613f545478c918acd55c86f9, type: 3}
       propertyPath: m_LocalScale.z
@@ -14425,6 +14424,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1102423190}
     m_Modifications:
+    - target: {fileID: -8313077759021213044, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8096972310231157048, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
       propertyPath: m_Name
       value: RockSlide (3)
@@ -15735,7 +15738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 744592540, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
       propertyPath: OverrideAttenuation
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 744592540, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
       propertyPath: OverrideMaxDistance
@@ -15743,7 +15746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 744592540, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
       propertyPath: OverrideMinDistance
-      value: 7.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5176313518674648092, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
       propertyPath: m_Name
@@ -20946,6 +20949,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1102423190}
     m_Modifications:
+    - target: {fileID: -8313077759021213044, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8096972310231157048, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
       propertyPath: m_Name
       value: RockSlide (4)
@@ -23880,15 +23887,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3937602940342775725, guid: 5f06daa376ed14142be33daef2b38a1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 3937602940342775725, guid: 5f06daa376ed14142be33daef2b38a1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3937602940342775725, guid: 5f06daa376ed14142be33daef2b38a1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 453
       objectReference: {fileID: 0}
     - target: {fileID: 3937602940342775725, guid: 5f06daa376ed14142be33daef2b38a1f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -23920,6 +23927,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3937602940342775763, guid: 5f06daa376ed14142be33daef2b38a1f, type: 3}
       propertyPath: player
+      value: 
+      objectReference: {fileID: 976927073}
+    - target: {fileID: 6718835993156982031, guid: 5f06daa376ed14142be33daef2b38a1f, type: 3}
+      propertyPath: attenuationObject
       value: 
       objectReference: {fileID: 976927073}
     m_RemovedComponents: []
@@ -25402,11 +25413,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1406308523}
     - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1406308515}
+    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 1406308515}
     - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
@@ -25418,11 +25437,19 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Drop
       objectReference: {fileID: 0}
     - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: PlayOnDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: PlayOnDeath
       objectReference: {fileID: 0}
     - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
@@ -25434,11 +25461,19 @@ PrefabInstance:
       value: TempleBossDeath, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: TempleBossDeath, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3587331068311863443, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
@@ -25504,7 +25539,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 387ca39997e263d4d9e2082af6d7e9ff, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 387ca39997e263d4d9e2082af6d7e9ff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26316,6 +26351,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1102423190}
     m_Modifications:
+    - target: {fileID: -8313077759021213044, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8096972310231157048, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
       propertyPath: m_Name
       value: RockSlide (5)
@@ -26436,65 +26475,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 381946914392494729, guid: 625add569f9f5db499a67d7491b45d80, type: 3}
   m_PrefabInstance: {fileID: 199930576634176510}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &543450652518941983 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2362466911000571916, guid: 4d78ab8e1afdfe84484891d5339da484, type: 3}
-  m_PrefabInstance: {fileID: 2829265924544345363}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &2829265924544345363
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 174758209}
-    m_Modifications:
-    - target: {fileID: 2362466911000571916, guid: 4d78ab8e1afdfe84484891d5339da484, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2362466911000571916, guid: 4d78ab8e1afdfe84484891d5339da484, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 224.54626
-      objectReference: {fileID: 0}
-    - target: {fileID: 2362466911000571916, guid: 4d78ab8e1afdfe84484891d5339da484, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -20.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 2362466911000571916, guid: 4d78ab8e1afdfe84484891d5339da484, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 85.03906
-      objectReference: {fileID: 0}
-    - target: {fileID: 2362466911000571916, guid: 4d78ab8e1afdfe84484891d5339da484, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7205499
-      objectReference: {fileID: 0}
-    - target: {fileID: 2362466911000571916, guid: 4d78ab8e1afdfe84484891d5339da484, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2362466911000571916, guid: 4d78ab8e1afdfe84484891d5339da484, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.69340307
-      objectReference: {fileID: 0}
-    - target: {fileID: 2362466911000571916, guid: 4d78ab8e1afdfe84484891d5339da484, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2362466911000571916, guid: 4d78ab8e1afdfe84484891d5339da484, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2362466911000571916, guid: 4d78ab8e1afdfe84484891d5339da484, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -87.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2362466911000571916, guid: 4d78ab8e1afdfe84484891d5339da484, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3135344886052416182, guid: 4d78ab8e1afdfe84484891d5339da484, type: 3}
-      propertyPath: m_Name
-      value: WOH_Asset_Pandoras_Box
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4d78ab8e1afdfe84484891d5339da484, type: 3}

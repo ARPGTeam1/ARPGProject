@@ -221,7 +221,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   maxHealth: 100
-  DeathSound: event:/Enemies/Enemy Range Death
+  DeathSound: event:/Enemies/EnemyRangeDeath3D
 --- !u!1 &4582945053365865646
 GameObject:
   m_ObjectHideFlags: 0

@@ -53,7 +53,8 @@ public class DropLoot : MonoBehaviour
 
     private void Launch(Rigidbody loot)
     {
-        loot.AddForce(LaunchDirection() * launchSpeed);
+        //loot.AddForce(LaunchDirection() * launchSpeed);
+        loot.AddExplosionForce(launchSpeed, loot.position, 2f );
         loot.AddTorque(loot.gameObject.transform.position - GameObject.FindWithTag("Player").transform.position);
     }
 }
