@@ -19,12 +19,14 @@ namespace Characters.Player
         
         [SerializeField] private GameObject clickDestinationPrefab;
 
+        //[SerializeField] [FMODUnity.EventRef] private string footstepsSound;
+        //private FMOD.Studio.EventInstance footstepsInstance;
+        
         public bool HasEffect => clickDestinationPrefab != null;
         
         private void Awake()
         {
             this.controller = GetComponent<Controller>();
-            
             this.agent = GetComponent<NavMeshAgent>();
             this._cam = Camera.main;
             this._ground = LayerMask.GetMask("Ground");
@@ -32,6 +34,17 @@ namespace Characters.Player
             this._animator = GetComponent<Animator>();
             this._rb = GetComponent<Rigidbody>();
             this._attack = GetComponent<Attack>();
+        }
+
+        private void Start()
+        {
+            //footstepsInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Character - Pandora/Running - Pandora");
+            //FMODUnity.RuntimeManager.AttachInstanceToGameObject(footstepsInstance, transform, GetComponent<Rigidbody>());
+        }
+
+        public void PlayFootStep()
+        {
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Character - Pandora/Running - Pandora", gameObject);
         }
 
         private void Update()
@@ -66,9 +79,11 @@ namespace Characters.Player
             {
                 case true:
                     this._animator.SetBool("isMoving", true);
+                   
                     break;
                 case false:
                     this._animator.SetBool("isMoving", false);
+                    
                     break;
             }
         }

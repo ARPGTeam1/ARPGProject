@@ -15,20 +15,22 @@ namespace Characters.Player
         [SerializeField] private bool alsoBuffLightRadius;
         [SerializeField] private float minLightRadius;
         [SerializeField] private float maxLightRadius;
-        
-        //[FMODUnity.EventRef] public string HealEvent = "";
-        
-        
+
+        [SerializeField] [FMODUnity.EventRef] private string hurtSound;
+        FMOD.Studio.EventInstance _hurtSoundInstance;
 
         private void Start()
         {
             _hp = GetComponent<HealthManager>();
             _hp.OnHealthChanged += UpdateLight;
+            _hp.OnDamaged += HitSound;
             UpdateLight();
             
-            //playerState = FMODUnity.RuntimeManager.CreateInstance(PlayerStateEvent);
-            //playerState.start();
+            _hurtSoundInstance = FMODUnity.RuntimeManager.CreateInstance(hurtSound);
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(_hurtSoundInstance, transform, GetComponent<Rigidbody>());
         }
+
+        private void HitSound(int currentHp) => _hurtSoundInstance.start();
 
         private void OnCollisionEnter(Collision other)
         {
@@ -40,6 +42,7 @@ namespace Characters.Player
         private void OnDestroy()
         {
             _hp.OnHealthChanged -= UpdateLight;
+            _hp.OnDamaged -= HitSound;
         }
         
         private void UpdateLight()
