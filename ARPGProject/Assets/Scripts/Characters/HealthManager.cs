@@ -24,14 +24,7 @@ namespace Characters
         [SerializeField] private int maxHealth;
         
         [SerializeField] [FMODUnity.EventRef] private string DeathSound = "";
-        //FMOD.Studio.EventInstance DeathSoundInstance;
 
-        private void Start()
-        {
-            //DeathSoundInstance = FMODUnity.RuntimeManager.CreateInstance(DeathSound);
-            //FMODUnity.RuntimeManager.AttachInstanceToGameObject(DeathSoundInstance, transform, GetComponent<Rigidbody>());
-        }
-        
         public int CurrentHealth
         {
             get => _currentHealth;
@@ -55,7 +48,6 @@ namespace Characters
         {
             CurrentHealth = MaxHealth;
             this._animator = GetComponentInChildren<Animator>();
-            //DeathSoundInstance = FMODUnity.RuntimeManager.CreateInstance(DeathSound);
         }
 
         public void TakeDamage(int damage, string source)
@@ -64,10 +56,6 @@ namespace Characters
 
             OnHealthChanged?.Invoke();
             OnDamaged?.Invoke(damage);
-            if (CompareTag("Player"))
-            {
-                //Animation and Sound for Player on Damaging;
-            }
             
             if (CompareTag("Enemy"))
             {
