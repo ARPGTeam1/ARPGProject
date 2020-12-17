@@ -12163,12 +12163,16 @@ PrefabInstance:
       value: event:/Voice Over/Hope/HopePickUp3D14
       objectReference: {fileID: 0}
     - target: {fileID: 744592540, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 744592540, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
       propertyPath: OverrideMaxDistance
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 744592540, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
       propertyPath: OverrideMinDistance
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 5176313518674648092, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
       propertyPath: m_Name
@@ -29825,12 +29829,16 @@ PrefabInstance:
       value: event:/Voice Over/Hope/HopePickUp3D03
       objectReference: {fileID: 0}
     - target: {fileID: 744592540, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 744592540, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
       propertyPath: OverrideMaxDistance
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 744592540, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
       propertyPath: OverrideMinDistance
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 5176313518674648092, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
       propertyPath: m_Name
@@ -37989,12 +37997,16 @@ PrefabInstance:
       value: event:/Voice Over/Hope/HopePickUp3D09
       objectReference: {fileID: 0}
     - target: {fileID: 744592540, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 744592540, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
       propertyPath: OverrideMaxDistance
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 744592540, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
       propertyPath: OverrideMinDistance
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 5176313518674648092, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
       propertyPath: m_Name
