@@ -2023,6 +2023,34 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 4875116039614293052, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875116039614293052, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875116039614293052, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1859266565}
+    - target: {fileID: 4875116039614293052, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875116039614293052, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Drop
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875116039614293052, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DropLoot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875116039614293052, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6344310275866603768, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
       propertyPath: m_Speed
       value: 5
@@ -6986,6 +7014,34 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 238154153}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Drop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DropLoot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7473095215975324673, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: points.Array.size
       value: 2
@@ -7000,6 +7056,27 @@ PrefabInstance:
       objectReference: {fileID: 58581566}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+--- !u!1 &238154152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3777453130216299770, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+  m_PrefabInstance: {fileID: 238154151}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &238154153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238154152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3aa984bbcf6e5346bab1c6bd6a3d07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootTable: {fileID: 11400000, guid: 344f69cb321b04ec9a2c7b7d07883fc9, type: 2}
+  dropType: 3
+  amountOfDrops: 1
+  launchSpeed: 500
 --- !u!1 &240896413
 GameObject:
   m_ObjectHideFlags: 0
@@ -25938,8 +26015,57 @@ PrefabInstance:
       propertyPath: damage
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 830649062}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Drop
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DropLoot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+--- !u!1 &830649061 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3777453130216299770, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+  m_PrefabInstance: {fileID: 830649060}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &830649062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830649061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3aa984bbcf6e5346bab1c6bd6a3d07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootTable: {fileID: 11400000, guid: 344f69cb321b04ec9a2c7b7d07883fc9, type: 2}
+  dropType: 3
+  amountOfDrops: 1
+  launchSpeed: 500
 --- !u!4 &831184101 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2387457706535127256, guid: 8124c11e65bbef643b2bdddd21c74c72, type: 3}
@@ -32982,6 +33108,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Patrol 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1073682822}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Drop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DropLoot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7473095215975324673, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: points.Array.size
       value: 2
@@ -33004,6 +33158,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+--- !u!1 &1073682821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3777453130216299770, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+  m_PrefabInstance: {fileID: 1073682820}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1073682822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073682821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3aa984bbcf6e5346bab1c6bd6a3d07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootTable: {fileID: 11400000, guid: 344f69cb321b04ec9a2c7b7d07883fc9, type: 2}
+  dropType: 3
+  amountOfDrops: 1
+  launchSpeed: 500
 --- !u!1001 &1076319467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45883,6 +46058,34 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 4875116039614293052, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875116039614293052, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875116039614293052, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1477480458}
+    - target: {fileID: 4875116039614293052, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875116039614293052, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Drop
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875116039614293052, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DropLoot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875116039614293052, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6344310275866603771, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
       propertyPath: m_Name
       value: Tracking Enemy (2)
@@ -45933,6 +46136,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+--- !u!1 &1477480457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6344310275866603771, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+  m_PrefabInstance: {fileID: 1477480456}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1477480458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477480457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3aa984bbcf6e5346bab1c6bd6a3d07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootTable: {fileID: 11400000, guid: 344f69cb321b04ec9a2c7b7d07883fc9, type: 2}
+  dropType: 3
+  amountOfDrops: 1
+  launchSpeed: 500
 --- !u!1001 &1480182083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46491,8 +46715,57 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Guard
       objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1499245163}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Drop
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DropLoot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+--- !u!1 &1499245162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3777453130216299770, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+  m_PrefabInstance: {fileID: 1499245161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1499245163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499245162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3aa984bbcf6e5346bab1c6bd6a3d07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootTable: {fileID: 11400000, guid: 344f69cb321b04ec9a2c7b7d07883fc9, type: 2}
+  dropType: 3
+  amountOfDrops: 1
+  launchSpeed: 500
 --- !u!4 &1499940122 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2387457706535127256, guid: 8124c11e65bbef643b2bdddd21c74c72, type: 3}
@@ -51434,6 +51707,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Patrol 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1652678220}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Drop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DropLoot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7473095215975324673, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: points.Array.size
       value: 2
@@ -51456,6 +51757,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+--- !u!1 &1652678219 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3777453130216299770, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+  m_PrefabInstance: {fileID: 1652678218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1652678220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652678219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3aa984bbcf6e5346bab1c6bd6a3d07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootTable: {fileID: 11400000, guid: 344f69cb321b04ec9a2c7b7d07883fc9, type: 2}
+  dropType: 3
+  amountOfDrops: 1
+  launchSpeed: 500
 --- !u!1001 &1653854817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53196,8 +53518,57 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Guard (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1716726315}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Drop
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DropLoot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+--- !u!1 &1716726314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3777453130216299770, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+  m_PrefabInstance: {fileID: 1716726313}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1716726315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716726314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3aa984bbcf6e5346bab1c6bd6a3d07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootTable: {fileID: 11400000, guid: 344f69cb321b04ec9a2c7b7d07883fc9, type: 2}
+  dropType: 3
+  amountOfDrops: 1
+  launchSpeed: 500
 --- !u!4 &1717565808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7916418741512970698, guid: 0964c6938393d574abc06cf66babd50d, type: 3}
@@ -67013,6 +67384,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Patrol 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2076219663}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Drop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DropLoot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7473095215975324673, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: points.Array.size
       value: 2
@@ -67035,6 +67434,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+--- !u!1 &2076219662 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3777453130216299770, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+  m_PrefabInstance: {fileID: 2076219661}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2076219663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076219662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3aa984bbcf6e5346bab1c6bd6a3d07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootTable: {fileID: 11400000, guid: 344f69cb321b04ec9a2c7b7d07883fc9, type: 2}
+  dropType: 3
+  amountOfDrops: 1
+  launchSpeed: 500
 --- !u!1001 &2076987370
 PrefabInstance:
   m_ObjectHideFlags: 0
