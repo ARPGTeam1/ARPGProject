@@ -9798,6 +9798,18 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 6344310275866603768, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: m_Speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344310275866603768, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: m_Acceleration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344310275866603768, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 6344310275866603771, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
       propertyPath: m_Name
       value: Tracking Enemy
@@ -10395,6 +10407,18 @@ PrefabInstance:
     - target: {fileID: 4875116039614293052, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
       propertyPath: maxHealth
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344310275866603768, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: m_Speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344310275866603768, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: m_Acceleration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344310275866603768, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6344310275866603771, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
       propertyPath: m_Name
@@ -12523,6 +12547,18 @@ PrefabInstance:
     - target: {fileID: 4875116039614293052, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
       propertyPath: maxHealth
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344310275866603768, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: m_Speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344310275866603768, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: m_Acceleration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344310275866603768, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6344310275866603771, guid: f1ec8e64e1b95454cbc71ae604fc114a, type: 3}
       propertyPath: m_Name
