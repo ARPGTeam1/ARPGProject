@@ -14,8 +14,6 @@ namespace Characters
         private HealthManager hitPoint;
         [SerializeField] public GameObject player;
 
-        //[SerializeField] private Color fromColorInspector;
-        //[SerializeField] private Color toColorInspector;
         [SerializeField] private  Color fromColor;
         [SerializeField] private  Color toColor;
 
@@ -23,16 +21,6 @@ namespace Characters
 
         private void Start()
         {
-            // fromColor.r = fromColorInspector.r;
-            // fromColor.b = fromColorInspector.b;
-            // fromColor.g = fromColorInspector.g;
-            // fromColor.a = fromColorInspector.a;
-            //
-            // toColor.r = toColorInspector.r;
-            // toColor.b = toColorInspector.b;
-            // toColor.g = toColorInspector.g;
-            // toColor.a = toColorInspector.a;
-            
             hitPoint = (player != null) ? player.GetComponent<HealthManager>() :GetComponentInParent<HealthManager>();
             HPBarImage = GetComponent<Image>();
             hitPoint.HPChanged.AddListener(OnHPChanged);
