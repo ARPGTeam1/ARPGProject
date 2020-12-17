@@ -852,6 +852,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: HP Bar UI
       objectReference: {fileID: 0}
+    - target: {fileID: 7445023248588495338, guid: 2d0fe038d0896484e91e1ef12edc8464, type: 3}
+      propertyPath: toColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445023248588495338, guid: 2d0fe038d0896484e91e1ef12edc8464, type: 3}
+      propertyPath: toColor.b
+      value: 0.69803923
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445023248588495338, guid: 2d0fe038d0896484e91e1ef12edc8464, type: 3}
+      propertyPath: toColor.g
+      value: 0.9490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445023248588495338, guid: 2d0fe038d0896484e91e1ef12edc8464, type: 3}
+      propertyPath: toColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445023248588495338, guid: 2d0fe038d0896484e91e1ef12edc8464, type: 3}
+      propertyPath: fromColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445023248588495338, guid: 2d0fe038d0896484e91e1ef12edc8464, type: 3}
+      propertyPath: fromColor.b
+      value: 0.24313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445023248588495338, guid: 2d0fe038d0896484e91e1ef12edc8464, type: 3}
+      propertyPath: fromColor.g
+      value: 0.8392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445023248588495338, guid: 2d0fe038d0896484e91e1ef12edc8464, type: 3}
+      propertyPath: fromColor.r
+      value: 0.9843137
+      objectReference: {fileID: 0}
     - target: {fileID: 7700326162197375931, guid: 2d0fe038d0896484e91e1ef12edc8464, type: 3}
       propertyPath: m_Layer
       value: 5
