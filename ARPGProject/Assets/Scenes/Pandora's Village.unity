@@ -11220,7 +11220,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2632026744131487214, guid: fc718623b9af9c94e941186d3df39124, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -204.76447
+      value: -204.7644
       objectReference: {fileID: 0}
     - target: {fileID: 3128097039203398320, guid: fc718623b9af9c94e941186d3df39124, type: 3}
       propertyPath: m_Name
@@ -11337,6 +11337,10 @@ PrefabInstance:
     - target: {fileID: 3185910151898738664, guid: fc718623b9af9c94e941186d3df39124, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -127.31268
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580175312353022271, guid: fc718623b9af9c94e941186d3df39124, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7373670662309821869, guid: fc718623b9af9c94e941186d3df39124, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -18677,6 +18681,10 @@ PrefabInstance:
     - target: {fileID: 7256849138240839514, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
       propertyPath: hurtSound
       value: event:/Character - Pandora/Recieve Damage - Pandora
+      objectReference: {fileID: 0}
+    - target: {fileID: 8290420522278468764, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
