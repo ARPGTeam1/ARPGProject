@@ -19,7 +19,7 @@ namespace Characters.Player
         
         [SerializeField] private GameObject clickDestinationPrefab;
 
-        //[SerializeField] [FMODUnity.EventRef] private string footstepsSound;
+        [SerializeField] [FMODUnity.EventRef] private string footstepsSound;
         //private FMOD.Studio.EventInstance footstepsInstance;
         
         public bool HasEffect => clickDestinationPrefab != null;
@@ -44,7 +44,7 @@ namespace Characters.Player
 
         public void PlayFootStep()
         {
-            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Character - Pandora/Running - Pandora", gameObject);
+            FMODUnity.RuntimeManager.PlayOneShotAttached(footstepsSound, gameObject);
         }
 
         private void Update()
