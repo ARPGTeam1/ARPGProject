@@ -2554,6 +2554,10 @@ PrefabInstance:
       propertyPath: OverrideMaxDistance
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: -8313077759021213044, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8096972310231157048, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
       propertyPath: m_Name
       value: RockSlide (1)
@@ -14428,6 +14432,10 @@ PrefabInstance:
       propertyPath: OverrideMaxDistance
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: -8313077759021213044, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8096972310231157048, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
       propertyPath: m_Name
       value: RockSlide (3)
@@ -17362,6 +17370,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1102423190}
     m_Modifications:
+    - target: {fileID: -8313077759021213044, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -8313077759021213044, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8096972310231157048, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
       propertyPath: m_Name
       value: RockSlide
@@ -20952,6 +20968,10 @@ PrefabInstance:
     - target: {fileID: -8313077759021213044, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
       propertyPath: OverrideMaxDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -8313077759021213044, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8096972310231157048, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
       propertyPath: m_Name
@@ -26354,6 +26374,10 @@ PrefabInstance:
     - target: {fileID: -8313077759021213044, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
       propertyPath: OverrideMaxDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -8313077759021213044, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8096972310231157048, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
       propertyPath: m_Name
