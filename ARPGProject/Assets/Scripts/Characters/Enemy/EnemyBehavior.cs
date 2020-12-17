@@ -81,35 +81,36 @@ namespace Characters.Enemy
                 _targetHealth = null;
             }
             else
+            {
+                
                 _targetTransform = new Vector3(_target.transform.position.x, this.transform.position.y, _target.transform.position.z);
 
-            if (CanTrack)
-            {
-                if (_tracking.checkFOV()) 
+                if (CanTrack)
+                {
+                    if (_tracking.checkFOV()) 
+                        this.transform.LookAt(_targetTransform);
+                }
+                else 
                     this.transform.LookAt(_targetTransform);
-            }
-            else 
-                this.transform.LookAt(_targetTransform);
-                
-                
 
-            if (CanAttack)
-            {
+                if (CanAttack)
+                {
              
-                if (_rangedEnemy && _meleeEnemy)
-                {
-                    if (_meleeEnemy.CanAttack && _rangedEnemy.CanAttack)
+                    if (_rangedEnemy && _meleeEnemy)
                     {
-                        RangedAndMelee();    
+                        if (_meleeEnemy.CanAttack && _rangedEnemy.CanAttack)
+                        {
+                            RangedAndMelee();    
+                        }
                     }
-                }
-                else if( _rangedEnemy && !_meleeEnemy)
-                {
-                    RangedOnly();
-                }
-                else if(_meleeEnemy && !_rangedEnemy)
-                {
-                    MeleeOnly();
+                    else if( _rangedEnemy && !_meleeEnemy)
+                    {
+                        RangedOnly();
+                    }
+                    else if(_meleeEnemy && !_rangedEnemy)
+                    {
+                        MeleeOnly(); 
+                    }
                 }
             }
         }
