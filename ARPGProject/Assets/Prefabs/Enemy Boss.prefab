@@ -176,8 +176,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   attackRange: 7
-  attackWindupTime: 0
   attackTimeCooldown: 1
+  meleeAttackSound: 
 --- !u!114 &3537875168566305514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,8 +213,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  deathSound: {fileID: 0}
   maxHealth: 100
+  DeathSound: 
 --- !u!1 &7965311235115784750
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +334,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6550008221324737395}
     m_Modifications:
+    - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
+      propertyPath: toColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
+      propertyPath: toColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
+      propertyPath: toColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
+      propertyPath: toColor.r
+      value: 0.090872645
+      objectReference: {fileID: 0}
+    - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
+      propertyPath: fromColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
+      propertyPath: fromColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
+      propertyPath: fromColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
+      propertyPath: fromColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4629839170392791415, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

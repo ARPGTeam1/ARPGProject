@@ -14,10 +14,25 @@ namespace Characters
         private HealthManager hitPoint;
         [SerializeField] public GameObject player;
 
+        //[SerializeField] private Color fromColorInspector;
+        //[SerializeField] private Color toColorInspector;
+        [SerializeField] private  Color fromColor;
+        [SerializeField] private  Color toColor;
+
         private bool HasPlayer => player != null;
 
         private void Start()
         {
+            // fromColor.r = fromColorInspector.r;
+            // fromColor.b = fromColorInspector.b;
+            // fromColor.g = fromColorInspector.g;
+            // fromColor.a = fromColorInspector.a;
+            //
+            // toColor.r = toColorInspector.r;
+            // toColor.b = toColorInspector.b;
+            // toColor.g = toColorInspector.g;
+            // toColor.a = toColorInspector.a;
+            
             hitPoint = (player != null) ? player.GetComponent<HealthManager>() :GetComponentInParent<HealthManager>();
             HPBarImage = GetComponent<Image>();
             hitPoint.HPChanged.AddListener(OnHPChanged);
@@ -32,14 +47,15 @@ namespace Characters
             BarTextChanged.Invoke($"{value} / {hitPoint.MaxHealth}");
         }
 
-        public static Color SetHPBarValue(float value)
+        public Color SetHPBarValue(float value)
         {
+              
             // if (value < 0.2f)
             //     return Color.red;
             // if (value < 0.4f)
             //     return Color.yellow;
             // return Color.green;
-            return Color.Lerp(Color.red, Color.green, value);
+            return Color.Lerp(fromColor, toColor, value);
         }
 
         private void LateUpdate()

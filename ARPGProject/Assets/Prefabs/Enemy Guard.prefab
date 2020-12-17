@@ -222,7 +222,6 @@ MonoBehaviour:
         m_CallState: 2
   maxHealth: 100
   DeathSound: event:/Enemies/Enemy Range Death
-  reload: 0
 --- !u!1 &4582945053365865646
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,6 +273,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3777453130216299719}
     m_Modifications:
+    - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
+      propertyPath: toColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
+      propertyPath: toColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
+      propertyPath: toColor.r
+      value: 0.089953184
+      objectReference: {fileID: 0}
+    - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
+      propertyPath: fromColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
+      propertyPath: fromColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4629839170392791415, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
