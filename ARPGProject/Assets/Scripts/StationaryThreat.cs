@@ -20,8 +20,11 @@ public class StationaryThreat : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         if (!(Time.time >= _lastDamaged + repeatDamageTimerSeconds)) return;
-        if (other.GetComponent<HealthManager>().IsDead) return;
-        
+        if (other.GetComponent<HealthManager>())
+        {
+            if(other.GetComponent<HealthManager>().IsDead) 
+                return;
+        }
         DamageTarget(other.GetComponent<IDamagable>());
     }
 

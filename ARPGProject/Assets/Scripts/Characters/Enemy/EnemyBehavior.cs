@@ -55,11 +55,20 @@ namespace Characters.Enemy
         {
             if (IsDead)
             {
+                if (CanAttack)
+                {
+                    if (_meleeEnemy && _rangedEnemy)
+                    {
+                        _meleeEnemy.enabled = false;
+                        _rangedEnemy.enabled = false;
+                    }
+                    else if (_meleeEnemy && !_rangedEnemy) _meleeEnemy.enabled = false;
+                    else if (!_meleeEnemy && _rangedEnemy) _rangedEnemy.enabled = false;
+                }
                 if (!CanPatrol) return;
                 _patrol.enabled = false;
                 if (!CanTrack) return;
                 _tracking.enabled = false;
-                
                 return;
             }
             BehaviourTree();
