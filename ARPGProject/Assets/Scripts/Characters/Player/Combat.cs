@@ -50,8 +50,8 @@ namespace Characters.Player
                         var enemyToPlayer = this.transform.position - this._target.position;
                         var steerTarget = this._target.position + enemyToPlayer.normalized * this._equipped.stats.attackRange;
                         this.controller.movement.agent.destination = steerTarget;
-                        var lookDirection = new Vector3(this._target.position.x, 0, this._target.position.z);
-                        this.transform.LookAt(lookDirection);
+                        // var lookDirection = new Vector3(this._target.position.x, 0, this._target.position.z);
+                        // this.transform.LookAt(lookDirection);
                     }
                     else
                     {

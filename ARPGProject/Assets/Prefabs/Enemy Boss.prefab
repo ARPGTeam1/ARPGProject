@@ -60,6 +60,8 @@ GameObject:
   - component: {fileID: 3447822814562774283}
   - component: {fileID: 3587331068311863443}
   - component: {fileID: 3537875168566305514}
+  - component: {fileID: 1406308515}
+  - component: {fileID: 1406308523}
   m_Layer: 9
   m_Name: Enemy Boss
   m_TagString: Enemy
@@ -177,7 +179,7 @@ MonoBehaviour:
   damage: 10
   attackRange: 7
   attackTimeCooldown: 1
-  meleeAttackSound: 
+  meleeAttackSound: event:/Enemies/EnemyRaneGiveDmg3D
 --- !u!114 &3537875168566305514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,8 +215,61 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1406308523}
+        m_TargetAssemblyTypeName: DropLoot, Assembly-CSharp
+        m_MethodName: Drop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1406308515}
+        m_TargetAssemblyTypeName: TempleBossDeath, Assembly-CSharp
+        m_MethodName: PlayOnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   maxHealth: 100
-  DeathSound: 
+  DeathSound: event:/Enemies/EnemyRangeDeath3D
+--- !u!114 &1406308515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6550008221324737358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d865c4d5b7904147bc84833850172e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossDeathMonologue: event:/Voice Over/Pandora/PandoraVO2
+--- !u!114 &1406308523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6550008221324737358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3aa984bbcf6e5346bab1c6bd6a3d07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootTable: {fileID: 11400000, guid: 41edba26e4e7a044ea9f16e8be103250, type: 2}
+  dropType: 3
+  amountOfDrops: 1
+  launchSpeed: 500
 --- !u!1 &7965311235115784750
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,15 +395,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
       propertyPath: toColor.b
-      value: 0
+      value: 0.8207547
       objectReference: {fileID: 0}
     - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
       propertyPath: toColor.g
-      value: 1
+      value: 0.6176914
       objectReference: {fileID: 0}
     - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
       propertyPath: toColor.r
-      value: 0.090872645
+      value: 0.33681917
       objectReference: {fileID: 0}
     - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
       propertyPath: fromColor.a
@@ -356,15 +411,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
       propertyPath: fromColor.b
-      value: 0
+      value: 0.745283
       objectReference: {fileID: 0}
     - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
       propertyPath: fromColor.g
-      value: 0
+      value: 0.15819688
       objectReference: {fileID: 0}
     - target: {fileID: 654197142337899403, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
       propertyPath: fromColor.r
-      value: 1
+      value: 0.28938138
       objectReference: {fileID: 0}
     - target: {fileID: 4629839170392791415, guid: 3735cb18677964e37b6b3a6088b73235, type: 3}
       propertyPath: m_Pivot.x
