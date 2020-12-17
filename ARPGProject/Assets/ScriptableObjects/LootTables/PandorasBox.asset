@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PandorasBox
   m_EditorClassIdentifier: 
   drops:
-  - {fileID: 919132149155446097, guid: d2bc71cf4a6698c4d8dbe3a2fb7109ca, type: 3}
+  - {fileID: 3135344886052416182, guid: 4d78ab8e1afdfe84484891d5339da484, type: 3}
