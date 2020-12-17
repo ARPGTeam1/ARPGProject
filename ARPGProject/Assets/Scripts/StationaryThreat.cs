@@ -1,4 +1,5 @@
-﻿using Interfaces;
+﻿using Characters;
+using Interfaces;
 using UnityEngine;
 
 public class StationaryThreat : MonoBehaviour
@@ -18,8 +19,8 @@ public class StationaryThreat : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-       
         if (!(Time.time >= _lastDamaged + repeatDamageTimerSeconds)) return;
+        if (other.GetComponent<HealthManager>().IsDead) return;
         
         DamageTarget(other.GetComponent<IDamagable>());
     }
@@ -30,6 +31,4 @@ public class StationaryThreat : MonoBehaviour
         _lastDamaged = Time.time;
         FMODUnity.RuntimeManager.PlayOneShot(burnSound, transform.position);
     }
-
-
 }
