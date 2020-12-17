@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75805921a2dc201409e508b08359b6b4, type: 3}
-  m_Name: Health_Drop
+  m_Name: PandorasBox
   m_EditorClassIdentifier: 
   drops:
-  - {fileID: 2933180138578614443, guid: 7e6ee200a1d2e684e92c47d7a96591f9, type: 3}
+  - {fileID: 3135344886052416182, guid: 4d78ab8e1afdfe84484891d5339da484, type: 3}
