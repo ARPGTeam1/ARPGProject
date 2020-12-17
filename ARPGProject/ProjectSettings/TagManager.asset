@@ -8,6 +8,7 @@ TagManager:
   - Portal
   - PlayerStateManager
   - PlayerHPBarUI
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
@@ -47,4 +48,7 @@ TagManager:
     locked: 0
   - name: FadeOut
     uniqueID: 2439302833
+    locked: 0
+  - name: UI
+    uniqueID: 4218086119
     locked: 0
