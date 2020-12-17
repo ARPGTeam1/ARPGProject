@@ -3111,7 +3111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 744592540, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
       propertyPath: OverrideMinDistance
-      value: 4.52
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 5176313518674648092, guid: 4b3e1b836c69d604ea383880b46969ff, type: 3}
       propertyPath: m_Name
@@ -11327,7 +11327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7373670662309821869, guid: fc718623b9af9c94e941186d3df39124, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -49.8609
+      value: -49.86091
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc718623b9af9c94e941186d3df39124, type: 3}
