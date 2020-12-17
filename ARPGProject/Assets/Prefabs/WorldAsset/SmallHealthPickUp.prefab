@@ -4966,7 +4966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aa134926fdcac54fbff6f69ea615545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healAmount: 15
+  healAmount: 100
   pickUpEffect: {fileID: 1298029560938040, guid: d74e73c0044f5cd43a6f1f506f0df790, type: 3}
   pickUpSound: event:/SFX/Hope Pickup Sound
 --- !u!1 &3672643119980738107

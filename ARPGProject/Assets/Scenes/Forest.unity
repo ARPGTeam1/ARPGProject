@@ -28047,10 +28047,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1789217070}
     m_Modifications:
+    - target: {fileID: 4350808577985529396, guid: e75c14a94ca541c4195c97a65ae0462c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350808577985529396, guid: e75c14a94ca541c4195c97a65ae0462c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350808577985529396, guid: e75c14a94ca541c4195c97a65ae0462c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.42
+      objectReference: {fileID: 0}
     - target: {fileID: 4350808577985529398, guid: e75c14a94ca541c4195c97a65ae0462c, type: 3}
       propertyPath: dUI
       value: 
       objectReference: {fileID: 956243260}
+    - target: {fileID: 4350808577985529398, guid: e75c14a94ca541c4195c97a65ae0462c, type: 3}
+      propertyPath: scene
+      value: 
+      objectReference: {fileID: 102900000, guid: 82417d9d073ad40c69e53ff357751bc4, type: 3}
     - target: {fileID: 4350808577985529398, guid: e75c14a94ca541c4195c97a65ae0462c, type: 3}
       propertyPath: textFacesPlayer
       value: 0
@@ -33237,6 +33253,10 @@ PrefabInstance:
     - target: {fileID: 912180434493775020, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256849138240839514, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
+      propertyPath: hurtSound
+      value: event:/Character - Pandora/Recieve Damage - Pandora
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c887fd216d5eeb45917b361d5e0d05b, type: 3}
@@ -56332,7 +56352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2632026744131487214, guid: fc718623b9af9c94e941186d3df39124, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -204.76445
+      value: -204.76447
       objectReference: {fileID: 0}
     - target: {fileID: 3128097039203398320, guid: fc718623b9af9c94e941186d3df39124, type: 3}
       propertyPath: m_Name
