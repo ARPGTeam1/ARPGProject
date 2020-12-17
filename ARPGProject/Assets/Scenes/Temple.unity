@@ -3990,6 +3990,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1102423190}
     m_Modifications:
+    - target: {fileID: 654197142295917326, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: toColor.b
+      value: 0.16113387
+      objectReference: {fileID: 0}
+    - target: {fileID: 654197142295917326, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: toColor.g
+      value: 0.4811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 654197142295917326, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: toColor.r
+      value: 0.17516887
+      objectReference: {fileID: 0}
+    - target: {fileID: 654197142295917326, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: fromColor.b
+      value: 0.17061234
+      objectReference: {fileID: 0}
+    - target: {fileID: 654197142295917326, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: fromColor.g
+      value: 0.17061234
+      objectReference: {fileID: 0}
+    - target: {fileID: 654197142295917326, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
+      propertyPath: fromColor.r
+      value: 0.509434
+      objectReference: {fileID: 0}
     - target: {fileID: 3777453130216299719, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -17445,40 +17469,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 722eb73fa91a5ca499dcf8db8408c8ab, type: 3}
---- !u!1 &1406308514 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6550008221324737358, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-  m_PrefabInstance: {fileID: 2077715508}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1406308515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406308514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d865c4d5b7904147bc84833850172e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bossDeathMonologue: event:/Voice Over/Pandora/PandoraVO2
---- !u!114 &1406308523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1406308514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3aa984bbcf6e5346bab1c6bd6a3d07f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lootTable: {fileID: 11400000, guid: 41edba26e4e7a044ea9f16e8be103250, type: 2}
-  dropType: 3
-  amountOfDrops: 1
-  launchSpeed: 500
 --- !u!1001 &1407871104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25491,114 +25481,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2238940781951138514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: toColor.b
-      value: 0.8207547
-      objectReference: {fileID: 0}
-    - target: {fileID: 2238940781951138514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: toColor.g
-      value: 0.6176914
-      objectReference: {fileID: 0}
-    - target: {fileID: 2238940781951138514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: toColor.r
-      value: 0.33681917
-      objectReference: {fileID: 0}
-    - target: {fileID: 2238940781951138514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: fromColor.b
-      value: 0.745283
-      objectReference: {fileID: 0}
-    - target: {fileID: 2238940781951138514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: fromColor.g
-      value: 0.15819688
-      objectReference: {fileID: 0}
-    - target: {fileID: 2238940781951138514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: fromColor.r
-      value: 0.28938138
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: DeathSound
-      value: event:/Enemies/EnemyRangeDeath3D
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1406308523}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1406308515}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Target
-      value: 
-      objectReference: {fileID: 1406308515}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Drop
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: PlayOnDeath
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: PlayOnDeath
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: DropLoot, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: TempleBossDeath, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
-      value: TempleBossDeath, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537875168566305514, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3587331068311863443, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
-      propertyPath: meleeAttackSound
-      value: event:/Enemies/EnemyRaneGiveDmg3D
-      objectReference: {fileID: 0}
     - target: {fileID: 6550008221324737358, guid: eafc6a97c127ef24584175ad9b526bbb, type: 3}
       propertyPath: m_Name
       value: Enemy Boss
