@@ -25,15 +25,11 @@ namespace Characters
         
         [SerializeField] [FMODUnity.EventRef] private string DeathSound = "";
         FMOD.Studio.EventInstance DeathSoundInstance;
-        
-        public bool reload;
-        
+
         private void Start()
         {
-            reload = true;
             DeathSoundInstance = FMODUnity.RuntimeManager.CreateInstance(DeathSound);
             FMODUnity.RuntimeManager.AttachInstanceToGameObject(DeathSoundInstance, transform, GetComponent<Rigidbody>());
-
         }
         
         public int CurrentHealth
@@ -70,7 +66,7 @@ namespace Characters
             OnDamaged?.Invoke(damage);
             if (CompareTag("Player"))
             {
-                
+                //Animation and Sound for Player on Damaging;
             }
             
             if (CompareTag("Enemy"))
@@ -78,14 +74,13 @@ namespace Characters
                 _animator.SetTrigger("GetHit");
             }
 
-            if (spawnDamageText) DamageText(damage);
+            if (spawnDamageText && source != "StateManager") DamageText(damage);
             CurrentHealth -= damage;
             if (IsDead)
             {
                 onDeath.Invoke();
                 BeKilledBy.Invoke($"You are Defeated by {source}");
             }
-            
         }
 
         public void Kill()
