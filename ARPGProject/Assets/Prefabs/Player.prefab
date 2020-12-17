@@ -353,6 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatState: 0
+  attackSound: event:/Character - Pandora/Attack Spear
 --- !u!114 &3970167866301039737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,6 +425,7 @@ MonoBehaviour:
   alsoBuffLightRadius: 1
   minLightRadius: 2
   maxLightRadius: 35
+  hurtSound: event:/Character - Pandora/Recieve Damage - Pandora
 --- !u!1 &852011760065721699
 GameObject:
   m_ObjectHideFlags: 0

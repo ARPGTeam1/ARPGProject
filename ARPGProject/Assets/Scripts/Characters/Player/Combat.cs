@@ -23,6 +23,8 @@ namespace Characters.Player
 
         private bool _targetIsDead => _target.GetComponent<HealthManager>().IsDead;
 
+        [FMODUnity.EventRef] [SerializeField] private string attackSound;
+
         private void Start()
         {
             this.controller = GetComponent<Controller>();
@@ -64,7 +66,7 @@ namespace Characters.Player
 
         public void SwordAttack() {
             this._equipped.DealDamage(this._target.GetComponent<IDamagable>());
+            FMODUnity.RuntimeManager.PlayOneShotAttached(attackSound, _target.gameObject);
         }
-
     }
 }

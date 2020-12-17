@@ -17,7 +17,6 @@ namespace Characters.Player
         [SerializeField] private float maxLightRadius;
 
         [SerializeField] [FMODUnity.EventRef] private string hurtSound;
-        //FMOD.Studio.EventInstance _hurtSoundInstance;
 
         private void Start()
         {
@@ -26,8 +25,6 @@ namespace Characters.Player
             _hp.OnDamaged += HitSound;
             UpdateLight();
             
-            //_hurtSoundInstance = FMODUnity.RuntimeManager.CreateInstance(hurtSound);
-            //FMODUnity.RuntimeManager.AttachInstanceToGameObject(_hurtSoundInstance, transform, GetComponent<Rigidbody>());
         }
 
         private void HitSound(int currentHp) => FMODUnity.RuntimeManager.PlayOneShotAttached(hurtSound, gameObject);
