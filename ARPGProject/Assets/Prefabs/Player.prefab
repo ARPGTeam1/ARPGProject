@@ -340,6 +340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 802219321045450586}
   clickDestinationPrefab: {fileID: 8888804507657352843, guid: c7261e7d07cd8804690c362479769145, type: 3}
+  footstepsSound: event:/Character - Pandora/PandoraFootsteps3D
 --- !u!114 &2950930965222286530
 MonoBehaviour:
   m_ObjectHideFlags: 0

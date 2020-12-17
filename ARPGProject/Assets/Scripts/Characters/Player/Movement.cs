@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 namespace Characters.Player
@@ -20,7 +19,6 @@ namespace Characters.Player
         [SerializeField] private GameObject clickDestinationPrefab;
 
         [SerializeField] [FMODUnity.EventRef] private string footstepsSound;
-        //private FMOD.Studio.EventInstance footstepsInstance;
         
         public bool HasEffect => clickDestinationPrefab != null;
         
@@ -36,16 +34,7 @@ namespace Characters.Player
             this._attack = GetComponent<Attack>();
         }
 
-        private void Start()
-        {
-            //footstepsInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Character - Pandora/Running - Pandora");
-            //FMODUnity.RuntimeManager.AttachInstanceToGameObject(footstepsInstance, transform, GetComponent<Rigidbody>());
-        }
-
-        public void PlayFootStep()
-        {
-            FMODUnity.RuntimeManager.PlayOneShotAttached(footstepsSound, gameObject);
-        }
+        public void PlayFootStep() => FMODUnity.RuntimeManager.PlayOneShotAttached(footstepsSound, gameObject);
 
         private void Update()
         {
@@ -68,10 +57,7 @@ namespace Characters.Player
             Destroy(instance, 1.5f);
         }
         
-        private bool ShouldStop()
-        {
-            return Vector3.Distance(this.agent.destination, this.transform.position) <= 0f;
-        }
+        private bool ShouldStop() => Vector3.Distance(this.agent.destination, this.transform.position) <= 0f;
 
         private void UpdateAnimation()
         {
@@ -79,7 +65,7 @@ namespace Characters.Player
             {
                 case true:
                     this._animator.SetBool("isMoving", true);
-                   
+                    
                     break;
                 case false:
                     this._animator.SetBool("isMoving", false);
