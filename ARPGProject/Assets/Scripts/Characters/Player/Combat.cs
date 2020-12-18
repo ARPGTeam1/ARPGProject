@@ -48,16 +48,18 @@ namespace Characters.Player
                         return;
                     }
                     
-                    if (Vector3.Distance(this._target.position, this.transform.position) > this._equipped.stats.attackRange)
+                    if (Vector3.Distance(this._target.position, this.transform.position) > this._equipped.stats.attackRange +1f)
                     {
                         var enemyToPlayer = this.transform.position - this._target.position;
                         var steerTarget = this._target.position + enemyToPlayer.normalized * this._equipped.stats.attackRange;
                         this.controller.movement.agent.destination = steerTarget;
-                        // var lookDirection = new Vector3(this._target.position.x, 0, this._target.position.z);
-                        // this.transform.LookAt(lookDirection);
+                         var lookDirection = new Vector3(this._target.position.x, this.transform.position.y, this._target.position.z);
+                         this.transform.LookAt(lookDirection);
                     }
                     else
                     {
+                        var lookDirection = new Vector3(this._target.position.x, this.transform.position.y, this._target.position.z);
+                        this.transform.LookAt(lookDirection);
                         this.controller.anim.SetBool("Melee", true);
                     }
                     break;
