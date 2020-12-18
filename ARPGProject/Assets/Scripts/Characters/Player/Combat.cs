@@ -20,13 +20,16 @@ namespace Characters.Player
         private bool _attacking;
         
         private Transform _target;
+        private HealthManager myHealth;
 
         private bool _targetIsDead => _target.GetComponent<HealthManager>().IsDead;
+        private bool amIDead => myHealth.IsDead;
 
         [FMODUnity.EventRef] [SerializeField] private string attackSound;
 
         private void Start()
         {
+            this.myHealth = gameObject.GetComponent<HealthManager>();
             this.controller = GetComponent<Controller>();
             this._equipped = GetComponentInChildren<Weapon>();
             
@@ -39,7 +42,7 @@ namespace Characters.Player
             {
                 case CombatState.Attack:
                     this._target = this.controller.Hit.transform;
-                    if (_targetIsDead)
+                    if (_targetIsDead || amIDead)
                     {
                         this.combatState = CombatState.Idle;
                         return;
