@@ -7502,7 +7502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: maxHealth
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
@@ -7546,7 +7546,7 @@ PrefabInstance:
       objectReference: {fileID: 58581566}
     - target: {fileID: 7846464531110220315, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: damage
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
@@ -27815,7 +27815,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 339321553, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
       propertyPath: damage
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3777453130216299719, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
       propertyPath: m_RootOrder
@@ -27867,7 +27867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6864254133440587559, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
       propertyPath: damage
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6886978981633574238, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
@@ -35493,7 +35493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: maxHealth
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
@@ -35537,7 +35537,7 @@ PrefabInstance:
       objectReference: {fileID: 1794826448}
     - target: {fileID: 7846464531110220315, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: damage
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7846464531110220315, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: attackRange
@@ -49972,6 +49972,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1302428379}
     m_Modifications:
+    - target: {fileID: 339321553, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
+      propertyPath: damage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3777453130216299719, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -55224,7 +55228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: maxHealth
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
@@ -55268,7 +55272,7 @@ PrefabInstance:
       objectReference: {fileID: 993159994}
     - target: {fileID: 7846464531110220315, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: damage
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7846464531110220315, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: attackRange
@@ -57142,7 +57146,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 339321553, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
       propertyPath: damage
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3777453130216299719, guid: c7913320c2a8e9e448087417aa958eb8, type: 3}
       propertyPath: m_RootOrder
@@ -71613,7 +71617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: maxHealth
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5659224070127877384, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
@@ -71657,7 +71661,7 @@ PrefabInstance:
       objectReference: {fileID: 306354867}
     - target: {fileID: 7846464531110220315, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: damage
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7846464531110220315, guid: 49b20f5daebd26a47b47f3d260a4df0b, type: 3}
       propertyPath: attackRange
