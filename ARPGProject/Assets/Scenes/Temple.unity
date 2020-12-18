@@ -2941,6 +2941,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2582607798656982569, guid: fc718623b9af9c94e941186d3df39124, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 25.999985
+      objectReference: {fileID: 0}
     - target: {fileID: 3128097039203398320, guid: fc718623b9af9c94e941186d3df39124, type: 3}
       propertyPath: m_Name
       value: UICanvas
@@ -6668,7 +6672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593914398636884497, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 723.8
+      value: 722.83
       objectReference: {fileID: 0}
     - target: {fileID: 2593914398636884497, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6676,7 +6680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593914398636884497, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 451.08
+      value: 452.37
       objectReference: {fileID: 0}
     - target: {fileID: 2593914398636884497, guid: eff4c9b66a592f5489736ce736cdc0d4, type: 3}
       propertyPath: m_LocalRotation.w
