@@ -24126,7 +24126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 6
-  projectileDamage: 10
+  projectileDamage: 20
   lifetime: 5
   shouldTrack: 0
   offset: {x: 0, y: 2, z: 0}
