@@ -12,7 +12,7 @@ public class ConfirmationBox : MonoBehaviour
     
     public 
     public AudioSource audiosource;
-    public AudioClip onClickSound;
+    public AudioClip WOHClickSound;
     
     public void Setup()
     {
@@ -54,7 +54,7 @@ public class ConfirmationBox : MonoBehaviour
     
     public void OnClickSound()
     {
-        audiosource.clip = onClickSound;
+        audiosource.clip = WOHClickSound;
         audiosource.Play();
     }
     
